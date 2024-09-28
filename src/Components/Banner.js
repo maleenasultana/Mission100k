@@ -110,7 +110,7 @@ export default function CallToActionWithVideo() {
               w={'100%'}
               h={'100%'}
               src={
-                "../../../Designer.png"
+                "../../../children1.jpg"
               }
             />
           </Box>
