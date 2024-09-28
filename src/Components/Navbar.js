@@ -1,5 +1,5 @@
 'use client';
-
+import About from "../Components/About"
 import {
   Box,
   Flex,
@@ -17,6 +17,7 @@ import {
   useColorModeValue,
   useBreakpointValue,
   useDisclosure,
+  Link,
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -40,7 +41,8 @@ export default function WithSubnavigation() {
         borderBottom={1}
         borderStyle={'solid'}
         borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}>
+        align={'center'}
+        _hover={{bg: 'grey. 900'}}>
         <Flex
           flex={{ base: 1, md: 'auto' }}
           ml={{ base: -2 }}
@@ -250,59 +252,79 @@ const MobileNavItem = ({ label, children, href }) => {
 const NAV_ITEMS = [
   {
     label: 'Home',
-    href: '#',
+    href: '/',
   },
   {
-    label: 'About Us',
-    href: '#',
+    label: <Link href={About} isExternal>About Us</Link>,
+    href: '../Components/About',
   },
   {
-    label: 'Services',
+    label: <Link href="./Components/Services" isExternal>Services</Link>,
     children: [
       {
-        label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
-        href: '#',
+        label: 'School/Colleges',
+        
+        href: '../Components/Schools',
       },
       {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Designers',
-        href: '#',
+        label: 'Corporates/Work Places',
+       
+        href: '../Components/Corporates',
+      },
+      {
+        label: 'Orphanages/ Govt Schools',
+       
+        href: '../Components/GovtSchools',
+      },
+      {
+        label: 'Career Counselling & Guidance',
+        
+        href: '../Components/CareerCounselling',
+      },
+      {
+        label: 'Institution Development Program',
+        
+        href: '../Components/IDP',
+      },
+      {
+        label: '1 : 1 Counselling',
+       
+        href: '../Components/one-to-one',
       },
     ],
   },
   {
-    label: 'Psychometric test',
-    children: [
-      {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-    ],
+    label: <Link href="./Components/About" isExternal>Psychometric Tests</Link>,
+    // children: [
+    //   {
+    //     label: 'Job Board',
+    //     subLabel: 'Find your dream design job',
+    //     href: '#',
+    //   },
+    //   {
+    //     label: 'Freelance Projects',
+    //     subLabel: 'An exclusive list for contract work',
+    //     href: '#',
+    //   },
+    // ],
   },
   {
-    label: '21st Century Life Skill & Learning',
-    children: [
-      {
-        label: 'Job Board',
-        subLabel: 'Find your dream design job',
-        href: '#',
-      },
-      {
-        label: 'Freelance Projects',
-        subLabel: 'An exclusive list for contract work',
-        href: '#',
-      },
-    ],
+    label: <Link href="/" isExternal>21st Century life Skill & Learning</Link>,
+    // children: [
+    //   {
+    //     label: 'Job Board',
+    //     subLabel: 'Find your dream design job',
+    //     href: '#',
+    //   },
+    //   {
+    //     label: 'Freelance Projects',
+    //     subLabel: 'An exclusive list for contract work',
+    //     href: '#',
+    //   },
+    // ],
   },
   {
-    label: 'Contact Us',
-    href: '#',
+    label: <Link href="./Components/Contactus" isExternal>Contact Us</Link>,
+    href: './Components/Contactus',
   }
 ];

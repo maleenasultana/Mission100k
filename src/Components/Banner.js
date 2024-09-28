@@ -61,7 +61,7 @@ export default function CallToActionWithVideo() {
               px={6}
               colorScheme={'blue'}
               bg={'blue.400'}
-              _hover={{ bg: 'blue.500' }}>
+              _hover={{ bg: 'blue.600', transform: 'scale(1.1)' }} >
              Contact Us
             </Button>
             <Button
@@ -69,7 +69,12 @@ export default function CallToActionWithVideo() {
               size={'lg'}
               fontWeight={'normal'}
               px={6}
-              leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
+              leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}
+              _hover={{
+                transform: 'scale(1.1)',
+                transition: 'transform 0.3s ease-in-out',
+                bg: "gray.200"
+              }}>
               Learn more...
             </Button>
           </Stack>
@@ -110,7 +115,7 @@ export default function CallToActionWithVideo() {
               w={'100%'}
               h={'100%'}
               src={
-                "../../../children1.jpg"
+                "../../../enlighten (1).jfif"
               }
             />
           </Box>

@@ -74,7 +74,11 @@ const ArticleList = () => {
                   '../../../logo.png'
                 }
                 alt="logo image"
-                objectFit="contain"
+                // objectFit="contain"
+                width={"250px"}
+                height={"250"}
+                justifyContent={"center"}
+                alignItems={"center"}
               />
             </Box>
           </Box>
@@ -96,10 +100,10 @@ const ArticleList = () => {
           flexDirection="column"
           justifyContent="center"
           marginTop={{ base: '3', sm: '0' }}>
-          <BlogTags tags={['Psychology', 'Well-being', 'Students']} />
+          <BlogTags tags={['Psychology', 'Well-being']} />
           <Heading marginTop="1">
-            <Text textDecoration="none" _hover={{ textDecoration: 'none' }}>
-             Enlighten, Empower, Enhance
+            <Text textDecoration="none" _hover={{ textDecoration: 'none' }} color={'blue.500'}>
+             Enlighten,Enhance,Empower
             </Text>
           </Heading>
           <Text
@@ -114,17 +118,17 @@ const ArticleList = () => {
       </Box>
      
       <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
-        <Heading as="h2">About Us</Heading>
+        <Heading as="h2" color={'blue.500'}>About Us</Heading>
         <Text as="p" fontSize="lg">
         Mission 100K is a project that aims to improve the emotional and occupational health of individuals in India. Understanding that mental health significantly influences an individual's ability to advance. We want to make emotional well-being accessible to every individual in our Country.
 
         </Text>
-        <Heading as="h2">Our Vision</Heading>
+        <Heading as="h2" color={'blue.500'}>Our Vision</Heading>
         <Text as="p" fontSize="lg">
         Creating an environment across India that enhances emotional well-being & career opportunities for every individual that helps them reach their personal & professional goals amidst the opportunities & resources.
 
         </Text>
-        <Heading as="h2">Our Mission</Heading>
+        <Heading as="h2" color={'blue.500'}>Our Mission</Heading>
         <Text as="p" fontSize="lg">
         Mission 100K focuses on delivering the required emotional well-being and career counselling to 100,000 more people. We want to create a comprehensive environment in which mental health awareness is fostered and people's critical practical skills and career directions are learnt. Our approach is tailored to each client, with a focus on instilling self-confidence, resilience, and tenacity through counselling, workshops, and Individual-community-based projects. 
         </Text>
