@@ -48,17 +48,18 @@ export default function BasicStatistics() {
         <Text color={'blue.500'}>Our Services</Text>
       </chakra.h1>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }} >
-        <Link href="../Components/Schools"><StatsCard title={'Schools/Colleges'} stat={'5k'} /></Link>
-        <StatsCard title={'Corporate/WorkPlaces'} stat={'30K'} />
-        <StatsCard title={'Orphanages/Govt Schools'} stat={'100k'} />
+        <Link href="../schools"><StatsCard title={'Schools/Colleges'} stat={'5k'} /></Link>
+        <Link href="../corporates"><StatsCard title={'Corporate/WorkPlaces'} stat={'30K'} /></Link>
+        <Link href="../govtschools"><StatsCard title={'Orphanages/Govt Schools'} stat={'100k'} /></Link>
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 3 }} spacing={{ base: 5, lg: 8 }} py={'15px'} boxShadow={'5px'}>
-        <StatsCard title={'Career Counselling/Guidance'}/>
-        <StatsCard title={'IDP'} />
-        <StatsCard title={'1 : 1 Counselling'} />
+      <Link href="../careercounselling"><StatsCard title={'Career Counselling/Guidance'}/></Link>
+      <Link href="../idp"><StatsCard title={'Institution Development Programme'} /></Link>
+      <Link href="../onetoone"><StatsCard title={'1 : 1 Counselling'} /></Link>
       </SimpleGrid>
      <Box>
      <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }}>
+     <Link href='/enquiryform'>
      <Button
               rounded={'full'}
               size={'lg'}
@@ -69,6 +70,8 @@ export default function BasicStatistics() {
               _hover={{ bg: 'blue.600', transform: 'scale(1.1)' }} gap={'10'} >
             Book Your Session
             </Button>
+            </Link>
+            <Link href='/psychometrictest'>
             <Button
               rounded={'full'}
               size={'lg'}
@@ -79,6 +82,7 @@ export default function BasicStatistics() {
               _hover={{ bg: 'blue.600', transform: 'scale(1.1)' }} >
             Psychometric Test
             </Button>
+            </Link>
              </Stack>
      </Box>
     

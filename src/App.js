@@ -1,6 +1,6 @@
 import React  from 'react'
 import Navbar from "./Components/Navbar"
-import Hero from "./Components/Hero"
+import Carousal from "./Components/Carousal"
 // import Banner from "./Components/Banner"
 import About from "./Components/About"
 import Services from "./Components/Services"
@@ -11,25 +11,48 @@ import Contactus from "./Components/Contactus"
 import Footer from "./Components/Footer"
 import Caption from "./Components/Caption"
 import Schools from "./Components/Schools"
-
-
+import GovtSchools from "./Components/GovtSchools"
+import Nav from "./Components/Nav"
+import IDP from "./Components/IDP"
+import EnquiryForm from './Components/Enquiryform'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SignIn from "./Components/SignIn"
+import SignUp from "./Components/SignUp"
+import Corporates from "./Components/Corporates"
+import Carousel from './Components/Carousal'
+import OnetoOne from "./Components/OnetoOne"
+import CareerCounselling from "./Components/CareerCounselling"
+import Home from "./Components/Home"
+import Psychometrictest from "./Components/Psychometrictest"
 const App = () => {
   return (
     <>
-    
-    <Navbar/>
-    <Caption/>
-    <Hero/>
+    <Router>
+    {/* <Navbar/> */}
+    <Nav/>
+    <Routes>
+    <Route path="/about" element={<About/>} />
+    {/* <Caption/> */}
+    <Route path="/" element={<Home/>} /> 
     {/* <Banner/> */}
-    <Schools/>
-    <About/>
-    <Services/>
+    <Route path="/schools" element={<Schools/>} />
+    <Route path="/govtschools" element={<GovtSchools/>} />
+    <Route path="/idp" element={<IDP/>} />
+    <Route path="/services" element={<Services/>} />
     {/* <Gallery/> */}
-    <Gallery1/>
-    <NewsEvents/>
-    <Contactus/>
-    <Footer/>
-   
+    <Route path="/gallery1" element={<Gallery1/>} />
+    <Route path="/newsevents" element={<NewsEvents/>} />
+    <Route path="/contactus" element={<Contactus/>} />
+    <Route path="/enquiryform" element={<EnquiryForm/>} />
+    <Route path="/signin" element={<SignIn/>}/>
+    <Route path="/signup" element={<SignUp/>}/>
+    <Route path="/corporates" element={<Corporates/>}/>
+    <Route path="/onetoone" element={<OnetoOne/>}/>
+    <Route path="/careercounselling" element={<CareerCounselling/>}/>
+    <Route path="/psychometrictest" element={<Psychometrictest/>}/>
+
+    </Routes>
+   </Router>
     </>
   )
 }

@@ -77,31 +77,31 @@ export default function GridListWith() {
         <Flex flexWrap="wrap" gridGap={6} justify="center">
           <Card
             heading={'Heading'}
-            // icon={<Icon as={FcAssistant} w={10} h={10} />}
+            icon={<Icon as={FcAssistant} w={10} h={10} />}
             description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
             href={'#'}
           />
           <Card
             heading={'Heading'}
-            // icon={<Icon as={FcCollaboration} w={10} h={10} />}
+            icon={<Icon as={FcCollaboration} w={10} h={10} />}
             description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
             href={'#'}
           />
           <Card
             heading={'Heading'}
-            // icon={<Icon as={FcDonate} w={10} h={10} />}
+            icon={<Icon as={FcDonate} w={10} h={10} />}
             description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
             href={'#'}
           />
           <Card
             heading={'Heading'}
-            // icon={<Icon as={FcManager} w={10} h={10} />}
+            icon={<Icon as={FcManager} w={10} h={10} />}
             description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
             href={'#'}
           />
           <Card
             heading={'Heading'}
-            // icon={<Icon as={FcAbout} w={10} h={10} />}
+            icon={<Icon as={FcAbout} w={10} h={10} />}
             description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
             href={'#'}
           />

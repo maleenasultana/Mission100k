@@ -1,11 +1,16 @@
-'use client'
-
-import React, { useState } from 'react'
-import { Box, Flex, IconButton, useBreakpointValue,Text } from '@chakra-ui/react'
-// Here we have used react-icons package for the icons
-import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
-// And react-slick as our Carousel Lib
-import Slider from 'react-slick'
+'use client';
+import React, { useState } from 'react';
+import {
+  Box,
+  Flex,
+  IconButton,
+  useBreakpointValue,
+  HStack,
+  Stack,
+} from '@chakra-ui/react';
+import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
+import Slider from 'react-slick';
+import NewsEvents from './NewsEvents';
 
 // Settings for the slider
 const settings = {
@@ -18,90 +23,88 @@ const settings = {
   autoplaySpeed: 5000,
   slidesToShow: 1,
   slidesToScroll: 1,
-}
+};
 
 export default function Carousel() {
-  // As we have used custom buttons, we need a reference variable to
-  // change the state
-  const [slider, setSlider] = useState(null)
+  const [slider, setSlider] = useState(null);
 
-  // These are the breakpoints which change the position of the
-  // buttons as the screen size changes
-  const top = useBreakpointValue({ base: '90%', md: '50%' })
-  const side = useBreakpointValue({ base: '30%', md: '10px' })
+  const top = useBreakpointValue({ base: '90%', md: '50%' });
+  const side = useBreakpointValue({ base: '30%', md: '10px' });
 
-  // These are the images used in the slide, with sizes reduced by 50%
   const cards = [
-     '../../../children1.jpg',
-    '../../../children.jpg',
-    '../../../children2.jpg',
-  ]
+    '../../../Designer.png',
+    '../../../Designer1.png',
+    '../../../Empower.png',
+  ];
 
   return (
-    < Box display="flex" justifyContent={"center"} alignItems={"center"} py={'15px'}  >
-
-    <Box position={'relative'}
-     height={'500px'} width={'650px'} 
-   overflow={'hidden'}>
-    
-      {/* CSS files for react-slick */}
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-      />
-      <link
-        rel="stylesheet"
-        type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-      />
-      {/* Left Icon */}
-      <IconButton
-        aria-label="left-arrow"
-        colorScheme="messenger"
-        borderRadius="full"
-        position="absolute"
-        left={side}
-        top={top}
-        transform={'translate(0%, -50%)'}
-        zIndex={2}
-        onClick={() => slider?.slickPrev()}>
-        <BiLeftArrowAlt />
-      </IconButton>
-      {/* Right Icon */}
-      {/* <Text>Caption */}
-      <IconButton
-        aria-label="right-arrow"
-        colorScheme="messenger"
-        borderRadius="full"
-        position="absolute"
-        right={side}
-        top={top}
-        transform={'translate(0%, -50%)'}
-        zIndex={2}
-        onClick={() => slider?.slickNext()}>
-        <BiRightArrowAlt />
-      </IconButton>  
-         {/* </Text> */}
-      {/* Slider */}
-      <Slider {...settings} ref={(slider) => setSlider(slider)}
-        >
-        {cards.map((url, index) => (
-            
+    <HStack>
+      <Stack>
+        <Box display="flex" justifyContent="center" alignItems="center" py="15px">
           <Box
-            key={index}
-            height={'2xl'} // 50% reduction in height size
             position="relative"
-            backgroundPosition="center"
-            backgroundRepeat="no-repeat"
-            backgroundSize="cover"
-            backgroundImage={`url(${url})`}
-          />
-    
-        ))}
-      </Slider>
-  
-    </Box>
-    </Box>
-  )
+            height={{ base: '300px', md: '500px', lg: '700px' }} // Responsive height
+            width={{ base: '100%', md: '85%', lg: '1150px' }} // Responsive width
+            overflow="hidden"
+          >
+            <link
+              rel="stylesheet"
+              type="text/css"
+              href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+            />
+            <link
+              rel="stylesheet"
+              type="text/css"
+              href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+            />
+
+            {/* Left Icon */}
+            <IconButton
+              aria-label="left-arrow"
+              colorScheme="messenger"
+              borderRadius="full"
+              position="absolute"
+              left={side}
+              top={top}
+              transform="translate(0%, -50%)"
+              zIndex={2}
+              onClick={() => slider?.slickPrev()}
+            >
+              <BiLeftArrowAlt />
+            </IconButton>
+
+            {/* Right Icon */}
+            <IconButton
+              aria-label="right-arrow"
+              colorScheme="messenger"
+              borderRadius="full"
+              position="absolute"
+              right={side}
+              top={top}
+              transform="translate(0%, -50%)"
+              zIndex={2}
+              onClick={() => slider?.slickNext()}
+            >
+              <BiRightArrowAlt />
+            </IconButton>
+
+            {/* Slider */}
+            <Slider {...settings} ref={(slider) => setSlider(slider)}>
+              {cards.map((url, index) => (
+                <Box
+                  key={index}
+                  height={{ base: '300px', md: '400px', lg: '600px' }} // Responsive height for each slide
+                  backgroundPosition="center"
+                  backgroundRepeat="no-repeat"
+                  backgroundSize="contain" // Ensures image scales without cropping
+                  backgroundImage={`url(${url})`}
+                  width="100%" // Ensures it takes full width of the container
+                />
+              ))}
+            </Slider>
+          </Box>
+        </Box>
+      </Stack>
+    </HStack>
+  );
 }

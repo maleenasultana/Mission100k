@@ -1,5 +1,6 @@
 'use client';
 import About from "../Components/About"
+import { Link as RouterLink } from 'react-router-dom'; 
 import {
   Box,
   Flex,
@@ -83,7 +84,9 @@ export default function WithSubnavigation() {
           direction={'row'}
           spacing={6}>
           <Button as={'a'} fontSize={'sm'} fontWeight={600} variant={'link'} href={'#'}>
-            Sign In
+          <Link as={RouterLink} to="/signin" >
+           SignIn
+          </Link>
           </Button>
           <Button
             as={'a'}
@@ -96,7 +99,9 @@ export default function WithSubnavigation() {
             _hover={{
               bg: 'blue.300',
             }}>
-            Sign Up
+            <Link as={RouterLink} to="/" >
+           SignUp
+          </Link>
           </Button>
         </Stack>
       </Flex>

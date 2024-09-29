@@ -67,11 +67,11 @@ const ArticleList = () => {
             zIndex="2"
             marginLeft={{ base: '0', sm: '5%' }}
             marginTop="5%">
-            <Box textDecoration="none" _hover={{ textDecoration: 'none' }}>
+            {/* <Box textDecoration="none" _hover={{ textDecoration: 'none' }}>
               <Image
                 borderRadius="lg"
                 src={
-                  '../../../logo.png'
+                  ''
                 }
                 alt="logo image"
                 // objectFit="contain"
@@ -80,7 +80,7 @@ const ArticleList = () => {
                 justifyContent={"center"}
                 alignItems={"center"}
               />
-            </Box>
+            </Box> */}
           </Box>
           <Box zIndex="1" width="100%" position="absolute" height="100%">
             <Box

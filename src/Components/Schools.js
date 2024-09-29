@@ -14,6 +14,7 @@ import {
   ListItem,
   Stack,
   Button,
+  Link,
 } from '@chakra-ui/react'
 
 
@@ -127,6 +128,7 @@ We aim to provide a healthy and balanced campus environment where students can t
 We also offer guidance for parents, equipping them with the tools to support their child's emotional growth, ensuring a strong foundation for their overall well-being.
 </Text>
 <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }} py={'20pxs'}>
+    <Link href="/enquiryform">
      <Button
               rounded={'full'}
               size={'lg'}
@@ -138,7 +140,7 @@ We also offer guidance for parents, equipping them with the tools to support the
               py={'20px'} >
             Book Your Session Now
             </Button>
-           
+            </Link>
              </Stack>
     </Box>
   )
