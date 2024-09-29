@@ -115,7 +115,7 @@ export default function CallToActionWithVideo() {
               w={'100%'}
               h={'100%'}
               src={
-                "../../../enlighten (1).jfif"
+                "../../../children.jpg"
               }
             />
           </Box>

@@ -43,7 +43,7 @@ export default function PostWithLike() {
         <Box h={'200px'} borderBottom={'1px'} borderColor="black">
           <Img
             src={
-              '../../../child group.jfif'
+              '../../../children.jpg'
             }
             roundedTop={'sm'}
             objectFit="cover"
@@ -107,7 +107,7 @@ export default function PostWithLike() {
         <Box h={'200px'} borderBottom={'1px'} borderColor="black">
           <Img
             src={
-              '../../../adoloscent group.jfif'
+              '../../../children.jpg'
             }
             roundedTop={'sm'}
             objectFit="cover"
@@ -170,7 +170,7 @@ export default function PostWithLike() {
         <Box h={'200px'} borderBottom={'1px'} borderColor="black">
           <Img
             src={
-              '../../../carrerr 1.jfif'
+              '../../../children.jpg'
             }
             roundedTop={'sm'}
             objectFit="cover"
