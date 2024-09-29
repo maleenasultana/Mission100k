@@ -38,7 +38,7 @@ export default function Carousel() {
   ]
 
   return (
-    < Box display="flex" justifyContent={"center"} alignItems={"center"} py={'15px'} >
+    < Box display="flex" justifyContent={"center"} alignItems={"center"} py={'15px'}  >
 
     <Box position={'relative'}
      height={'500px'} width={'650px'} 

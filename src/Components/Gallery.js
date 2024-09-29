@@ -19,7 +19,7 @@ export default function PostWithLike() {
   const [liked, setLiked] = useState(false)
 
   return (
-    <Container maxW={'7xl'} p="12">
+    <Container maxW={'7xl'} p="12" >
     <chakra.h1
         textAlign={'center'}
         fontSize={'4xl'}
@@ -29,7 +29,7 @@ export default function PostWithLike() {
         <Text color={'blue.500'}>Gallery</Text>
       </chakra.h1>
     <Center py={6}>
-       
+       <Box direction={{ base: 'column', sm: 'row' }} pb={'5px'} py={'5px'} px={'5px'}>
       <Box
         w="xs"
         rounded={'sm'}
@@ -39,7 +39,7 @@ export default function PostWithLike() {
         bg="white"
         border={'1px'}
         borderColor="black"
-        boxShadow={useColorModeValue('6px 6px 0 black', '6px 6px 0 cyan')}>
+        boxShadow={useColorModeValue('6px 6px 0 black', '6px 6px 0 cyan')} >
         <Box h={'200px'} borderBottom={'1px'} borderColor="black">
           <Img
             src={
@@ -221,7 +221,7 @@ export default function PostWithLike() {
           </Flex>
         </HStack>
       </Box>
-      
+      </Box>
     </Center>
     </Container>
   )
