@@ -68,7 +68,8 @@ export default function Carousel() {
         onClick={() => slider?.slickPrev()}>
         <BiLeftArrowAlt />
       </IconButton>
-      {/* Right Icon */}<Text>Caption
+      {/* Right Icon */}
+      {/* <Text>Caption */}
       <IconButton
         aria-label="right-arrow"
         colorScheme="messenger"
@@ -81,7 +82,7 @@ export default function Carousel() {
         onClick={() => slider?.slickNext()}>
         <BiRightArrowAlt />
       </IconButton>  
-         </Text>
+         {/* </Text> */}
       {/* Slider */}
       <Slider {...settings} ref={(slider) => setSlider(slider)}
         >

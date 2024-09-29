@@ -7,12 +7,12 @@ import { Box,
   } from '@chakra-ui/react'
 
 const images = [
-  {url:'../../../children.jpg' , title: 'children'}, // Replace with your actual image URLs
+  {url:'../../../career 4.jfif' , title: 'counselling'}, // Replace with your actual image URLs
   {url:'../../../children1.jpg' , title: 'children'},
-  {url:'../../../children.jpg' , title: 'children'},
-  {url:'../../../children1.jpg' , title: 'children'},
-  {url:'../../../children.jpg' , title: 'children'},
-  {url:'../../../children1.jpg' , title: 'children'}
+  {url:'../../../children.jpg' , title: 'Enlightening'},
+  {url:'../../../child 1 to 1.jfif' , title: 'Guiding'},
+  {url:'../../../carrerr 1.jfif' , title: 'Career Counselling'},
+  {url:'../../../adoloscent group.jfif' , title: 'Adoloscent group'}
 ]
 
 export default function ImageGallery() {
