@@ -29,7 +29,7 @@ export default function PostWithLike() {
         <Text color={'blue.500'}>Gallery</Text>
       </chakra.h1>
     <Center py={6}>
-       <Box direction={{ base: 'column', sm: 'row' }} pb={'5px'} py={'5px'} px={'5px'}>
+       <Box  pb={'5px'} py={'5px'} px={'5px'} display={{base:"column" , sm: 'row'}}>
       <Box
         w="xs"
         rounded={'sm'}
