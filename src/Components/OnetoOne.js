@@ -48,11 +48,11 @@ Improve overall emotional well-being with Mission 100K’s 1:1 personalized coun
   borderColor="grey.100" 
   boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
+       height={{ base: "150px", md: "200px", lg:"200px" }} 
+       width={{ base: "150px", md: "200px", lg: "200px" }}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
 
-       <Text py={'5px'} fontSize={{ base: "12px", md: "16px", lg: "18px" }}>
+       <Text py={'5px'} fontSize={{ base: "12px", md: "16px", lg: "18px" }}fontWeight={'700'} >
        100% confidential & secure
 
 
@@ -62,10 +62,10 @@ Improve overall emotional well-being with Mission 100K’s 1:1 personalized coun
   borderColor="grey.100" 
   boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
+       height={{ base: "150px", md: "200px", lg: "200px" }} 
+       width={{ base: "150px", md: "200px", lg: "200px"}}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
-       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}> 99.9% uptime
+       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}fontWeight={'700'}> 99.9% uptime
        </Text></Box>
 
        <Box borderRadius={'50%'} bg={'blue.100'}  borderBottom="5px solid" 
@@ -73,10 +73,10 @@ Improve overall emotional well-being with Mission 100K’s 1:1 personalized coun
   borderColor="grey.100" 
   boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
+       height={{ base: "150px", md: "200px", lg: "200px" }} 
+       width={{ base: "150px", md: "200px", lg: "200px" }}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
-        <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>Ease of access
+        <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}fontWeight={'700'}>Ease of access
         </Text></Box>
 </Flex>
 <Flex
@@ -90,10 +90,10 @@ Improve overall emotional well-being with Mission 100K’s 1:1 personalized coun
   borderColor="grey.100" 
   boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
+       height={{ base: "150px", md: "200px", lg: "200px" }} 
+       width={{ base: "150px", md: "200px", lg: "200px" }}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
-          <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>Trust & Integrity
+          <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}fontWeight={'700'}>Trust & Integrity
           </Text></Box>
 
           <Box borderRadius={'50%'} bg={'blue.100'}  borderBottom="5px solid" 
@@ -101,29 +101,29 @@ Improve overall emotional well-being with Mission 100K’s 1:1 personalized coun
   borderColor="grey.100" 
   boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
+       height={{ base: "150px", md: "200px", lg: "200px" }} 
+       width={{ base: "150px", md: "200px", lg: "200px"}}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
-       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>Built with empathy   </Text></Box>
+       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}fontWeight={'700'}>Built with empathy   </Text></Box>
        <Box borderRadius={'50%'} bg={'blue.100'}  borderBottom="5px solid" 
   borderRight="5px solid" 
   borderColor="grey.100" 
   boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
+       height={{ base: "150px", md: "200px", lg: "200px" }} 
+       width={{ base: "150px", md: "200px", lg: "200px" }}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
-       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>  Inclusive    </Text></Box>
+       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}fontWeight={'700'}>  Inclusive    </Text></Box>
 
        <Box borderRadius={'50%'} bg={'blue.100'} borderBottom="5px solid" 
   borderRight="5px solid" 
   borderColor="grey.100" 
   boxShadow="2px 2px 2px 2px"  
        textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
+       height={{ base: "150px", md: "200px", lg: "200px" }} 
+       width={{ base: "150px", md: "200px", lg: "200px" }}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
-       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>     Unbiased           </Text></Box>
+       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}fontWeight={'700'}>     Unbiased           </Text></Box>
 
        <Box borderRadius={'50%'} bg={'blue.100'}  borderBottom="5px solid" 
   borderRight="5px solid" 
@@ -143,12 +143,12 @@ Improve overall emotional well-being with Mission 100K’s 1:1 personalized coun
 
 
       </Text>
-      <Box borderRadius={'50%'} bg={'blue.100'}  
+      <Box borderRadius={'50%'} bg={'orange.100'}  
        textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
+       height={{ base: "150px", md: "200px", lg: "200px" }} 
+       width={{ base: "150px", md: "200px", lg: "200px" }}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
-       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>  Depression   </Text></Box>
+       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}fontWeight={'700'}>  Depression   </Text></Box>
 
       <Text fontSize="2xl" fontWeight="bold" mb={4}>
       One in 20 Indians suffers from depression
@@ -201,12 +201,12 @@ Signs to look out for
        
       </UnorderedList>
     </Box>
-    <Box borderRadius={'50%'} bg={'blue.100'}  
+    <Box borderRadius={'50%'} bg={'red.100'}  
        textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
+       height={{ base: "150px", md: "200px", lg: "200px" }} 
+       width={{ base: "150px", md: "200px", lg: "200px" }}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
-       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>  Anxiety  </Text></Box>
+       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}fontWeight={'700'}>  Anxiety  </Text></Box>
        <Text fontSize="2xl" fontWeight="bold" mb={4}>
        3.5% of India's population has an anxiety-related disorder
 

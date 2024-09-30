@@ -30,7 +30,7 @@ const OfferCard = ({ imageSrc, title }) => {
   return (
     <Box
       w={"full"}
-      maxW={"600px"}
+      maxW={"300px"}
       p={2}
       // boxShadow={'md'}
       // borderRadius="md"
@@ -197,7 +197,7 @@ export default function BasicStatistics() {
           description={"of mental health conditions begin by age 14."}
         />
         <Card
-          number={"-60%"}
+          number={"60%"}
           heading={"National Center for School Mental Health, 2020"}
           description={
             "Students who receive school-based mental health support"
@@ -252,45 +252,45 @@ export default function BasicStatistics() {
       </Heading>
       <Flex flexWrap="wrap" gridGap={8} justify="center">
         <OfferCard
-          imageSrc="https://via.placeholder.com/100"
+          imageSrc="../../../honor.svg"
           title="One-on-one counseling sessions for personal and academic support."
         />
         <OfferCard
-          imageSrc="https://via.placeholder.com/100"
+          imageSrc="../../../data.svg"
           title="Group workshops on stress management and emotional skills."
         />
         <OfferCard
-          imageSrc="https://via.placeholder.com/100"
+          imageSrc="../../../3.svg"
           title="Roleplays for practical problem-solving."
         />
         <OfferCard
-          imageSrc="https://via.placeholder.com/100"
+          imageSrc="../../../bookmark.svg"
           title="Assessments to evaluate emotional well-being and progress"
         />
         <OfferCard
-          imageSrc="https://via.placeholder.com/100"
+          imageSrc="../../../5.svg"
           title="Worksheets to help students set goals and track their growth."
         />
         <OfferCard
-          imageSrc="https://via.placeholder.com/100"
+          imageSrc="../../../6.svg"
           title="Reference materials for continuous learning.
 
 "
         />
         <OfferCard
-          imageSrc="https://via.placeholder.com/100"
+          imageSrc="../../../data.svg"
           title="Self-help tools to promote independent development."
         />
         <OfferCard
-          imageSrc="https://via.placeholder.com/100"
+          imageSrc="../../../dial.svg"
           title="Career counseling for future guidance."
         />
         <OfferCard
-          imageSrc="https://via.placeholder.com/100"
+          imageSrc="../../../gift.svg"
           title="Parental guidance sessions to support overall well-being."
         />
       </Flex>
-      <Stack minH={"100vh"} direction={{ base: "column", md: "row" }}>
+      <Stack minH={"100vh"} direction={{ base: "column", md: "row" }} margin={'30px'} padding={"30px"}>
         <Flex p={8} flex={1} align={"center"} justify={"center"}>
           <Stack spacing={6} w={"full"} maxW={"lg"}>
             <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
@@ -310,7 +310,7 @@ export default function BasicStatistics() {
            Schools/Colleges
             </Text> */}
               <br />{" "}
-              <Text color={"blue.400"} as={"span"}>
+              <Text color={"orange.300"} as={"span"}>
                 Early Childhood Well-being Support for pre-school
               </Text>{" "}
             </Heading>
@@ -318,7 +318,8 @@ export default function BasicStatistics() {
               We believe that emotional well-being starts early. Our program for
               preschool children focuses on creating a nurturing environment
               where kids can develop emotional skills, manage behaviour, and
-              build resilience.<br/> We also offer guidance for parents, equipping
+              build resilience.<br/></Text>
+              <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.700"}> We also offer guidance for parents, equipping
               them with the tools to support their child's emotional growth,
               ensuring a strong foundation for their overall well-being.
             </Text>
@@ -351,8 +352,8 @@ export default function BasicStatistics() {
             alt={"Login Image"}
             // objectFit={'cover'}
             marginTop={'40px'}
-            height={"650px"}
-            width={'600px'}
+            height={"550px"}
+            width={'500px'}
             src={"../../../girl happy.jfif"}
           />
         </Flex>

@@ -25,9 +25,9 @@ const Navbar = () => {
 
   return (
     <Box bg={useColorModeValue('white', 'gray.800')} px={4} boxShadow="sm">
-      <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+      <Flex h={16}  alignItems={'center'} justifyContent={'space-between'}>
         {/* Logo */}
-        <Image src={'../../../logo.png'} alt={'Logo'} boxSize={'50px'} objectFit={'cover'} />
+        <Image src={'../../../logo.png'} alt={'Logo'} height={'50px'} width={'170px'} objectFit={'cover'} />
 
         {/* Desktop Navigation */}
         <HStack as={'nav'} spacing={8} display={{ base: 'none', md: 'flex' }}>
@@ -100,12 +100,10 @@ const Navbar = () => {
             <Link as={RouterLink} to="/about" onClick={onClose}>
               About
             </Link>
-            <Link as={RouterLink} to="/gallery1" onClick={onClose}>
-              Gallery1
-            </Link>
+            
             <Menu>
               <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                Services
+              Services
               </MenuButton>
               <MenuList>
                 <MenuItem as={RouterLink} to="/schools" onClick={onClose}>
@@ -131,6 +129,9 @@ const Navbar = () => {
 
             <Link as={RouterLink} to="/contactus" onClick={onClose}>
               Contact
+            </Link>
+            <Link as={RouterLink} to="/contactus" onClick={onClose}>
+              Gallery1
             </Link>
             <Link as={RouterLink} to="/signin" onClick={onClose}>
               Sign In
