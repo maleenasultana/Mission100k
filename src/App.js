@@ -1,7 +1,7 @@
 import React  from 'react'
 import Navbar from "./Components/Navbar"
 import Carousal from "./Components/Carousal"
-// import Banner from "./Components/Banner"
+import Banner from "./Components/Banner"
 import About from "./Components/About"
 import Services from "./Components/Services"
 // import Gallery from "./Components/Gallery"
@@ -33,7 +33,7 @@ const App = () => {
     <Routes>
     <Route path="/about" element={<About/>} />
     {/* <Caption/> */}
-    <Route path="/" element={<Home/>} /> 
+    <Route path="/Banner" element={<Banner/>} /> 
     {/* <Banner/> */}
     <Route path="/schools" element={<Schools/>} />
     <Route path="/govtschools" element={<GovtSchools/>} />
@@ -53,6 +53,7 @@ const App = () => {
 
     </Routes>
    </Router>
+  
     </>
   )
 }
