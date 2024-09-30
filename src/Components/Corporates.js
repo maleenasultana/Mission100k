@@ -2,22 +2,52 @@
 
 import {
   Box,
-  chakra,
-  SimpleGrid,
-  Stat,
-  StatLabel,
-  StatNumber,
-  useColorModeValue,
-  Text,
-  Flex,
-  UnorderedList,
-  ListItem,
-  Stack,
   Button,
-  Link,
-  
+  Container,
+  Flex,
+  Heading,
+  Icon,
+  Stack,
+  Text,
+  useColorModeValue,
+  chakra,
+  ListIcon,ListItem,UnorderedList, Link,
 } from '@chakra-ui/react'
-
+import { FcAbout, FcAssistant, FcCollaboration, FcDonate, FcManager } from 'react-icons/fc'
+const Card = ({ heading, description, icon, href }) => {
+  return (
+   
+    <Box
+      maxW={{ base: 'full', md: '275px' }}
+      w={'full'}
+      
+      overflow="hidden"
+      p={5}>
+      <Stack align={'center'} spacing={2}>
+        <Flex
+          w={16}
+          h={16}
+          align={'center'}
+          justify={'center'}
+          color={'white'}
+          rounded={'full'}
+          bg={useColorModeValue('gray.100', 'gray.700')}>
+          {icon}
+        </Flex>
+        <Box mt={2}>
+          <Heading textAlign="center" size="md">{heading}</Heading>
+          <Text mt={1} fontSize={'sm'} textAlign={'center'}>
+            {description}
+          </Text>
+        </Box>
+        <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
+          Learn more
+        </Button>
+      </Stack>
+    
+    </Box>
+  )
+}
 
 export default function BasicStatistics() {
   return (
@@ -31,64 +61,43 @@ export default function BasicStatistics() {
           flexDirection="column"
           justifyContent="center"
           marginTop={{ base: '3', sm: '0' }}>
-      <Text>We help businesses create healthier workplaces by offering accessible, stigma-free mental health support. Our services aim to reduce stress, boost employee engagement, and improve overall satisfaction.
+      <Text fontFamily={'san-sarif'} fontSize={'x-large'} fontWeight={'700'} pb={'20px'}>We help businesses create healthier workplaces by offering accessible, stigma-free mental health support. Our services aim to reduce stress, boost employee engagement, and improve overall satisfaction.
 
 
 
 </Text></Box>
-<Flex
-      justify="center"
-      wrap="wrap" // Makes the circles wrap in smaller screens
-      gap={6} // Adds space between the circles
-      mt="20px"
-    >
-<Box borderRadius={'50%'} bg={'blue.100'}  
-       textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
-       pt={{ base: "40px", md: "60px", lg: "80px" }}>
-
-       <Text py={'5px'} fontSize={{ base: "12px", md: "16px", lg: "18px" }}>
-       57% of employees experience workplace stress, (Gallup, 2020).
-
-
-
-       </Text></Box>   
-       <Box borderRadius={'50%'} bg={'blue.100'}  
-       textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
-       pt={{ base: "40px", md: "60px", lg: "80px" }}>
-       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>Only 1 in 10 employees seek mental health support (Mental Health America, 2021).
-
-
-       </Text></Box>
-
-       <Box borderRadius={'50%'} bg={'blue.100'}  
-       textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
-       pt={{ base: "40px", md: "60px", lg: "80px" }}>
-        <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>40% of employees show no obvious signs of mental distress (World Health Organization, 2021).
-
-        </Text></Box>
-</Flex>
-<Flex
-      justify="center"
-      wrap="wrap" // Makes the circles wrap in smaller screens
-      gap={6} // Adds space between the circles
-      mt="20px"
-    >
-        <Box borderRadius={'50%'} bg={'blue.100'}  
-       textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
-       pt={{ base: "40px", md: "60px", lg: "80px" }}>
-          <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>Join us to create a mentally healthy workplace!
-
-          </Text></Box>
-
-      </Flex>
+<Flex flexWrap="wrap" gridGap={8} justify="center">
+          <Card
+            heading={'Gallup, 2020'}
+            icon={<Icon as={FcAssistant} w={25} h={15} />}
+            description={'57% of employees experience workplace stress, .'}
+            href={'#'}
+          />
+          <Card
+            heading={'Mental Health America, 2021'}
+            icon={<Icon as={FcCollaboration} w={10} h={10} />}
+            description={'Only 1 in 10 employees seek mental health support.'}
+            href={'#'}
+          />
+          <Card
+            heading={'World Health Organization, 2021'}
+            icon={<Icon as={FcDonate} w={10} h={10} />}
+            description={'40% of employees show no obvious signs of mental distress .'}
+            href={'#'}
+          />
+          <Card
+            heading={'Join us'}
+            icon={<Icon as={FcManager} w={10} h={10} />}
+            description={'Join us to create a mentally healthy workplace!'}
+            href={'#'}
+          />
+          {/* <Card
+            heading={'Heading'}
+            icon={<Icon as={FcAbout} w={10} h={10} />}
+            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
+            href={'#'}
+          /> */}
+        </Flex>
       <Box p={5}>
       <Text fontSize="2xl" fontWeight="bold" mb={4}>
       What we offer :

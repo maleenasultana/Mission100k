@@ -43,7 +43,10 @@ Improve overall emotional well-being with Mission 100K’s 1:1 personalized coun
       gap={6} // Adds space between the circles
       mt="20px"
     >
-<Box borderRadius={'50%'} bg={'blue.100'}  
+<Box borderRadius={'50%'} bg={'blue.100'}  borderBottom="5px solid" 
+  borderRight="5px solid" 
+  borderColor="grey.100" 
+  boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
        height={{ base: "150px", md: "200px", lg: "250px" }} 
        width={{ base: "150px", md: "200px", lg: "350px" }}
@@ -54,7 +57,10 @@ Improve overall emotional well-being with Mission 100K’s 1:1 personalized coun
 
 
        </Text></Box>   
-       <Box borderRadius={'50%'} bg={'blue.100'}  
+       <Box borderRadius={'50%'} bg={'blue.100'}  borderBottom="5px solid" 
+  borderRight="5px solid" 
+  borderColor="grey.100" 
+  boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
        height={{ base: "150px", md: "200px", lg: "250px" }} 
        width={{ base: "150px", md: "200px", lg: "350px" }}
@@ -62,7 +68,10 @@ Improve overall emotional well-being with Mission 100K’s 1:1 personalized coun
        <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}> 99.9% uptime
        </Text></Box>
 
-       <Box borderRadius={'50%'} bg={'blue.100'}  
+       <Box borderRadius={'50%'} bg={'blue.100'}  borderBottom="5px solid" 
+  borderRight="5px solid" 
+  borderColor="grey.100" 
+  boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
        height={{ base: "150px", md: "200px", lg: "250px" }} 
        width={{ base: "150px", md: "200px", lg: "350px" }}
@@ -76,7 +85,10 @@ Improve overall emotional well-being with Mission 100K’s 1:1 personalized coun
       gap={6} // Adds space between the circles
       mt="20px"
     >
-        <Box borderRadius={'50%'} bg={'blue.100'}  
+        <Box borderRadius={'50%'} bg={'blue.100'}  borderBottom="5px solid" 
+  borderRight="5px solid" 
+  borderColor="grey.100" 
+  boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
        height={{ base: "150px", md: "200px", lg: "250px" }} 
        width={{ base: "150px", md: "200px", lg: "350px" }}
@@ -84,32 +96,44 @@ Improve overall emotional well-being with Mission 100K’s 1:1 personalized coun
           <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>Trust & Integrity
           </Text></Box>
 
-          <Box borderRadius={'50%'} bg={'blue.100'}  
+          <Box borderRadius={'50%'} bg={'blue.100'}  borderBottom="5px solid" 
+  borderRight="5px solid" 
+  borderColor="grey.100" 
+  boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
        height={{ base: "150px", md: "200px", lg: "250px" }} 
        width={{ base: "150px", md: "200px", lg: "350px" }}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
        <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>Built with empathy   </Text></Box>
-       <Box borderRadius={'50%'} bg={'blue.100'}  
+       <Box borderRadius={'50%'} bg={'blue.100'}  borderBottom="5px solid" 
+  borderRight="5px solid" 
+  borderColor="grey.100" 
+  boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
        height={{ base: "150px", md: "200px", lg: "250px" }} 
        width={{ base: "150px", md: "200px", lg: "350px" }}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
        <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>  Inclusive    </Text></Box>
 
-       <Box borderRadius={'50%'} bg={'blue.100'}  
+       <Box borderRadius={'50%'} bg={'blue.100'} borderBottom="5px solid" 
+  borderRight="5px solid" 
+  borderColor="grey.100" 
+  boxShadow="2px 2px 2px 2px"  
        textAlign={'center'} mt={'20px'} 
        height={{ base: "150px", md: "200px", lg: "250px" }} 
        width={{ base: "150px", md: "200px", lg: "350px" }}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
        <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>     Unbiased           </Text></Box>
 
-       <Box borderRadius={'50%'} bg={'blue.100'}  
+       <Box borderRadius={'50%'} bg={'blue.100'}  borderBottom="5px solid" 
+  borderRight="5px solid" 
+  borderColor="grey.100" 
+  boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
+       height={{ base: "150px", md: "200px", lg: "200px" }} 
+       width={{ base: "150px", md: "200px", lg: "200px" }}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
-       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>  Practical Approach    </Text></Box>
+       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }} fontWeight={'700'}>  Practical Approach    </Text></Box>
 
 
       </Flex>

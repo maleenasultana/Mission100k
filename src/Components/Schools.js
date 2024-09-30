@@ -40,27 +40,37 @@ We aim to provide a healthy and balanced campus environment where students can t
       gap={6} // Adds space between the circles
       mt="20px"
     >
-<Box borderRadius={'50%'} bg={'blue.100'}  
+<Box borderRadius={'20%'} bg={'white'}  borderBottom="5px solid" 
+  borderRight="5px solid" 
+  borderColor="grey.100" 
+  boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
        height={{ base: "150px", md: "200px", lg: "250px" }} 
        width={{ base: "150px", md: "200px", lg: "350px" }}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
-       <Text py={'5px'} fontSize={{ base: "12px", md: "16px", lg: "18px" }}>50% of mental health conditions begin by age 14 (World Health Organization, 2021)
+       <Text py={'5px'} fontSize={{ base: "12px", md: "16px", lg: "18px" }}>
+  <Text as="span" color="red">50%</Text> of mental health conditions begin by age 14 (World Health Organization, 2021)
+</Text>
+</Box>   
+       <Box borderRadius={'20%'} bg={'white'}  borderBottom="5px solid" 
+  borderRight="5px solid" 
+  borderColor="grey.100" 
+  boxShadow="2px 2px 2px 2px" 
+       textAlign={'center'} mt={'20px'} 
+       height={{ base: "150px", md: "200px", lg: "250px" }} 
+       width={{ base: "150px", md: "200px", lg: "350px" }}
+       pt={{ base: "40px", md: "60px", lg: "80px" }}>
+       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>Students who receive school-based mental health support are <Text as="span" color="#08fb00">60%</Text> less likely to drop out (National Center for School Mental Health, 2020)</Text></Box>
 
-       </Text></Box>   
-       <Box borderRadius={'50%'} bg={'blue.100'}  
+       <Box borderRadius={'20%'} bg={'white'}  borderBottom="5px solid" 
+  borderRight="5px solid" 
+  borderColor="grey.100" 
+  boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
        height={{ base: "150px", md: "200px", lg: "250px" }} 
        width={{ base: "150px", md: "200px", lg: "350px" }}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
-       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>Students who receive school-based mental health support are 60% less likely to drop out (National Center for School Mental Health, 2020)</Text></Box>
-
-       <Box borderRadius={'50%'} bg={'blue.100'}  
-       textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
-       pt={{ base: "40px", md: "60px", lg: "80px" }}>
-        <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>Students receiving mental health support show a 13% increase in academic success (APA, 2019)</Text></Box>
+        <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>Students receiving mental health support show a <Text as="span" color="#08fb00">13%</Text>increase in academic success (APA, 2019)</Text></Box>
 </Flex>
 <Flex
       justify="center"
@@ -68,19 +78,25 @@ We aim to provide a healthy and balanced campus environment where students can t
       gap={6} // Adds space between the circles
       mt="20px"
     >
-        <Box borderRadius={'50%'} bg={'blue.100'}  
+        <Box borderRadius={'20%'} bg={'white'}  borderBottom="5px solid" 
+  borderRight="5px solid" 
+  borderColor="grey.100" 
+  boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
        height={{ base: "150px", md: "200px", lg: "250px" }} 
        width={{ base: "150px", md: "200px", lg: "350px" }}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
-          <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>1 in 7 adolescents experiences mental health disorders (WHO, 2021)</Text></Box>
+          <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}><Text as="span" color="red">1</Text> in 7 adolescents experiences mental health disorders (WHO, 2021)</Text></Box>
 
-          <Box borderRadius={'50%'} bg={'blue.100'}  
+          <Box borderRadius={'20%'}  bg={'white'} borderBottom="5px solid" 
+  borderRight="5px solid" 
+  borderColor="grey.100" 
+  boxShadow="2px 2px 2px 2px" 
        textAlign={'center'} mt={'20px'} 
        height={{ base: "150px", md: "200px", lg: "250px" }} 
        width={{ base: "150px", md: "200px", lg: "350px" }}
        pt={{ base: "40px", md: "60px", lg: "80px" }}>
-       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>Talk therapy reduces anxiety by 70% in treated individuals (National Institute for Health and Care Excellence, 2020)</Text></Box>
+       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>Talk therapy reduces anxiety by <Text as="span" color="#08fb00">70%</Text> in treated individuals (National Institute for Health and Care Excellence, 2020)</Text></Box>
       </Flex>
       <Box p={5}>
       <Text fontSize="2xl" fontWeight="bold" mb={4}>
