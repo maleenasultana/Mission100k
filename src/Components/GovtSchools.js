@@ -19,7 +19,7 @@ import {
 
 export default function BasicStatistics() {
   return (
-    <Box maxW="9xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }} borderRadius={'40%'} >
+    <Box maxW="6xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }} borderRadius={'40%'} >
       <chakra.h1 textAlign={'center'} fontSize={'4xl'} py={10} fontWeight={'bold'}>
       Empowerment and Wellbeing Initiative
 
@@ -29,7 +29,7 @@ export default function BasicStatistics() {
           flexDirection="column"
           justifyContent="center"
           marginTop={{ base: '3', sm: '0' }}>
-      <Text>We are committed to promoting emotional well-being for every student, regardless of their background. Our professional counselling services are designed to support students in orphanages and government schools, connecting them with experienced counsellors who guide stress management, personal challenges, and overall mental health.
+      <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>We are committed to promoting emotional well-being for every student, regardless of their background. Our professional counselling services are designed to support students in orphanages and government schools, connecting them with experienced counsellors who guide stress management, personal challenges, and overall mental health.
 
 Our mission is to ensure that all students have access to the well-being services they deserve, creating an inclusive environment where everyone can thrive emotionally, mentally, and academically.
 

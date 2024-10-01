@@ -21,8 +21,8 @@ import {
 
 export default function BasicStatistics() {
   return (
-    <Box maxW="9xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }} borderRadius={'40%'} >
-      <chakra.h1 textAlign={'center'} fontSize={'4xl'} py={10} fontWeight={'bold'}>
+    <Box maxW="6xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }} borderRadius={'40%'} >
+      <chakra.h1 textAlign={'center'} fontSize={'5xl'} py={10} fontWeight={'bold'}>
       personalized counselling service
 
 
@@ -32,7 +32,7 @@ export default function BasicStatistics() {
           flexDirection="column"
           justifyContent="center"
           marginTop={{ base: '3', sm: '0' }}>
-      <Text>At Mission 100K we aim to ensure that all emotional well-being services are provided at an affordable price by experts
+      <Text fontSize={{ base: "lg", lg: "x-large" }} color={"gray.700"}>At Mission 100K we aim to ensure that all emotional well-being services are provided at an affordable price by experts
 
 Improve overall emotional well-being with Mission 100K’s 1:1 personalized counselling service
 

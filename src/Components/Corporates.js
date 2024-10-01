@@ -22,6 +22,7 @@ const OfferCard = ({ imageSrc, title }) => {
     <Box
       w={'full'}
       maxW={'600px'}
+    
       p={2}
       // boxShadow={'md'}
       // borderRadius="md"
@@ -51,7 +52,7 @@ const OfferCard = ({ imageSrc, title }) => {
   )
 }
 
-const Card = ({ heading, description, number }) => {
+const Card = ({ heading, description, number,color }) => {
   return (
     
     <Box
@@ -67,7 +68,7 @@ const Card = ({ heading, description, number }) => {
           <Heading
             textAlign="center"
             size="2xl"
-            color="blue.400"
+            color={color}
             fontWeight="bold">
             {number}
           </Heading>
@@ -169,21 +170,25 @@ export default function BasicStatistics() {
           number={'57%'}
           heading={'Gallup, 2020'}
           description={'of employees experience workplace stress.'}
+          // color={'red.500'}
         />
         <Card
           number={'1 in 10'}
           heading={'Mental Health America, 2021'}
           description={'employees seek mental health support.'}
+          color={''}
         />
         <Card
           number={'40%'}
           heading={'World Health Organization, 2021'}
           description={'of employees show no obvious signs of mental distress.'}
+          color={''}
         />
         <Card
           number={'Join us'}
           heading={'Join us'}
           description={'to create a mentally healthy workplace!'}
+          color={''}
         />
       </Flex>
       <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} textAlign={'center'} pb={'30px'} pt={'30px'} margin={'90px'} marginTop={'40px'}>
@@ -209,31 +214,31 @@ export default function BasicStatistics() {
           </Heading>
       <Flex flexWrap="wrap" gridGap={8} justify="center">
         <OfferCard
-          imageSrc="https://via.placeholder.com/100"
+          imageSrc="../../../gift.svg"
           title="On-demand personalized counselling."
         />
         <OfferCard
-          imageSrc="https://via.placeholder.com/100"
+          imageSrc="../../../dial.svg"
           title="Interactive group sessions."
         />
         <OfferCard
-          imageSrc="https://via.placeholder.com/100"
+          imageSrc="../../../data.svg"
           title="Live webinars and expert-led workshops."
         />
         <OfferCard
-          imageSrc="https://via.placeholder.com/100"
+          imageSrc="../../../6.svg"
           title="Self-help resources."
         />
         <OfferCard
-          imageSrc="https://via.placeholder.com/100"
+          imageSrc="../../../5.svg"
           title="Expert assessments."
         />
         <OfferCard
-          imageSrc="https://via.placeholder.com/100"
+          imageSrc="../../../bookmark.svg"
           title="Worksheets for goal setting and progress tracking."
         />
         <OfferCard
-          imageSrc="https://via.placeholder.com/100"
+          imageSrc="../../../3.svg"
           title="Comprehensive reports and detailed insights."
         />
       </Flex>
@@ -349,10 +354,10 @@ export default function BasicStatistics() {
         </VStack>
          <Text color={'grey.100'}>
 <Text color={'blue.300'}>Thank You for Your Enquiry!</Text><br/>
-<Text color={'red.200'}>We appreciate your interest in our services.<br/>
+{/* <Text color={'red.200'}>We appreciate your interest in our services.<br/>
 Our team will review your request and get back <br/>
 to you shortly. If you require immediate assistance,<br/></Text>
-<Text color={'blue.400'}>please feel free to call us at xxxxxxxxxxx</Text>
+<Text color={'blue.400'}>please feel free to call us at xxxxxxxxxxx</Text> */}
 
 </Text>
       </form>

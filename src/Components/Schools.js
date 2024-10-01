@@ -22,16 +22,20 @@ import {
   Select,
   Textarea,
   VStack,
+  SimpleGrid,
 } from "@chakra-ui/react";
 
 import { useState } from "react";
+
+
+
 
 const OfferCard = ({ imageSrc, title }) => {
   return (
     <Box
       w={"full"}
       maxW={"300px"}
-      p={2}
+      p={5}
       // boxShadow={'md'}
       // borderRadius="md"
       display="flex"
@@ -59,23 +63,24 @@ const OfferCard = ({ imageSrc, title }) => {
   );
 };
 
-const Card = ({ heading, description, number }) => {
+const Card = ({ heading, description, number, color }) => {
   return (
+    <Box height={'350px'} width={'300px'} p={10} >
     <Box
       maxW={{ base: "full", md: "275px" }}
       w={"full"}
       overflow="hidden"
-      p={5}
+      p={4}
       borderRadius="50%"
       boxShadow="lg"
       bg={useColorModeValue("white", "gray.800")}
     >
-      <Stack align={"center"} spacing={2}>
-        <Box mt={2}>
+      <Stack align={"center"} spacing={1}>
+        <Box mt={4}>
           <Heading
             textAlign="center"
             size="2xl"
-            color="blue.400"
+            color={color}
             fontWeight="bold"
           >
             {number}
@@ -84,13 +89,19 @@ const Card = ({ heading, description, number }) => {
             {description}
           </Text>
         </Box>
-        <Text fontSize="sm" color="gray.500" textAlign="center">
+        
+      </Stack>
+    </Box>
+    <Box>
+      <Text fontSize="sm" color="gray.500" textAlign="center">
           *Source: {heading}
         </Text>
-      </Stack>
+    </Box>
     </Box>
   );
 };
+
+
 export default function BasicStatistics() {
   const [formData, setFormData] = useState({
     name: "",
@@ -99,7 +110,8 @@ export default function BasicStatistics() {
     service: "",
     additionalInfo: "",
   });
-
+ 
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -117,12 +129,14 @@ export default function BasicStatistics() {
     <Box
       maxW="9xl"
       mx={"auto"}
-      pt={5}
+      pt={1}
       px={{ base: 2, sm: 12, md: 17 }}
-      margin={"40px"}
+      margin={"30px"}
       borderRadius={"50%"}
     >
-      <Stack minH={"100vh"} direction={{ base: "column", md: "row" }}>
+      <Image src="../../../lo-removebg.png" height={'210px'} width={'350px'}/>
+      <Stack  direction={{ base: "column", md: "row" }}>
+        
         <Flex p={8} flex={1} align={"center"} justify={"center"}>
           <Stack spacing={6} w={"full"} maxW={"lg"}>
             <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
@@ -153,72 +167,72 @@ export default function BasicStatistics() {
               managing stress, academic pressure, behavioural challenges,
               personal challenges, and students' overall well-being.
             </Text>
-            <Text>
+            <Text fontSize={{ base: "14", lg: "24" }} color={"gray.700"}>
               We aim to provide a healthy and balanced campus environment where
               students can thrive emotionally, mentally, and academically.
             </Text>
-            <Box>
-              <Stack direction={{ base: "column", md: "row" }} spacing={6}>
-                {/* <Button
-              rounded={'full'}
-              bg={'blue.400'}
-              color={'white'}
-              _hover={{
-                bg: 'blue.500',
-              }}>
-             Ontime Projects Delivery
-            </Button> */}
+            {/* <Box 
+            column={{base:"1", md:"3"}} height={{ base: "150px", md: "200px", lg: "250px" }} 
+       width={{ base: "150px", md: "200px", lg: "350px" }}
+       pt={{ base: "10px", md: "20px", lg: "30px" }}>
+              <Stack direction={{ base: "column", md: "row" }} spacing={8} >
+             
               </Stack>
-            </Box>
+            </Box> */}
           </Stack>
         </Flex>
         <Flex flex={1}>
           <Image
             alt={"Login Image"}
-            // objectFit={'cover'}
-            height={"600px"}
+            objectFit={'cover'}
+            height={"400px"}
             width={"550px"}
-            src={"../../../corp 1.jfif"}
+            src={"../../../school-img.png"}
           />
         </Flex>
       </Stack>
-      <Flex
-        flexWrap="wrap"
-        gridGap={8}
+      <Flex  
         justify="center"
-        width={"250"}
-        height={"250"}
-        margin={"90px"}
-        spacing="8"
+        wrap="wrap" // Makes the circles wrap in smaller screens
+        gap={6} // Adds space between the circles
+        mt="20px"
+        // margin={"10px"}
+       
       >
         <Card
           number={"50%"}
           heading={"World Health Organization, 2021"}
           description={"of mental health conditions begin by age 14."}
+          color={'red.500'}
         />
         <Card
           number={"60%"}
           heading={"National Center for School Mental Health, 2020"}
           description={
             "Students who receive school-based mental health support"
-          }
+             }
+             color={'green.500'}
         />
         <Card
-          number={"+13%"}
+          number={"13%"}
           heading={"APA, 2019"}
           description={
             "Students receiving mental health support and increase in academic success"
           }
+          color={'green.500'}
         />
         <Card
           number={"1 in 7"}
           heading={"WHO, 2021)"}
-          description={"adolescents experiences mental health disorders"}
+          description={"adolescents experiences and  mental health disorders"}
+          color={'red.500'}
         />
+
         <Card
           number={"70%"}
           heading={"National Institute for Health and Care Excellence, 2020"}
           description={"Talk therapy reduces anxiety in treated individuals"}
+          color={'green.500'}
         />
       </Flex>
       <Heading
@@ -226,7 +240,7 @@ export default function BasicStatistics() {
         textAlign={"center"}
         pb={"20px"}
         pt={"100px"}
-        margin={"90px"}
+        margin={"30px"}
         marginTop={"40px"}
         
       >
@@ -290,7 +304,7 @@ export default function BasicStatistics() {
           title="Parental guidance sessions to support overall well-being."
         />
       </Flex>
-      <Stack minH={"100vh"} direction={{ base: "column", md: "row" }} margin={'30px'} padding={"30px"}>
+      <Stack  direction={{ base: "column", md: "row" }} margin={'30px'} padding={"30px"}>
         <Flex p={8} flex={1} align={"center"} justify={"center"}>
           <Stack spacing={6} w={"full"} maxW={"lg"}>
             <Heading fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}>
@@ -323,7 +337,7 @@ export default function BasicStatistics() {
               them with the tools to support their child's emotional growth,
               ensuring a strong foundation for their overall well-being.
             </Text>
-            <Stack direction={{ base: "column", md: "row" }} spacing={4}>
+            <Stack direction={{ base: "column", md: "row" }} spacing={8}>
               {/* <Button
                 rounded={"full"}
                 bg={"blue.400"}
@@ -352,9 +366,9 @@ export default function BasicStatistics() {
             alt={"Login Image"}
             // objectFit={'cover'}
             marginTop={'40px'}
-            height={"550px"}
+            height={"350px"}
             width={'500px'}
-            src={"../../../girl happy.jfif"}
+            src={"../../../2.jpg"}
           />
         </Flex>
       </Stack>
@@ -495,10 +509,12 @@ export default function BasicStatistics() {
               <Button type="submit" colorScheme="blue" width="full">
                 Submit
               </Button>
+              
             </VStack>
             <Text color={"grey.100"}>
               <Text color={"blue.300"}>Thank You for Your Enquiry!</Text>
               <br />
+{/*               
               <Text color={"red.200"}>
                 We appreciate your interest in our services.
                 <br />
@@ -508,7 +524,7 @@ export default function BasicStatistics() {
               </Text>
               <Text color={"blue.400"}>
                 please feel free to call us at xxxxxxxxxxx
-              </Text>
+              </Text> */}
             </Text>
           </form>
         </Box>

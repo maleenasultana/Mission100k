@@ -49,21 +49,22 @@ export default function BasicStatistics({ title, stat }) {
           flexDirection="column"
           justifyContent="center"
           marginTop={{ base: '3', sm: '0' }}>
-      <Text fontFamily={'sans-serif'} fontWeight={600}>Are you looking for an expert’s advice to collaborate with your institution’s vision and Mission?
+      <Text fontFamily={'sans-serif'} fontWeight={600} mx={'auto'} fontSize={'x-large'}>Are you looking for an expert’s advice to collaborate with your institution’s vision and Mission?
 
 </Text></Box>
-<Box>
+<Box maxW="lg" mx="auto" mt={10} p={6}  borderColor="gray.300" >
 <Image
               alt={'Hero Image'}
               fit={'cover'}
               align={'center'}
+              
               w={'100%'}
-              h={'100%'}
+              h={'90%'}
               src={
                 "../../../children.jpg"
               }
             />
-             <Text>Mission 100K is super excited to announce our collaboration with the top educators and marketing professionals to provide a sustainable revenue model for educational Institutions
+             <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>Mission 100K is super excited to announce our collaboration with the top educators and marketing professionals to provide a sustainable revenue model for educational Institutions
 
 While we strive towards impacting the lives of 100K people, our aim is also to empower the education institutions to be successful in their noble mission of providing the best quality education to the students
 
@@ -125,13 +126,13 @@ While we strive towards impacting the lives of 100K people, our aim is also to e
     <chakra.h1 textAlign={'center'} fontSize={'4xl'} py={10} fontWeight={'bold'}>
     Early Childhood Well-being Support for pre-school
       </chakra.h1>
-      <Text>We believe that emotional well-being starts early. Our program for preschool children focuses on creating a nurturing environment where kids can develop emotional skills, manage behaviour, and build resilience.
+      <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>We believe that emotional well-being starts early. Our program for preschool children focuses on creating a nurturing environment where kids can develop emotional skills, manage behaviour, and build resilience.
 We also offer guidance for parents, equipping them with the tools to support their child's emotional growth, ensuring a strong foundation for their overall well-being.
 </Text>
 
           
 
-    <Box maxW="7xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }}>
+    <Box maxW="6xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }}>
       <chakra.h1 textAlign={'center'} fontSize={'4xl'} py={10} fontWeight={'bold'}>
       Why choose us
       </chakra.h1>

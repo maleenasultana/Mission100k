@@ -10,7 +10,7 @@ import Testimonials from "./Testimonials"
 
 const Home = () => {
   return (
-    <Container maxW='1250px'>
+    <Container maxW='1350px' >
       <Carousal/>
       <chakra.h1 textAlign={'center'} fontSize={'4xl'} py={10} pb={2}fontWeight={'bold'}>
         <Text color={'green.700'} fontFamily="cursive,poppins">EMPOWERING MINDS, TRANSFORMING LIVES: YOUR JOURNEY TO LIFE SUCCESS STARTS HERE</Text>
