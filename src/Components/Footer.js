@@ -1,66 +1,155 @@
-'use client'
+'use client';
 
+import { PhoneIcon, EmailIcon } from '@chakra-ui/icons';
+
+import React from 'react';
 import {
   Box,
-  chakra,
   Container,
+  SimpleGrid,
   Stack,
   Text,
+  Flex,
+  Tag,
   useColorModeValue,
-  VisuallyHidden,
-} from '@chakra-ui/react'
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
-import { ReactNode } from 'react'
+} from '@chakra-ui/react';
 
-const SocialButton = ({ children, label, href }) => {
+// const Logo = props => {
+//   return (
+//     <img
+//       src="../../../full-logo.png"
+//       alt="logo"
+//       className="logo"
+//       height={"20px"}
+//       width={"20px"}
+//       viewBox="0 0 120 28"
+//       xmlns=""
+//       {...props}
+//     />
+//   );
+// };
+
+const ListHeader = ({ children }) => {
   return (
-    <chakra.button
-      bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-      rounded={'full'}
-      w={8}
-      h={8}
-      cursor={'pointer'}
-      as={'a'}
-      href={href}
-      display={'inline-flex'}
-      alignItems={'center'}
-      justifyContent={'center'}
-      transition={'background 0.3s ease'}
-      _hover={{
-        bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-      }}>
-      <VisuallyHidden>{label}</VisuallyHidden>
+    <Text fontWeight={'500'} fontSize={'lg'} mb={2}>
       {children}
-    </chakra.button>
-  )
-}
+    </Text>
+  );
+};
 
-export default function SmallWithSocial() {
+export default function LargeWithLogoCentered() {
   return (
     <Box
-      bg={useColorModeValue('gray.50', 'gray.900')}
-      color={useColorModeValue('gray.700', 'gray.200')}>
-      <Container
-        as={Stack}
-        maxW={'6xl'}
-        py={4}
-        direction={{ base: 'column', md: 'row' }}
-        spacing={4}
-        justify={{ base: 'center', md: 'space-between' }}
-        align={{ base: 'center', md: 'center' }}>
-        <Text>© 2024 All rights reserved</Text>
-        <Stack direction={'row'} spacing={6}>
-          <SocialButton label={'Twitter'} href={'#'}>
-            <FaTwitter />
-          </SocialButton>
-          <SocialButton label={'YouTube'} href={'#'}>
-            <FaYoutube />
-          </SocialButton>
-          <SocialButton label={'Instagram'} href={'#'}>
-            <FaInstagram />
-          </SocialButton>
-        </Stack>
+      bg={useColorModeValue('gray.100', 'grey.300')}
+      color={useColorModeValue('grey.200', 'grey.100')} p={'10px'} m={'30px'}
+    >
+      <Container as={Stack} maxW={'9xl'} py={10}>
+        <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={6}>
+          <Stack align={'flex-start'}>
+            <ListHeader>Product</ListHeader>
+            <Box as="a" href={'./about'}>
+              Overview
+            </Box>
+            <Stack direction={'row'} align={'center'} spacing={2}>
+              <Box as="a" href={'./services'}>
+                Features
+              </Box>
+              <Tag
+                size={'sm'}
+                bg={useColorModeValue('green.300', 'green.800')}
+                ml={2}
+                color={'white'}
+              >
+                New
+              </Tag>
+            </Stack>
+            <Box as="a" href={'#'}>
+              Tutorials
+            </Box>
+            <Box as="a" href={'#'}>
+              Pricing
+            </Box>
+          </Stack>
+          <Stack align={'flex-start'}>
+            <ListHeader>Company</ListHeader>
+
+            <Box as="a" href={'./enquiryform'}>
+              Careers
+            </Box>
+            <Box as="a" href={'./contactus'}>
+              Contact Us
+            </Box>
+            <Box as="a" href={'tel:+91'}>
+              <PhoneIcon /> Call Us
+            </Box>
+            <Box as="a" href={'mailto:'}>
+              <EmailIcon /> Email Us
+            </Box>
+          </Stack>
+          <Stack align={'flex-start'}>
+            <ListHeader>Legal</ListHeader>
+            <Box
+              as="a"
+              href={
+                'https://www.wonder.legal/in/modele/website-cookies-policy?msclkid=89102818a8081c0639a34dc16bce4f2e'
+              }
+            >
+              Cookies Policy
+            </Box>
+            <Box as="a" href={""}>
+              Privacy Policy
+            </Box>
+            <Box as="a" href={'#'}>
+              Terms of Service
+            </Box>
+          </Stack>
+          <Stack align={'flex-start'}>
+            <ListHeader>Follow Us</ListHeader>
+            <Box
+              as="a"
+              href={
+                'https://www.bing.com/ck/a?!&&p=583db211f445a4c6JmltdHM9MTcwODczMjgwMCZpZ3VpZD0xZWZiNTM3Zi02OWFhLTY4ZTEtM2YzMC00MDEwNjhmNzY5ZjUmaW5zaWQ9NTIyNQ&ptn=3&ver=2&hsh=3&fclid=1efb537f-69aa-68e1-3f30-401068f769f5&psq=facebook&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLw&ntb=1'
+              }
+            >
+              Facebook
+            </Box>
+            <Box as="a" href={'https://twitter.com/home'}>
+              Twitter
+            </Box>
+
+            <Box as="a" href={'https://instagram.com/'}>
+              Instagram
+            </Box>
+            <Box as="a" href={'https://linkedin.com'}>
+              LinkedIn
+            </Box>
+          </Stack>
+        </SimpleGrid>
       </Container>
+      <Box py={1}>
+        {/* <Flex
+          align={'center'}
+          _before={{
+            content: '""',
+            borderBottom: '1px solid',
+            borderColor: useColorModeValue('gray.200', 'gray.700'),
+            flexGrow: 1,
+            mr: 8,
+          }}
+          _after={{
+            content: '""',
+            borderBottom: '1px solid',
+            borderColor: useColorModeValue('gray.200', 'gray.700'),
+            flexGrow: 1,
+            ml: 8,
+          }}
+        >
+          <Logo />
+        </Flex> */}
+        <Text pt={6} fontSize={'sm'} textAlign={'center'}>
+          Copyrights © 2024. All rights reserved
+        </Text>
+      </Box>
     </Box>
-  )
+  );
 }

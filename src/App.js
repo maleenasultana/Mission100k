@@ -24,6 +24,7 @@ import OnetoOne from "./Components/OnetoOne"
 import CareerCounselling from "./Components/CareerCounselling"
 import Home from "./Components/Home"
 import Psychometrictest from "./Components/Psychometrictest"
+import Testimonials from "./Components/Testimonials"
 const App = () => {
   return (
     <>
@@ -51,6 +52,7 @@ const App = () => {
     <Route path="/careercounselling" element={<CareerCounselling/>}/>
     <Route path="/psychometrictest" element={<Psychometrictest/>}/>
     <Route path="/carousal" element={<Carousal/>} />
+    <Route path="/testimonials" element={<Testimonials/>} />
 
     </Routes>
    </Router>

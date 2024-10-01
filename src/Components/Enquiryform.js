@@ -96,14 +96,34 @@ export default function EnquiryForm() {
             Submit
           </Button>
         </VStack>
-         <Text color={'grey.100'}>
+        <Text color={'grey.100'}>
 <Text color={'blue.300'}>Thank You for Your Enquiry!</Text><br/>
-<Text color={'red.200'}>We appreciate your interest in our services.<br/>
-Our team will review your request and get back <br/>
-to you shortly. If you require immediate assistance,<br/></Text>
-<Text color={'blue.400'}>please feel free to call us at xxxxxxxxxxx</Text>
 
 </Text>
+{/* hidden text */}
+
+{/* <Box position="relative" display="inline-block">
+        <Box
+        position="absolute"
+        bottom="100%" // Position above the trigger box
+        left="50%"
+        transform="translateX(-50%)"
+        bg="gray.100"
+        color="blue.300"
+        p={2}
+        borderRadius="md"
+        whiteSpace="nowrap"
+        opacity={0}
+        transition="opacity 0.2s"
+        _groupHover={{ opacity: 1 }} // Shows text when the parent is hovered
+        _hover={{ opacity: 1 }} // Ensure it stays visible on hover
+      >
+       We appreciate your interest in our services.<br/>
+Our team will review your request and get back <br/>
+to you shortly. If you require immediate assistance,
+please feel free to call us at xxxxxxxxxxx
+      </Box>
+         </Box> */}
       </form>
      
     </Box>

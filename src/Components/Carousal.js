@@ -1,158 +1,82 @@
  'use client';
 
-// import React from 'react';
-// import Slider from 'react-slick';
-// import { Box, Text, chakra, keyframes, useColorModeValue } from '@chakra-ui/react';
 
-// // Animation for the letter "E"
-// const bounce = keyframes`
-//   0%, 100% {
-//     transform: translateY(0);
-//   }
-//   50% {
-//     transform: translateY(-10px);
-//   }
-// `;
+import { useState, useEffect } from "react";
+import { Box, IconButton, Image, Button, Flex } from "@chakra-ui/react";
+import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
-// const settings = {
-//   dots: true,
-//   infinite: true,
-//   speed: 500,
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   autoplay: true,
-//   autoplaySpeed: 3000,
-// };
+const images = [
+  { src: "../../../1.png", alt: "First Slide" },
+  { src: "../../../2.png", alt: "Second Slide" },
+  { src: "../../../3.png", alt: "Third Slide" },
+];
 
-// const Carousel = () => {
-//   return (
-//     <Box maxW="100%" mx="auto" mt={10} height="400px" position="relative">
-//       <Slider {...settings}>
-//         {/* Slide 1 - Enlighten */}
-//         <Box
-//           height="400px"
-//           bgGradient="linear(to-r, orange.400, yellow.400)"
-//           display="flex"
-//           alignItems="center"
-//           justifyContent="center"
-//         >
-//           <Text fontSize="6xl" fontWeight="bold" color="white">
-//             <chakra.span
-//               animation={`${bounce} 2s infinite`}
-//               display="inline-block"
-//               mr={2}
-//             >
-//               E
-//             </chakra.span>
-//             nlighten
-//           </Text>
-//         </Box>
+const Carousel = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const intervalTimes = [2000, 4000, 6000]; // Intervals for each slide in ms
 
-//         {/* Slide 2 - Enhance */}
-//         <Box
-//           height="400px"
-//           bgGradient="linear(to-r, blue.400, teal.400)"
-//           display="flex"
-//           alignItems="center"
-//           justifyContent="center"
-//         >
-//           <Text fontSize="6xl" fontWeight="bold" color="white">
-//             <chakra.span
-//               animation={`${bounce} 2s infinite`}
-//               display="inline-block"
-//               mr={2}
-//             >
-//               E
-//             </chakra.span>
-//             nhance
-//           </Text>
-//         </Box>
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+    }, intervalTimes[currentSlide]);
 
-//         {/* Slide 3 - Empower */}
-//         <Box
-//           height="400px"
-//           bgGradient="linear(to-r, purple.400, pink.400)"
-//           display="flex"
-//           alignItems="center"
-//           justifyContent="center"
-//         >
-//           <Text fontSize="6xl" fontWeight="bold" color="white">
-//             <chakra.span
-//               animation={`${bounce} 2s infinite`}
-//               display="inline-block"
-//               mr={2}
-//             >
-//               E
-//             </chakra.span>
-//             mpower
-//           </Text>
-//         </Box>
-//       </Slider>
-      
-//     </Box>
-//   );
-// };
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [currentSlide]);
 
-// export default Carousel;
+  const handlePrev = () => {
+    setCurrentSlide((prevSlide) => (prevSlide === 0 ? images.length - 1 : prevSlide - 1));
+  };
 
+  const handleNext = () => {
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
+  };
 
-import React from 'react';
+  const handleIndicatorClick = (index) => {
+    setCurrentSlide(index);
+  };
 
-import { Flex,Box, Text, VStack, useBreakpointValue } from '@chakra-ui/react';
-
-import Footer from "./Footer";
-
-
-export default function WithVideoBackground() {
   return (
-    <>
-   
-    <Flex
-      w={'full'}
-      h={'400px'}
-      position="relative"
-      overflow="hidden"
-      marginTop={1}
-    >
-      <video
-        autoPlay
-        loop
-        muted
-        style={{
-          position: 'absolute',
-          width: '100%',
-          height: '400px',
-          objectFit: 'fill',
-          zIndex: -1,
-        }}
-      >
-        <source src="/3Es.mp4" type="video/mp4" />
-        
-      </video>
-      <VStack
-        w={'full'}
-        justify={'center'}
-        px={useBreakpointValue({ base: 2, md: 4 })}
-        bgGradient={'linear(to-r, blackAlpha.600, transparent)'}
-      >
-        <VStack maxW={'2xl'} align={'flex-start'} spacing={6}>
-          <Text
-            color={'white'}
-            fontWeight={700}
-            lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}
-          >
-            {/* Your content here */}
-          </Text>
-          <Flex direction={'row'}>
-          
+    <Box position="relative" width="full" overflow="hidden">
+      <Image src={images[currentSlide].src} alt={images[currentSlide].alt} width="full" height="auto" />
 
-          </Flex>
-        </VStack>
-      </VStack>
-    </Flex> 
-    <Box>
+      {/* Previous button */}
+      {/* <IconButton
+        position="absolute"
+        top="50%"
+        left="10px"
+        transform="translateY(-50%)"
+        aria-label="Previous Slide"
+        icon={<ChevronLeftIcon />}
+        onClick={handlePrev}
+      /> */}
+
+      {/* Next button */}
+      {/* <IconButton
+        position="absolute"
+        top="50%"
+        right="10px"
+        transform="translateY(-50%)"
+        aria-label="Next Slide"
+        icon={<ChevronRightIcon />}
+        onClick={handleNext}
+      /> */}
+
+      {/* Indicator Dots */}
+      <Flex justify="center" mt={4}>
+        {images.map((_, index) => (
+          <Button
+            key={index}
+            onClick={() => handleIndicatorClick(index)}
+            size="sm"
+            borderRadius="50%"
+            mx={1}
+            bg={currentSlide === index ? "blue.500" : "gray.300"}
+            aria-label={`Slide ${index + 1}`}
+          />
+        ))}
+      </Flex>
     </Box>
-    </>
   );
-}
+};
+
+export default Carousel;
