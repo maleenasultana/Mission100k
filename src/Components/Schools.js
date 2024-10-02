@@ -82,6 +82,7 @@ const Card = ({ heading, description, number, color }) => {
             size="2xl"
             color={color}
             fontWeight="bold"
+            font-family= "Exo, sans-serif"
           >
             {number}
           </Heading>

@@ -20,9 +20,8 @@ import {
 export default function BasicStatistics() {
   return (
     <Box maxW="6xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }} borderRadius={'40%'} >
-      <chakra.h1 textAlign={'center'} fontSize={'4xl'} py={10} fontWeight={'bold'}>
-      Empowerment and Wellbeing Initiative
-
+      <chakra.h1 textAlign={'center'} fontSize={'4xl'} py={10} pb={2}fontWeight={'bold'}>
+        <Text color={'blue.500'} fontFamily="Poppins">Employment and Well-being initiative</Text>
       </chakra.h1>
       <Box display="flex"
           flex="1"

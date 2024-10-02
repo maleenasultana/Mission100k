@@ -37,8 +37,8 @@ function StatsCard({ title, stat, bgColor, gradient,text }) {
       <StatNumber
        fontSize={['32px',"22px","28px", "36px"]}
         fontWeight={'extrabold'}
-        fontFamily="Amaranth, sans-serif"
-      bgGradient="linear(to-r, red, blue, green)" // Multicolored gradient
+        fontFamily="Abril Fatface, serif"
+      bgGradient="linear(to-r, blue.500, green)" // Multicolored gradient
       bgClip="text" // Applies the gradient only to the text
       textFillColor="transparent" 
       >
@@ -72,7 +72,7 @@ export default function BasicStatistics() {
         textAlign={"center"}
         fontSize={"4xl"}
         py={8}
-        fontWeight={"bold"}
+        fontWeight={"extrabold"}
         fontFamily="Amaranth, sans-serif"
       >
         <Text color={"blue.500"}>Our Services</Text>

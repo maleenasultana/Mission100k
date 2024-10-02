@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.exo-{
+  font-family: "Exo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.yatra-one-regular {
+  font-family: "Yatra One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}

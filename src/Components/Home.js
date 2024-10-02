@@ -14,7 +14,7 @@ const Home = () => {
     <Container maxW='1350px' >
       <Carousal display={'auto'}/>
       <chakra.h1 textAlign={'center'} fontSize={'4xl'} py={10} pb={2}fontWeight={'bold'}>
-        <Text color={'green.700'} fontFamily="playfair display">EMPOWERING MINDS, TRANSFORMING LIVES: YOUR JOURNEY TO LIFE SUCCESS STARTS HERE</Text>
+        <Text color={'green.700'}  font-family= "Yatra One, system-ui">EMPOWERING MINDS, TRANSFORMING LIVES: YOUR JOURNEY TO LIFE SUCCESS STARTS HERE</Text>
       </chakra.h1>
       {/* <Image fontSize={ '4xl'} src="../../../Add a heading.png" alt="... " height="200" width="full" /> */}
       <Services/> 
