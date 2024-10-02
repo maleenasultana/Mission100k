@@ -110,7 +110,7 @@ export default function BasicStatistics() {
           />
         </Link>
       </SimpleGrid>
-      <SimpleGrid columns={{ base: 1, md: 3, sm:"2" }} spacing={{ base: 5, lg: 8 }} py={"15px"}>
+      <SimpleGrid columns={{ base: 1, md: 3, sm:"2" }} spacing={{ base: 8, lg: 5 }} py={"25px"}>
         <Link href="../careercounselling">
           <StatsCard
             title={"CAREER COUNSELLING"}
