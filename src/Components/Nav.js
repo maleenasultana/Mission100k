@@ -127,10 +127,10 @@ const Navbar = () => {
               </MenuList>
             </Menu>
 
-            <Link as={RouterLink} to="/contactus" onClick={onClose}>
-              Contact
+            <Link as={RouterLink} to="/psychometrictest" onClick={onClose}>
+             Psychometric test
             </Link>
-            <Link as={RouterLink} to="/contactus" onClick={onClose}>
+            <Link as={RouterLink} to="/gallery1" onClick={onClose}>
               Gallery1
             </Link>
             <Link as={RouterLink} to="/signin" onClick={onClose}>
