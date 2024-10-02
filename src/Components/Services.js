@@ -13,6 +13,7 @@ import {
 
 function StatsCard({ title, stat, bgColor, gradient,text }) {
   return (
+    
     <Stat
       px={{ base: 4, md: 8 , sm: 10}}
       py={"5"}
@@ -30,25 +31,30 @@ function StatsCard({ title, stat, bgColor, gradient,text }) {
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      height="200px"
+      height={"350px"}
+      width={"350px"}
     >
       <StatNumber
-        fontSize={{base:"2xl", md: "1xl", }}
-        fontWeight={"extrabold"}
+       fontSize={['32px',"22px","28px", "36px"]}
+        fontWeight={'extrabold'}
         fontFamily="Amaranth, sans-serif"
+      bgGradient="linear(to-r, red, blue, green)" // Multicolored gradient
+      bgClip="text" // Applies the gradient only to the text
+      textFillColor="transparent" 
       >
         {title}
       </StatNumber>
       <Text
         
         color="blue.500"
-        fontFamily="Amaranth, sans-serif"
+        fontFamily="Amaranth"
         fontWeight="bold"
-        fontSize={{base:"md", sm:"xl", md:"l"}} 
+        fontSize={['12px', '14px', '16px', '18px']}
+        display={'auto'}
       >
         {stat}
       </Text>
-      <Text fontSize={{base:"l", sm:"xl", md:"l"}} color="gray.500" textAlign="center"
+      <Text fontSize={[ '14px', '16px', '18px']} color="gray.500" textAlign="center"
     
       >
         {/* Placeholder for one-liner under each stat */}
@@ -60,22 +66,23 @@ function StatsCard({ title, stat, bgColor, gradient,text }) {
 
 export default function BasicStatistics() {
   return (
-    <Box maxW="7xl" mx={"auto"} pt={5} px={{ base: 2, sm: 12, md: 17 }}>
+    
+    <Box maxW="9xl" mx={"auto"} pt={5} px={{ base: 2, sm: 10, md: 15 }}>
       <chakra.h1
         textAlign={"center"}
         fontSize={"4xl"}
-        py={10}
+        py={8}
         fontWeight={"bold"}
         fontFamily="Amaranth, sans-serif"
       >
         <Text color={"blue.500"}>Our Services</Text>
       </chakra.h1>
-      <SimpleGrid columns={{ base: 1, sm: 2, md: 3 }} // Adjusting columns for small screens
-        spacing={{ base: 4, sm: 6, md: 8 }} // Spacing for different breakpoints
-        py={"15px"}>
+      <SimpleGrid columns={{ base: 1,  md: 3 }} // Adjusting columns for small screens
+        spacing={{ base: 4, sm: 5, md: 6 }} // Spacing for different breakpoints
+        py={"10px"}>
         <Link href="../schools">
           <StatsCard
-            title={"Schools/Colleges"}
+            title={"SCHOOLS /  COLLEGES"}
             stat={""}
             bgColor="pink.200"
             gradient="linear(to-r, pink.100, pink.200)"
@@ -86,7 +93,7 @@ export default function BasicStatistics() {
         
         <Link href="../corporates">
           <StatsCard
-            title={"Corporate/Workplaces"}
+            title={"CORPORATE / WORKPLACES"}
             stat={""}
             bgColor="blue.200"
             gradient="linear(to-r, blue.100, blue.200)"
@@ -95,7 +102,7 @@ export default function BasicStatistics() {
         </Link>
         <Link href="../govtschools">
           <StatsCard
-            title={"Orphanages/Govt Schools"}
+            title={"ORPHANAGES/ GOVTSCHOOLS"}
             stat={""}
             bgColor="green.200"
             gradient="linear(to-r, green.100, green.200)"
@@ -106,7 +113,7 @@ export default function BasicStatistics() {
       <SimpleGrid columns={{ base: 1, md: 3, sm:"2" }} spacing={{ base: 5, lg: 8 }} py={"15px"}>
         <Link href="../careercounselling">
           <StatsCard
-            title={"Career Counselling"}
+            title={"CAREER COUNSELLING"}
             stat={""}
             bgColor="yellow.200"
             gradient="linear(to-r, yellow.100, yellow.200)"
@@ -115,7 +122,7 @@ export default function BasicStatistics() {
         </Link>
         <Link href="../idp">
           <StatsCard
-            title={"Institution Development Programme"}
+            title={"INSTITUTION DEVELOPMENT PROGRAMME"}
             stat={""}
             bgColor="purple.200"
             gradient="linear(to-r, purple.100, purple.200)"
@@ -125,7 +132,7 @@ export default function BasicStatistics() {
         <Link href="../onetoone">
           <StatsCard
 
-            title={"1 : 1 Counselling"}
+            title={"1 : 1 COUNSELLING"}
             stat={""}
             bgColor="orange.200"
             gradient="linear(to-r, orange.100, orange.200)"

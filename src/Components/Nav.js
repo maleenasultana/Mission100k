@@ -64,8 +64,8 @@ const Navbar = () => {
             </MenuList>
           </Menu>
 
-          <Link as={RouterLink} to="/contactus" color="gray.700">
-            Contact
+          <Link as={RouterLink} to="/psychometrictest" color="gray.700">
+            Psychometric test
           </Link>
           <Link as={RouterLink} to="/signin" fontWeight={600}>
             Sign In

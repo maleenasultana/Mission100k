@@ -25,6 +25,7 @@ import CareerCounselling from "./Components/CareerCounselling"
 import Home from "./Components/Home"
 import Psychometrictest from "./Components/Psychometrictest"
 import Testimonials from "./Components/Testimonials"
+import Features from "./Components/Features"
 const App = () => {
   return (
     <>
@@ -53,6 +54,7 @@ const App = () => {
     <Route path="/psychometrictest" element={<Psychometrictest/>}/>
     <Route path="/carousal" element={<Carousal/>} />
     <Route path="/testimonials" element={<Testimonials/>} />
+    <Route path="/features" element={<Features/>} />
 
     </Routes>
    </Router>

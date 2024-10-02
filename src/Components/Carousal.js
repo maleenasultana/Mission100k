@@ -2,7 +2,7 @@
 
 
 import { useState, useEffect } from "react";
-import { Box, IconButton, Image, Button, Flex } from "@chakra-ui/react";
+import { Box, IconButton, Image, Button, Flex, Container } from "@chakra-ui/react";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 const images = [
@@ -13,7 +13,7 @@ const images = [
 
 const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const intervalTimes = [2000, 4000, 6000]; // Intervals for each slide in ms
+  const intervalTimes = [2000, 2000, 2000]; // Intervals for each slide in ms
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -36,8 +36,14 @@ const Carousel = () => {
   };
 
   return (
-    <Box position="relative" width="full" overflow="hidden">
-      <Image src={images[currentSlide].src} alt={images[currentSlide].alt} width="full" height="auto" />
+    <Container maxW={'9xl'}>
+    <Box  position="relative"
+            height={{ base: '300px', md: '500px', lg: '700px' }} // Responsive height
+            width={{ base: '100%', md: '85%', lg: '1150px' }} // Responsive width
+            overflow="hidden">
+      <Image src={images[currentSlide].src} alt={images[currentSlide].alt} 
+      maxW="100%"  // Ensures the image does not exceed the container width
+            height="auto" />
 
       {/* Previous button */}
       {/* <IconButton
@@ -76,6 +82,7 @@ const Carousel = () => {
         ))}
       </Flex>
     </Box>
+    </Container>
   );
 };
 

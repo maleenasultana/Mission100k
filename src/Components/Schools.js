@@ -171,14 +171,14 @@ export default function BasicStatistics() {
               We aim to provide a healthy and balanced campus environment where
               students can thrive emotionally, mentally, and academically.
             </Text>
-            {/* <Box 
+            <Box 
             column={{base:"1", md:"3"}} height={{ base: "150px", md: "200px", lg: "250px" }} 
        width={{ base: "150px", md: "200px", lg: "350px" }}
        pt={{ base: "10px", md: "20px", lg: "30px" }}>
               <Stack direction={{ base: "column", md: "row" }} spacing={8} >
              
               </Stack>
-            </Box> */}
+            </Box>
           </Stack>
         </Flex>
         <Flex flex={1}>
