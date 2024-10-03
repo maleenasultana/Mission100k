@@ -112,22 +112,22 @@ const Navbar = () => {
                 <MenuItem as={RouterLink} to="/corporates" onClick={onClose}>
                   Corporates/Workplaces
                 </MenuItem>
-                <MenuItem as={RouterLink} to="/govtschools" onClick={onClose}>
+                <MenuItem as={RouterLink} to="/" onClick={onClose}>
                   Orphanages/Govt Schools
                 </MenuItem>
-                <MenuItem as={RouterLink} to="/careercounselling" onClick={onClose}>
+                <MenuItem as={RouterLink} to="/" onClick={onClose}>
                   Career Counselling & Guidance
                 </MenuItem>
-                <MenuItem as={RouterLink} to="/idp" onClick={onClose}>
+                <MenuItem as={RouterLink} to="/" onClick={onClose}>
                   Institution Development Program
                 </MenuItem>
-                <MenuItem as={RouterLink} to="/onetoone" onClick={onClose}>
+                <MenuItem as={RouterLink} to="/" onClick={onClose}>
                   1:1 Counselling
                 </MenuItem>
               </MenuList>
             </Menu>
 
-            <Link as={RouterLink} to="/psychometrictest" onClick={onClose}>
+            <Link as={RouterLink} to="/" onClick={onClose}>
              Psychometric test
             </Link>
             <Link as={RouterLink} to="/gallery1" onClick={onClose}>

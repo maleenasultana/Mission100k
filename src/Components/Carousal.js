@@ -36,7 +36,7 @@ const Carousel = () => {
   };
 
   return (
-    <Container maxW={'9xl'}>
+    <Container maxW={'12xl'}>
     <Box  position="relative"
             height={{ base: '300px', md: '500px', lg: '700px' }} // Responsive height
             width={{ base: '100%', md: '85%', lg: '1150px' }} // Responsive width

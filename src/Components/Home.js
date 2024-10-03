@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Link, Text, chakra,Image } from '@chakra-ui/react'; // Import Container from Chakra UI
 // import Hero from './Hero'; // Correct the import path
 import Carousal from "./Carousal"
-import Services from "./Schools"
+import Services from "./Services"
 import Features from "./Features"
 import EnquiryForm from './Enquiryform';
 import Footer from "./Footer"
