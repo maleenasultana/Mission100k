@@ -40,7 +40,7 @@ export default function Carousel() {
   return (
     <HStack>
       <Stack>
-        <Box display="flex" justifyContent="center" alignItems="center" py="15px">
+        <Box display="flex" justifyContent="center" alignItems="center" >
           <Box
             position="relative"
             height={{ base: '300px', md: '500px', lg: '700px' }} // Responsive height

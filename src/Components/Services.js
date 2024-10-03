@@ -31,16 +31,17 @@ function StatsCard({ title, stat, bgColor, gradient,text }) {
       flexDirection="column"
       alignItems="center"
       justifyContent="center"
-      height={"350px"}
+      height={"250px"}
       width={"350px"}
     >
       <StatNumber
-       fontSize={['32px',"22px","28px", "36px"]}
+       fontSize={['22px',"20px","20px", "18px"]}
         fontWeight={'extrabold'}
         fontFamily="Abril Fatface, serif"
-      bgGradient="linear(to-r, blue.500, green)" // Multicolored gradient
-      bgClip="text" // Applies the gradient only to the text
-      textFillColor="transparent" 
+        textAlign={'center'}
+      // bgGradient="linear(to-r, blue.500, green)" // Multicolored gradient
+      // bgClip="text" // Applies the gradient only to the text
+      // textFillColor="transparent" 
       >
         {title}
       </StatNumber>
@@ -67,16 +68,15 @@ function StatsCard({ title, stat, bgColor, gradient,text }) {
 export default function BasicStatistics() {
   return (
     
-    <Box maxW="9xl" mx={"auto"} pt={5} px={{ base: 2, sm: 10, md: 15 }}>
-      <chakra.h1
+    <Box maxW="7xl" mx={"auto"} pt={5} px={{ base: 2, sm: 10, md: 15 }}>
+         <chakra.h1
         textAlign={"center"}
-        fontSize={"4xl"}
-        py={8}
-        fontWeight={"extrabold"}
+        fontSize={"2xl"}
+        py={3}
+        fontWeight={"bold"}
         fontFamily="Amaranth, sans-serif"
       >
-        <Text color={"blue.500"}>Our Services</Text>
-      </chakra.h1>
+        <Text color={"blue.500"}>Our services</Text> </chakra.h1>
       <SimpleGrid columns={{ base: 1,  md: 3 }} // Adjusting columns for small screens
         spacing={{ base: 4, sm: 5, md: 6 }} // Spacing for different breakpoints
         py={"10px"}>

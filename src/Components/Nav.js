@@ -24,22 +24,51 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box bg={useColorModeValue('white', 'gray.800')} px={4} boxShadow="sm">
-      <Flex h={16}  alignItems={'center'} justifyContent={'space-between'}>
+    <Box 
+      bg={useColorModeValue('rgba(255, 255, 255, 0.8)', 'rgba(50, 50, 50, 0.8)')} // Semi-transparent background for visibility
+      px={4} 
+      boxShadow="sm"
+      backgroundImage="url('../../../bg-nav.png')" // Replace with your image path
+      backgroundSize="cover" // Cover the entire navbar
+      backgroundPosition="center" // Center the image
+      zIndex={-1}
+    >
+      <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
         {/* Logo */}
-        <Image src={'../../../logo.png'} alt={'Logo'} height={'50px'} width={'170px'} objectFit={'cover'} />
+        <Image src={'../../../logo.png'}  alt={'Logo'} height={'50px'} width={'170px'} objectFit={'cover'} />
 
         {/* Desktop Navigation */}
-        <HStack as={'nav'} spacing={8} display={{ base: 'none', md: 'flex' }}>
-          <Link as={RouterLink} to="/" color="gray.700">
-            Home
-          </Link>
-          <Link as={RouterLink} to="/about" color="gray.700">
-            About
-          </Link>
+        <HStack as={'nav'} spacing={8} display={{ base: 'none', md: 'flex' }} >
+
+        <Button as={RouterLink} to="/" color="white" 
+        bg="transparent"
+        _hover={{
+          bg: "white", // Background color on hover
+          color: "black", // Text color on hover
+          border: "1px solid", // Optional border on hover
+          borderColor: "blue.500" // Border color on hover
+        }} 
+        >
+          Home
+          </Button>
+          <Button as={RouterLink} to="/about" color="white"   bg="transparent"
+        _hover={{
+          bg: "white", // Background color on hover
+          color: "black", // Text color on hover
+          border: "1px solid", // Optional border on hover
+          borderColor: "blue.500" // Border color on hover
+        }}>
+           About Us
+          </Button>
 
           <Menu>
-            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+            <MenuButton color="white" as={Button} rightIcon={<ChevronDownIcon />}  bg="transparent"
+        _hover={{
+          bg: "white", // Background color on hover
+          color: "black", // Text color on hover
+          border: "1px solid", // Optional border on hover
+          borderColor: "blue.500" // Border color on hover
+        }}>
               Services
             </MenuButton>
             <MenuList>
@@ -64,12 +93,18 @@ const Navbar = () => {
             </MenuList>
           </Menu>
 
-          <Link as={RouterLink} to="/psychometrictest" color="gray.700">
+        <Button as={RouterLink} to="/psychometrictest" color="white"  bg="transparent"
+        _hover={{
+          bg: "white", // Background color on hover
+          color: "black", // Text color on hover
+          border: "1px solid", // Optional border on hover
+          borderColor: "blue.500" // Border color on hover
+        }}>
             Psychometric test
-          </Link>
-          <Link as={RouterLink} to="/signin" fontWeight={600}>
+          </Button>
+          <Button as={RouterLink} to="/signin" fontWeight={600} >
             Sign In
-          </Link>
+          </Button>
           <Button
             as={RouterLink}
             to="/signup"
@@ -98,12 +133,12 @@ const Navbar = () => {
               Home
             </Link>
             <Link as={RouterLink} to="/about" onClick={onClose}>
-              About
+              About Us
             </Link>
             
             <Menu>
               <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-              Services
+                Services
               </MenuButton>
               <MenuList>
                 <MenuItem as={RouterLink} to="/schools" onClick={onClose}>
@@ -112,23 +147,23 @@ const Navbar = () => {
                 <MenuItem as={RouterLink} to="/corporates" onClick={onClose}>
                   Corporates/Workplaces
                 </MenuItem>
-                <MenuItem as={RouterLink} to="/" onClick={onClose}>
+                <MenuItem as={RouterLink} to="/govtschools" onClick={onClose}>
                   Orphanages/Govt Schools
                 </MenuItem>
-                <MenuItem as={RouterLink} to="/" onClick={onClose}>
+                <MenuItem as={RouterLink} to="/careercounselling" onClick={onClose}>
                   Career Counselling & Guidance
                 </MenuItem>
-                <MenuItem as={RouterLink} to="/" onClick={onClose}>
+                <MenuItem as={RouterLink} to="/idp" onClick={onClose}>
                   Institution Development Program
                 </MenuItem>
-                <MenuItem as={RouterLink} to="/" onClick={onClose}>
+                <MenuItem as={RouterLink} to="/onetoone" onClick={onClose}>
                   1:1 Counselling
                 </MenuItem>
               </MenuList>
             </Menu>
 
-            <Link as={RouterLink} to="/" onClick={onClose}>
-             Psychometric test
+            <Link as={RouterLink} to="/psychometrictest" onClick={onClose}>
+              Psychometric test
             </Link>
             <Link as={RouterLink} to="/gallery1" onClick={onClose}>
               Gallery1
@@ -153,6 +188,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-
-

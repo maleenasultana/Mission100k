@@ -91,7 +91,7 @@ const Testimonials = () => {
                   width="60px"
                 />
               </Flex>
-              <Text fontSize={{ base: 'xl', md: '2xl' }} textAlign={'center'} maxW={'3xl'} mb={6}>
+              <Text fontSize={{ base: 'l', md: 'xl' }} textAlign={'center'} maxW={'3xl'} mb={6}>
                 {testimonial.text}
               </Text>
               <Box textAlign={'center'}>

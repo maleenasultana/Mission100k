@@ -120,11 +120,11 @@ import {
 </Box>
         <Stack
           align={'center'}
-          spacing={{ base: 8, md: 10 }}
-          py={{ base: 20, md: 28 }}
+          spacing={{ base: 8, md: 6 }}
+          py={{ base: 10, md: 18 }}
           direction={{ base: 'column', md: 'row' }}>
             
-          <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+          <Stack flex={1} spacing={{ base: 5, md: 4 }} >
             <Heading
               lineHeight={1.1}
               fontWeight={600}
@@ -230,7 +230,8 @@ import {
             </Box>
           </Flex>
         </Stack>
-        <Flex flexWrap="wrap" gridGap={10} justify="center" pt={20} >
+
+        <Flex flexWrap="wrap" gridGap={16} justify="center" pt={30} bg={'green.100'} height={'700px'} >
         <Card
           number={"50%"}
           heading={"World Health Organization, 2021"}
@@ -292,11 +293,11 @@ import {
              SEO - Website
             </Text> */}
         <br />{" "}
-        <Text color={"blue.400"} as={"span"} textAlign={"center"} marginTop={'50px'} pt={'50px'}>
+        <Text color={"blue.400"} as={"span"} textAlign={"center"} marginTop={'50px'} pt={'10px'}>
           We offer a holistic approach to student well-being
         </Text>{" "}
       </Heading>
-      <Flex flexWrap="wrap" gridGap={16} py={15} justify="center" spacing={{base:"8", lg:"5"}}>
+      <Flex flexWrap="wrap" gridGap={16} py={20} justify="center" spacing={{base: 6, lg:8}}>
         <OfferCard 
           imageSrc="../../../honor.svg"
           title="One-on-one counseling sessions for personal and academic support."
@@ -339,7 +340,7 @@ import {
       <Stack
           align={'center'}
           spacing={{ base: 8, md: 10 }}
-          py={{ base: 20, md: 28 }}
+          py={{ base: 18, md: 25 }}
           direction={{ base: 'column', md: 'row' }}>
       <Stack flex={1} spacing={{ base: 5, md: 10 }}>
             <Heading
@@ -449,7 +450,7 @@ import {
         <Heading
           fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
           textAlign={"center"}
-          pt={"30px"}
+          pt={"20px"}
           marginTop={"40px"}
           marginBottom={"2px"}
         >

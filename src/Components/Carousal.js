@@ -36,10 +36,10 @@ const Carousel = () => {
   };
 
   return (
-    <Container maxW={'12xl'}>
+   
     <Box  position="relative"
-            height={{ base: '300px', md: '500px', lg: '700px' }} // Responsive height
-            width={{ base: '100%', md: '85%', lg: '1150px' }} // Responsive width
+            height={{ base: '300px', md: '500px', lg: '900px' }} // Responsive height
+            width={{ base: '100%', md: '85%', lg: '100vw' }} // Responsive width
             overflow="hidden">
       <Image src={images[currentSlide].src} alt={images[currentSlide].alt} 
       maxW="100%"  // Ensures the image does not exceed the container width
@@ -82,7 +82,7 @@ const Carousel = () => {
         ))}
       </Flex>
     </Box>
-    </Container>
+ 
   );
 };
 
