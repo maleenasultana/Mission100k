@@ -23,7 +23,7 @@ import {
     return (
       <Box height={'250px'} width={'300px'} p={10} >
       <Box
-        maxW={{ base: "full", md: "275px" }}
+        maxW={{ base: "full", md: "250px" }}
         w={"full"}
         overflow="hidden"
         p={4}
@@ -129,22 +129,6 @@ import {
               lineHeight={1.1}
               fontWeight={600}
               fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
-              {/* <Text
-                as={'span'}
-                position={'relative'}
-                _after={{
-                  content: "''",
-                  width: 'full',
-                  height: '30%',
-                  position: 'absolute',
-                  bottom: 1,
-                  left: 0,
-                  bg: 'red.400',
-                  zIndex: -1,
-                }}>
-                Write once,
-              </Text> */}
-              <br />
               <Text as={'span'} color={'blue.500'}>
               Student Wellbeing Program
               </Text>

@@ -21,7 +21,7 @@ const OfferCard = ({ imageSrc, title }) => {
   return (
     <Box
       w={'full'}
-      maxW={'600px'}
+      maxW={'350px'}
     
       p={2}
       // boxShadow={'md'}
@@ -39,8 +39,8 @@ const OfferCard = ({ imageSrc, title }) => {
         objectFit={'cover'}
         borderRadius="full"
         mr={6}
-        height={'20px'}
-        width={'20px'}
+        height={'50px'}
+        width={'50px'}
 
       />
 
@@ -109,7 +109,7 @@ export default function BasicStatistics() {
   };
   return (
     <Box maxW="9xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }} margin={'40px'} borderRadius={'50%'}>
-     <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
+     <Stack  direction={{ base: 'column', md: 'row' }}>
       <Flex p={8} flex={1} align={'center'} justify={'center'}>
         <Stack spacing={6} w={'full'} maxW={'lg'}>
           <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}>
@@ -157,10 +157,10 @@ export default function BasicStatistics() {
         <Image
           alt={'Login Image'}
           // objectFit={'cover'}
-          height={'450px'}
+          height={'350px'}
           width={'550px'}
           src={
-            '../../../carrerr 1.jfif'
+            '../../../corp.jpg'
           }
         />
       </Flex>
@@ -170,27 +170,29 @@ export default function BasicStatistics() {
           number={'57%'}
           heading={'Gallup, 2020'}
           description={'of employees experience workplace stress.'}
-          // color={'red.500'}
+           color={'red.500'}
         />
         <Card
           number={'1 in 10'}
           heading={'Mental Health America, 2021'}
           description={'employees seek mental health support.'}
-          color={''}
+          color={'red.500'}
         />
         <Card
           number={'40%'}
           heading={'World Health Organization, 2021'}
           description={'of employees show no obvious signs of mental distress.'}
-          color={''}
+          color={'red.500'}
         />
-        <Card
-          number={'Join us'}
-          heading={'Join us'}
-          description={'to create a mentally healthy workplace!'}
-          color={''}
-        />
+        
       </Flex>
+      <Text
+          textAlign={"center"}
+          fontSize="25px"
+          fontWeight="500"
+          color={"grey.500"}
+          fontFamily={"Exo, sans-serif"}
+        >Join us to create a mentally healthy workplace!</Text>
       <Heading fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }} textAlign={'center'} pb={'30px'} pt={'30px'} margin={'90px'} marginTop={'40px'}>
             {/* <Text
               as={'span'}

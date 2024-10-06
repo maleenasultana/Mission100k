@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import {
   Box,
@@ -12,21 +12,102 @@ import {
   Flex,
   UnorderedList,
   ListItem,
+  Image,
   Stack,
   Button,
   Heading,
-  Link,  FormControl,FormLabel, Input, Select, Textarea, VStack 
-} from '@chakra-ui/react'
-import { useState } from 'react';
+  Link,
+  FormControl,
+  FormLabel,
+  Input,
+  Select,
+  Textarea,
+  VStack,
+  Container,
+  Icon,
+} from "@chakra-ui/react";
 
+import { useState } from "react";
+
+const Card = ({ heading, description, icon, href,bgColor }) => {
+  return (
+    <Box
+      maxW={{ base: 'full', md: '250px' }}
+      w={'full'}
+      borderWidth="1px"
+      borderRadius="lg"
+      bg={bgColor}
+      overflow="hidden"
+      boxShadow={'revert'}
+      shadow={'revert-layer'}
+      _hover={{
+        transform: 'translateY(-5px)',
+        boxShadow: 'xl',
+        transition: 'all 0.3s ease-in-out',
+      }}
+      transition="all 0.3s ease-in-out"
+      textAlign="center"
+      role="group"
+      position={'relative'}
+
+     
+      p={5}>
+      <Stack align={'start'} spacing={2}>
+       
+        <Box mt={2}>
+          {/* <Heading size="md">{heading}</Heading> */}
+          <Text mt={1} fontSize={'sm'} fontFamily={'Exo, sans-serif'}fontWeight={600}>
+            {description}
+          </Text>
+        </Box>
+        {/* <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
+          Learn more
+        </Button> */}
+      </Stack>
+    </Box>
+  )
+}
+
+const OfferCard = ({ imageSrc, title }) => {
+  return (
+    <Box
+      w={"full"}
+      maxW={"300px"}
+      p={5}
+      py={5}
+      // boxShadow={'md'}
+      // borderRadius="md"
+      display="flex"
+      alignItems="center"
+      bg={useColorModeValue("white", "gray.800")}
+      height={"80px"} // Ensuring uniform height
+    >
+      {/* Image on the left side */}
+      <Image
+        src={imageSrc}
+        alt={title}
+        boxSize={"100px"}
+        objectFit={"cover"}
+        borderRadius="full"
+        mr={6}
+        height={"40px"}
+        width={"40px"}
+      />
+
+      {/* Text on the right side */}
+      <Box>
+        <Heading fontSize={"lg"}>{title}</Heading>
+      </Box>
+    </Box>
+  );
+};
 export default function BasicStatistics() {
-
   const [formData, setFormData] = useState({
-    name: '',
-    contactNumber: '',
-    email: '',
-    service: '',
-    additionalInfo: ''
+    name: "",
+    contactNumber: "",
+    email: "",
+    service: "",
+    additionalInfo: "",
   });
 
   const handleChange = (e) => {
@@ -43,232 +124,186 @@ export default function BasicStatistics() {
     console.log(formData);
   };
   return (
-    <Box maxW="6xl" mx={'auto'} pt={5} px={{ base: 2, sm: 12, md: 17 }} borderRadius={'40%'} >
-      <chakra.h1 textAlign={'center'} fontSize={'4xl'} py={10} fontWeight={'bold'}>
-      Empowerment and Wellbeing Initiative
-
-      </chakra.h1>
-      <Box display="flex"
-          flex="1"
-          flexDirection="column"
-          justifyContent="center"
-          marginTop={{ base: '3', sm: '0' }}>
-      <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.500"}>We are committed to promoting emotional well-being for every student, regardless of their background. Our professional counselling services are designed to support students in orphanages and government schools, connecting them with experienced counsellors who guide stress management, personal challenges, and overall mental health.
-
-Our mission is to ensure that all students have access to the well-being services they deserve, creating an inclusive environment where everyone can thrive emotionally, mentally, and academically.
-
-</Text></Box>
-<Flex
-      justify="center"
-      wrap="wrap" // Makes the circles wrap in smaller screens
-      gap={6} // Adds space between the circles
-      mt="20px"
+    <Box
+      maxW="6xl"
+      mx={"auto"}
+      px={{ base: 2, sm: 12, md: 17 }}
+      borderRadius={"40%"}
     >
-<Box borderRadius={'50%'} bg={'gray.100'}  borderBottom="5px solid" 
-  borderRight="5px solid" 
-  borderColor="grey.100" 
-  boxShadow="2px 2px 2px 2px" 
-       textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
-       pt={{ base: "40px", md: "60px", lg: "80px" }}>
-
-       <Text py={'5px'} fontSize={{ base: "12px", md: "16px", lg: "18px" }}>
-Over <Text as="span" color="red">50%</Text> of children in <br/> orphanages experience mental health <br/>issues (Children's Rights Alliance, 2021)
-
-
-       </Text></Box>   
-       <Box borderRadius={'50%'}  bg={'gray.100'}   borderBottom="5px solid" 
-  borderRight="5px solid" 
-  borderColor="grey.100" 
-  boxShadow="2px 2px 2px 2px" 
-       textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
-       pt={{ base: "40px", md: "60px", lg: "80px" }}>
-       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>Students in low-income schools are <Text as="span" color="green.300">50%</Text> more likely to report emotional distress (National Center for Children in Poverty, 2020)
-       </Text></Box>
-
-       <Box borderRadius={'50%'}  bg={'gray.100'}   borderBottom="5px solid" 
-  borderRight="5px solid" 
-  borderColor="grey.100" 
-  boxShadow="2px 2px 2px 2px" 
-       textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
-       pt={{ base: "40px", md: "60px", lg: "80px" }}>
-        <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>Children with access to mental health services show improved academic performance by 20% (The Child Mind Institute, 2019)
-        </Text></Box>
-</Flex>
-<Flex
-      justify="center"
-      wrap="wrap" // Makes the circles wrap in smaller screens
-      gap={6} // Adds space between the circles
-      mt="20px"
-    >
-        <Box borderRadius={'50%'} bg={'gray.100'}  borderBottom="5px solid" 
-  borderRight="5px solid" 
-  borderColor="grey.100" 
-  boxShadow="2px 2px 2px 2px" 
-       textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
-       pt={{ base: "40px", md: "60px", lg: "80px" }}>
-          <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>Approximately 1 in 5 students in low-income areas experience significant mental health challenges (SAMHSA, 2021)
-          </Text></Box>
-
-          <Box borderRadius={'50%'}  bg={'gray.100'}  borderBottom="5px solid" 
-  borderRight="5px solid" 
-  borderColor="grey.100" 
-  boxShadow="2px 2px 2px 2px" 
-       textAlign={'center'} mt={'20px'} 
-       height={{ base: "150px", md: "200px", lg: "250px" }} 
-       width={{ base: "150px", md: "200px", lg: "350px" }}
-       pt={{ base: "40px", md: "60px", lg: "80px" }}>
-       <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>School-based mental health programs can reduce behavioural issues by up to 40% (National Institute of Mental Health, 2020)</Text></Box>
-      </Flex>
-      <Box p={5}>
-      <Text fontSize="2xl" fontWeight="bold" mb={4} justifyContent={'center'} display={'flex'}>
-      Our Holistic Approach to Student Well-being:
-
-      </Text>
-
-      <UnorderedList
-        spacing={3}
-        pl={5}
-        styleType="disc" // You can use 'circle' or 'square' for other bullet styles
+      <Box>
+        <Image src="../../../logo4-rm.png" height={"350px"} width={"350px"} />
+      </Box>
+      <Heading
+        lineHeight={1.1}
+        fontWeight={600}
+        fontSize={{ base: "2xl", sm: "3xl", lg: "4xl" }}
       >
-        <ListItem fontSize="lg">
-        Group workshops on stress management and emotional skills. 
+        <Flex
+          flex={1}
+          justify={"center"}
+          align={"center"}
+          position={"relative"}
+          w={"full"}
+        >
+          <Text as={"span"} color={"blue.500"} textAlign={"center"}>
+            Empowerment and Wellbeing Initiative
+          </Text>
+        </Flex>
+      </Heading>
+      <Flex
+        flex={1}
+        justify={"center"}
+        align={"center"}
+        position={"relative"}
+        w={"full"}
+      >
+        <Image
+          alt={"Hero Image"}
+          fit={"cover"}
+          align={"center"}
+          w={"550px"}
+          h={"300px"}
+          src={"../../../c-c.jpg"}
+          py={"10px"}
+        />
+      </Flex>
 
-        </ListItem>
-        <ListItem fontSize="lg">
-        Roleplays for practical problem-solving. 
-      
-        </ListItem>
-        
-        <ListItem fontSize="lg">
-        Assessments to evaluate emotional well-being and progress. 
+      <Heading
+        fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
+        textAlign={"center"}
+        pb={"20px"}
+        pt={{ base: "90", lg: "50px" }}
+        margin={"30px"}
+        marginTop={"40px"}
+      >
+        <Text
+          color={"blue.400"}
+          as={"span"}
+          textAlign={"center"}
+          marginTop={"50px"}
+          pt={"10px"}
+        >
+          What do we do ?
+        </Text>
+      </Heading>
+      <Flex
+        flexWrap="wrap"
+        gridGap={16}
+        py={8}
+        justify="center"
+        spacing={{ base: 6, lg: 8 }}
+      >
+        <OfferCard
+          imageSrc="../../../honor.svg"
+          title="Help individuals identify strengths, interests, and suitable career paths.
+"
+        />
+        <OfferCard
+          imageSrc="../../../data.svg"
+          title="Provide tailored guidance based on comprehensive psychometric assessments.
+"
+        />
+        <OfferCard
+          imageSrc="../../../3.svg"
+          title="Assist students and professionals in making informed education and career decisions.
+"
+        />
+        <OfferCard
+          imageSrc="../../../bookmark.svg"
+          title="Support professionals in navigating career transitions or breaks confidently.
+"
+        />
+        <OfferCard
+          imageSrc="../../../5.svg"
+          title="Offer up-to-date insights into industry trends and emerging opportunities.
+."
+        />
+        <OfferCard
+          imageSrc="../../../6.svg"
+          title="Help individuals avoid common career mistakes by providing clarity on options
+"
+        />
+        <OfferCard
+          imageSrc="../../../data.svg"
+          title="Guide professionals in enhancing their skills for better career prospects.
+"
+        />
+        <OfferCard
+          imageSrc="../../../dial.svg"
+          title="Equip career changers with strategies to shift industries or roles smoothly.
+"
+        />
+        <OfferCard
+          imageSrc="../../../gift.svg"
+          title="Alleviate career-related stress by offering clear, actionable roadmaps.
+."
+        />
 
-        </ListItem>
-        <ListItem fontSize="lg">
-          Worksheets to help students set goals and track their growth.
-        </ListItem>
-        <ListItem fontSize="lg">
-          Reference materials for continuous learning.
-        </ListItem>
-        <ListItem fontSize="lg">
-          Self-help tools to promote independent development.
-        </ListItem>
-        <ListItem fontSize="lg">
-          Career counseling for future guidance.
-        </ListItem>
-       
-      </UnorderedList>
-    </Box>
-   
-{/* <Stack spacing={{ base: 4, sm: 6 }} direction={{ base: 'column', sm: 'row' }} py={'20pxs'}>
-     <Link href="/enquiryform">
-     <Button
-              rounded={'full'}
-              size={'lg'}
-              fontWeight={'normal'}
-              px={9}
-              colorScheme={'blue'}
-              bg={'blue.400'}
-              _hover={{ bg: 'blue.600', transform: 'scale(1.1)' }} gap={'10'}
-              py={'20px'} >
-            Enquire Now
-            </Button>
-           </Link>
-             </Stack> */}
-             <Heading marginTop="1" textAlign={'center'}>
-            <Text textDecoration="none" _hover={{ textDecoration: 'none' }} color={'blue.500'}>
-          Enquiry Form
-            </Text>
+        <OfferCard
+          imageSrc="../../../data.svg"
+          title="Ensure each individual finds a fulfilling career aligned with their personal goals
+"
+        />
+      </Flex>
+      <Box p={4} pt={10}>
+      <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
+        <Heading fontSize={{ base: '2xl', sm: '4xl' }} color={'blue.500'}fontWeight={'bold'}>
+            Why Career Counseling is Required?
           </Heading>
-            <Box maxW="md" mx="auto" mt={10} p={6} border="1px" borderColor="gray.300" borderRadius="md" boxShadow="lg">
+        </Stack>
 
-            
-      <form onSubmit={handleSubmit}>
-        <VStack spacing={4} align="start">
-          <FormControl id="name" isRequired>
-            <FormLabel>Name:</FormLabel>
-            <Input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Please enter your name"
+        <Container maxW={"5xl"} mt={12}>
+          <Flex flexWrap="wrap" gridGap={6} justify="center">
+            <Card
+              heading={"Heading"}
+              description={
+                "Helps individuals choose a career that aligns with their strengths and market trends."
+              }
+              bgColor="blue.100"
             />
-          </FormControl>
-
-          <FormControl id="contactNumber" isRequired>
-            <FormLabel>Contact Number:</FormLabel>
-            <Input
-              type="tel"
-              name="contactNumber"
-              value={formData.contactNumber}
-              onChange={handleChange}
-              placeholder="Please enter your contact number"
+            <Card
+              heading={"Heading"}
+              description={
+                "Reduces uncertainty and indecision during critical career transitions."
+              }
+               bgColor="pink.100"
             />
-          </FormControl>
-
-          <FormControl id="email" isRequired>
-            <FormLabel>Email ID:</FormLabel>
-            <Input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Please enter your email address"
+            <Card
+              heading={"Heading"}
+              description={
+                "Provides working professionals with guidance to upskill or pivot into new roles."
+              }
+               bgColor="orange.100"
             />
-          </FormControl>
-
-          <FormControl id="service" isRequired>
-            <FormLabel>What Service Are You Interested In?</FormLabel>
-            <Select
-              name="service"
-              value={formData.service}
-              onChange={handleChange}
-              placeholder="Choose the service you require"
-            >
-              <option value="1 to 1 Counseling Service">1 to 1 Counseling Service</option>
-              <option value="Workplace - Corporate Program">Workplace - Corporate Program</option>
-              <option value="School-College-University Program">School-College-University Program</option>
-              <option value="Institutional Development Program">Institutional Development Program</option>
-              <option value="Career Counseling and Psychometric Test">Career Counseling and Psychometric Test</option>
-              <option value="Government School/Orphanages">Government School/Orphanages</option>
-              <option value="Preschool program">Preschool program</option>
-              <option value="Other">Other (Please specify)</option>
-            </Select>
-          </FormControl>
-
-          <FormControl id="additionalInfo">
-            <FormLabel>Additional Information:</FormLabel>
-            <Textarea
-              name="additionalInfo"
-              value={formData.additionalInfo}
-              onChange={handleChange}
-              placeholder="Please provide any additional details or specific requirements"
+            <Card
+              heading={"Heading"}
+              description={
+                "Offers a systematic approach to long-term career satisfaction and success"
+              }
+               bgColor="red.100"
             />
-          </FormControl>
+          </Flex>
+        </Container>
+      </Box>
+      <Box py={10} display="flex" justifyContent="center" alignItems="center" mt={'20px'}>
+  <Stack spacing={6} direction={{ base: "column", sm: "row" }} alignItems="center">
+    <Link href="/psychometrictest">
+      <Button
+        rounded={"full"}
+        size={"lg"}
+        fontWeight={"normal"}
+        px={6}
+        colorScheme={"blue"}
+        bg={"blue.400"}
+        _hover={{ bg: "blue.600", transform: "scale(1.1)" }}
+      >
+      Take the psychometric test today 
 
-          <Button type="submit" colorScheme="blue" width="full">
-            Submit
-          </Button>
-        </VStack>
-         <Text color={'grey.100'}>
-<Text color={'blue.300'}>Thank You for Your Enquiry!</Text><br/>
-{/* <Text color={'red.200'}>We appreciate your interest in our services.<br/>
-Our team will review your request and get back <br/>
-to you shortly. If you require immediate assistance,<br/></Text>
-<Text color={'blue.400'}>please feel free to call us at xxxxxxxxxxx</Text> */}
 
-</Text>
-      </form>
-     
+      </Button>
+    </Link>
+    </Stack>
     </Box>
     </Box>
-  )
+  );
 }

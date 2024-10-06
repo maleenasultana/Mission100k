@@ -7,7 +7,7 @@ import Features from "./Features"
 import EnquiryForm from './Enquiryform';
 import Footer from "./Footer"
 import Testimonials from "./Testimonials"
-
+import "./../App.css"
 
 const Home = () => {
   return (
