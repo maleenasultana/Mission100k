@@ -71,13 +71,17 @@ const OfferCard = ({ imageSrc, title }) => {
       height={"80px"}
     >
       <Image
-        src={imageSrc}
-        alt={title}
-        boxSize={"100px"}
-        objectFit={"cover"}
-        borderRadius="full"
-        mr={6}
-      />
+    
+         src={imageSrc}
+         alt={title}
+         boxSize={"100px"}
+         objectFit={"cover"}
+         borderRadius="full"
+         mr={6}
+         height={"50px"}
+         width={"50px"}
+       />
+      
       <Box>
         <Heading fontSize={"lg"}>{title}</Heading>
       </Box>

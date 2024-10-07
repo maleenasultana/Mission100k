@@ -23,13 +23,14 @@ import {
   Link,
   ListItem,
   UnorderedList,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const Card = ({ heading, description, number, color }) => {
   return (
-    <Box height={"250px"} width={"300px"} p={10}>
+    <Box height={"250px"} width={"300px"} p={5}>
       <Box
         maxW={{ base: "full", md: "375px" }}
         height={"100"}
@@ -181,23 +182,24 @@ export default function CallToActionWithVideo() {
 </Stack>
 
 
-      <Flex
-        flexWrap="wrap"
-        gridGap={3}
-        justify="center"
-        height={{ base: "auto", md: "500px" }}
-        display={{base: "column", md: "row"}} // Adjust height for small screens
-        mt={{ base: 5, md: 10 }} // Add margin-top for spacing
-      >
-        <Card description={"100% confidential & secure"} />
-        <Card description={"99.9% uptime"} />
-        <Card description={"Ease of access"} />
-        <Card description={"Trust & Integrity"} />
-        <Card description={"Built with empathy"} />
-        <Card description={"Inclusive"} />
-        <Card description={"Unbiased"} />
-        <Card description={"Practical Approach"} />
-      </Flex>
+
+
+
+<SimpleGrid 
+  columns={{ base: 1, md: 2, lg: 4 }} // 1 column on small screens, 2 on medium, and 4 on large
+  spacing={4} // Adjust spacing between cards
+  mt={{ base: 5, md: 10 }} // Add margin-top for spacing
+>
+  <Card description={"100% confidential & secure"} />
+  <Card description={"99.9% uptime"} />
+  <Card description={"Ease of access"} />
+  <Card description={"Trust & Integrity"} />
+  <Card description={"Built with empathy"} />
+  <Card description={"Inclusive"} />
+  <Card description={"Unbiased"} />
+  <Card description={"Practical Approach"} />
+</SimpleGrid>
+
 
       <Heading
         fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}

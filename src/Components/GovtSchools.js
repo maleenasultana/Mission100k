@@ -48,6 +48,8 @@ const OfferCard = ({ imageSrc, title }) => {
         objectFit={"cover"}
         borderRadius="full"
         mr={6}
+        height={"50px"}
+        width={"50px"}
       />
       <Box>
         <Heading fontSize={"lg"}>{title}</Heading>
