@@ -80,7 +80,7 @@ const OfferCard = ({ imageSrc, title }) => {
       display="flex"
       alignItems="center"
       bg={useColorModeValue("white", "gray.800")}
-      height={"80px"} // Ensuring uniform height
+      height={"100px"} // Ensuring uniform height
     >
       {/* Image on the left side */}
       <Image
@@ -96,7 +96,7 @@ const OfferCard = ({ imageSrc, title }) => {
 
       {/* Text on the right side */}
       <Box>
-        <Heading fontSize={"lg"}>{title}</Heading>
+        <Heading fontSize={"md"}>{title}</Heading>
       </Box>
     </Box>
   );

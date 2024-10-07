@@ -135,8 +135,8 @@ export default function BasicStatistics() {
           textAlign={"center"}
           mt={"20px"}
           p={8}
-          height={{ base: "250px", md: "200px", lg: "250px" }}
-          width={{ base: "250px", md: "200px", lg: "350px" }}
+          height={{ base: "250px", md: "250px", lg: "250px" }}
+          width={{ base: "250px", md: "250px", lg: "350px" }}
           pt={{ base: "40px", md: "60px", lg: "80px" }}
         >
           <Text py={"5px"} fontSize={{ base: "18px", md: "16px", lg: "18px" }}>
@@ -154,8 +154,8 @@ export default function BasicStatistics() {
           textAlign={"center"}
           mt={"20px"}
           p={8}
-          height={{ base: "250px", md: "200px", lg: "250px" }}
-          width={{ base: "250px", md: "200px", lg: "350px" }}
+          height={{ base: "250px", md: "250px", lg: "250px" }}
+          width={{ base: "250px", md: "250px", lg: "350px" }}
           pt={{ base: "40px", md: "60px", lg: "80px" }}
         >
           <Text fontSize={{ base: "18px", md: "16px", lg: "18px" }}>
@@ -174,8 +174,8 @@ export default function BasicStatistics() {
           textAlign={"center"}
           mt={"20px"}
           p={8}
-          height={{ base: "250px", md: "200px", lg: "250px" }}
-          width={{ base: "250px", md: "200px", lg: "350px" }}
+          height={{ base: "250px", md: "250px", lg: "250px" }}
+          width={{ base: "250px", md: "250px", lg: "350px" }}
           pt={{ base: "40px", md: "60px", lg: "80px" }}
         >
           <Text fontSize={{ base: "18px", md: "16px", lg: "18px" }}>
@@ -200,8 +200,8 @@ export default function BasicStatistics() {
           textAlign={"center"}
           mt={"20px"}
           p={8}
-          height={{ base: "250px", md: "200px", lg: "250px" }}
-          width={{ base: "250px", md: "200px", lg: "350px" }}
+          height={{ base: "250px", md: "250px", lg: "250px" }}
+          width={{ base: "250px", md: "250px", lg: "350px" }}
           pt={{ base: "40px", md: "60px", lg: "80px" }}
         >
           <Text fontSize={{ base: "18px", md: "16px", lg: "18px" }}>
@@ -220,8 +220,8 @@ export default function BasicStatistics() {
           textAlign={"center"}
           mt={"20px"}
           p={8}
-          height={{ base: "250px", md: "200px", lg: "250px" }}
-          width={{ base: "250px", md: "200px", lg: "350px" }}
+          height={{ base: "250px", md: "250px", lg: "250px" }}
+          width={{ base: "250px", md: "250px", lg: "350px" }}
           pt={{ base: "40px", md: "60px", lg: "80px" }}
         >
           <Text fontSize={{ base: "18px", md: "16px", lg: "18px" }}>

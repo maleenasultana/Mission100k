@@ -22,9 +22,9 @@ import EnquiryForm from './Enquiryform';
 
 const Card = ({ heading, description, number, color }) => {
   return (
-    <Box height={'300px'} width={'300px'} p={10}>
+    <Box height={'300px'} width={'300px'} p={15}>
       <Box
-        maxW={{ base: "full", md: "250px" }}
+        maxW={{ base: "full", md: "350px" }}
         w={"full"}
         overflow="hidden"
         p={4}
@@ -43,7 +43,7 @@ const Card = ({ heading, description, number, color }) => {
             >
               {number}
             </Heading>
-            <Text mt={3} fontSize={"md"} textAlign={"center"}>
+            <Text mt={3} fontSize={"sm"} textAlign={"center"}>
               {description}
             </Text>
           </Box>
@@ -68,7 +68,7 @@ const OfferCard = ({ imageSrc, title }) => {
       display="flex"
       alignItems="center"
       bg={useColorModeValue("white", "gray.800")}
-      height={"80px"}
+      height={"100px"}
     >
       <Image
     
@@ -84,7 +84,7 @@ const OfferCard = ({ imageSrc, title }) => {
        />
       
       <Box>
-        <Heading fontSize={"lg"}>{title}</Heading>
+        <Heading fontSize={"md"}>{title}</Heading>
       </Box>
     </Box>
   );
@@ -114,8 +114,8 @@ export default function CallToActionWithVideo() {
 
   return (
     <Container maxW={'7xl'}>
-      <Box>
-        <Image src="../../../lo-removebg.png" height={'200px'} width={'350px'} />
+      <Box py={20}>
+        <Image src="../../../lo-removebg.png" height={'100px'} width={'250px'} />
       </Box>
       <Stack
         align={'center'}
