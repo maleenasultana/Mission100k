@@ -30,7 +30,7 @@ const Carousel = () => {
       position="relative"
       width="100vw"
       overflow="hidden"
-      height={{ base: "50vh", md: "80vh", lg: "100vh" }} // Adjust the height based on screen size
+      height={{ base: "30vh", md: "50vh", lg: "100vh" }} // Adjust the height based on screen size
     >
       <Image
         src={images[currentSlide].src}
