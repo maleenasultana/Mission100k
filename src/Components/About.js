@@ -2,83 +2,51 @@
 
 import {
   Box,
-  Heading,
   Image,
   Text,
-  Divider,
-  HStack,
-  Tag,
-  Wrap,
-  WrapItem,
-  useColorModeValue,
-  Container,
   VStack,
   chakra,
+  Container,
+  Flex,
 } from "@chakra-ui/react";
-
-const BlogTags = (props) => {
-  const { marginTop = 0, tags } = props;
-
-  return (
-    <HStack spacing={2} marginTop={marginTop}>
-      {tags.map((tag) => {
-        return (
-          <Tag size={"md"} variant="solid" colorScheme="orange" key={tag}>
-            {tag}
-          </Tag>
-        );
-      })}
-    </HStack>
-  );
-};
-
-const BlogAuthor = (props) => {
-  return (
-    <HStack marginTop="2" spacing="2" display="flex" alignItems="center">
-      <Image
-        borderRadius="full"
-        boxSize="40px"
-        src="https://100k-faces.glitch.me/random-image"
-        alt={`Avatar of ${props.name}`}
-      />
-      <Text fontWeight="medium">{props.name}</Text>
-      <Text>—</Text>
-      <Text>{new Date(props.date).toLocaleDateString()}</Text>
-    </HStack>
-  );
-};
 
 const ArticleList = () => {
   return (
-    <Container maxW={"4xl"} p="12">
-      <Box display="flex" alignItems="center">
+    <Container maxW={"5xl"} p="12">
+      {/* Responsive Flex container for images */}
+      <Flex
+        direction={{ base: "column", md: "row" }} // Column on small screens, row on larger
+        alignItems="center"
+        alignContent={'center'}
+        wrap="wrap"
+        gap={3} // Gap between images
+      >
         <Image
-          src="../../../logo1.png"
+          src="../../../lo-removebg.png"
           alt="logo1"
-          height="90px"
-          width="160px"
+          height={{ base: "80px", md: "90px" }} // Adjust sizes for responsiveness
+          width={{ base: "120px", md: "160px" }}
+        
         />
         <Image
           src="../../../logo2.png"
           alt="logo2"
-          height="160px"
-          width="250px"
-          px={8}
+          height={{ base: "120px", md: "160px" }}
+          width={{ base: "150px", md: "180px" }}
         />
         <Image
           src="../../../logo3.png"
           alt="logo3"
-          height="160px"
-          width="250px"
+          height={{ base: "120px", md: "160px" }}
+          width={{ base: "150px", md: "180px" }}
         />
         <Image
           src="../../../logo4.png"
           alt="logo4"
-          height="180px"
-          width="250px"
-          pt={5}
+          height={{ base: "120px", md: "160px" }}
+          width={{ base: "150px", md: "180px" }}
         />
-      </Box>
+      </Flex>
 
       <VStack paddingTop="20px" spacing="2" alignItems="flex-start">
         <Text as="p" fontSize="lg">
@@ -130,7 +98,7 @@ const ArticleList = () => {
           color={"grey.500"}
           fontFamily={"Exo, sans-serif"}
         >
-          JOIN US IN THE JOURNEY OF ENLIGHTEN MINDS, ENHANCE LIVES AND EMPOMER
+          JOIN US IN THE JOURNEY OF ENLIGHTEN MINDS, ENHANCE LIVES AND EMPOWER
           FUTURES. BE A PART OF MISSION 100K AND HELP CREATE A MORE EMOTIONALLY
           RESILIENT AND SUCCESSFUL INDIA.
         </Text>

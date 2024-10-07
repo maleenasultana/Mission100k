@@ -6,14 +6,14 @@ import Services from "./Services"
 import Features from "./Features"
 import EnquiryForm from './Enquiryform';
 import Footer from "./Footer"
-import Testimonials from "./Testimonials"
+import Testimonial from "./Testimonial"
 import "./../App.css"
 
 const Home = () => {
   return (
-    <Container maxW={'1450'}>
+    <Container maxW={'100vw'}>
       <Carousal display={'auto'}/>
-      <chakra.h1 textAlign={'center'} fontSize={'4xl'} pb={2}fontWeight={'bold'}>
+      <chakra.h1 textAlign={'center'} fontSize={'3xl'} pb={2} py={'20px'} fontWeight={'bold'}>
         <Text color={'green.700'}  font-family= "Exo, sans-serif">EMPOWERING MINDS, TRANSFORMING LIVES: YOUR JOURNEY TO LIFE SUCCESS STARTS HERE</Text>
       </chakra.h1>
       {/* <Image fontSize={ '4xl'} src="../../../Add a heading.png" alt="... " height="200" width="full" /> */}
@@ -23,12 +23,12 @@ const Home = () => {
       <chakra.h1
         textAlign={"center"}
         fontSize={"2xl"}
-        py={3}
+        py={10}
         fontWeight={"bold"}
         fontFamily="Amaranth, sans-serif"
       >
         <Text color={"blue.500"}>Testimonials</Text> </chakra.h1>
-     <Testimonials/>
+     <Testimonial/>
      <chakra.h1
         textAlign={"center"}
         fontSize={"2xl"}

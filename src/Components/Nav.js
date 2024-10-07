@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import {
   Box,
@@ -17,58 +17,95 @@ import {
   VStack,
   Collapse,
   useColorModeValue,
+  useColorMode,
 } from '@chakra-ui/react';
 import { HamburgerIcon, ChevronDownIcon, CloseIcon } from '@chakra-ui/icons';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { colorMode } = useColorMode(); // For light/dark mode support
+  const [navbarBg, setNavbarBg] = useState('transparent'); // Default background for navbar
+  const [boxShadow, setBoxShadow] = useState('none');
+
+  // Function to change navbar background color on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setNavbarBg('blue.500'); // Change to blue when scrolled
+        setBoxShadow('md'); // Add shadow when scrolling down
+      } else {
+        setNavbarBg('transparent'); // Transparent when at the top
+        setBoxShadow('none'); // Remove shadow at the top
+      }
+    };
+
+    // Listen to scroll events
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      // Cleanup listener on component unmount
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <Box 
-      bg={useColorModeValue('rgba(255, 255, 255, 0.8)', 'rgba(50, 50, 50, 0.8)')} // Semi-transparent background for visibility
-      px={4} 
-      boxShadow="sm"
-      backgroundImage="url('../../../bg-nav.png')" // Replace with your image path
-      backgroundSize="cover" // Cover the entire navbar
-      backgroundPosition="center" // Center the image
-      zIndex={-1}
+    <Box
+      bg={navbarBg} // Dynamic background
+      transition="background-color 0.3s ease" // Smooth transition for background change
+      px={4}
+      boxShadow={boxShadow} // Dynamic shadow based on scroll
+      position="fixed" // Fixed navbar on top
+      width="100%"
+      zIndex={10} // Ensure navbar stays on top of other elements
     >
       <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
         {/* Logo */}
-        <Image src={'../../../logo.png'}  alt={'Logo'} height={'50px'} width={'170px'} objectFit={'cover'} />
+        <Image src={'../../../logo.png'} alt={'Logo'} height={'50px'} width={'200px'} />
 
         {/* Desktop Navigation */}
-        <HStack as={'nav'} spacing={8} display={{ base: 'none', md: 'flex' }} >
-
-        <Button as={RouterLink} to="/" color="white" 
-        bg="transparent"
-        _hover={{
-          bg: "white", // Background color on hover
-          color: "black", // Text color on hover
-          border: "1px solid", // Optional border on hover
-          borderColor: "blue.500" // Border color on hover
-        }} 
-        >
-          Home
+        <HStack as={'nav'} spacing={8} display={{ base: 'none', md: 'flex' }}>
+          <Button
+            as={RouterLink}
+            to="/"
+            color="white"
+            bg="transparent"
+            _hover={{
+              bg: 'white',
+              color: 'black',
+              border: '1px solid',
+              borderColor: 'blue.500',
+            }}
+          >
+            Home
           </Button>
-          <Button as={RouterLink} to="/about" color="white"   bg="transparent"
-        _hover={{
-          bg: "white", // Background color on hover
-          color: "black", // Text color on hover
-          border: "1px solid", // Optional border on hover
-          borderColor: "blue.500" // Border color on hover
-        }}>
-           About Us
+          <Button
+            as={RouterLink}
+            to="/about"
+            color="white"
+            bg="transparent"
+            _hover={{
+              bg: 'white',
+              color: 'black',
+              border: '1px solid',
+              borderColor: 'blue.500',
+            }}
+          >
+            About Us
           </Button>
 
           <Menu>
-            <MenuButton color="white" as={Button} rightIcon={<ChevronDownIcon />}  bg="transparent"
-        _hover={{
-          bg: "white", // Background color on hover
-          color: "black", // Text color on hover
-          border: "1px solid", // Optional border on hover
-          borderColor: "blue.500" // Border color on hover
-        }}>
+            <MenuButton
+              color="white"
+              as={Button}
+              rightIcon={<ChevronDownIcon />}
+              bg="transparent"
+              _hover={{
+                bg: 'white',
+                color: 'black',
+                border: '1px solid',
+                borderColor: 'blue.500',
+              }}
+            >
               Services
             </MenuButton>
             <MenuList>
@@ -93,24 +130,25 @@ const Navbar = () => {
             </MenuList>
           </Menu>
 
-        <Button as={RouterLink} to="/psychometrictest" color="white"  bg="transparent"
-        _hover={{
-          bg: "white", // Background color on hover
-          color: "black", // Text color on hover
-          border: "1px solid", // Optional border on hover
-          borderColor: "blue.500" // Border color on hover
-        }}>
-            Psychometric test
-          </Button>
-          <Button as={RouterLink} to="/signin" fontWeight={600} >
-            Sign In
-          </Button>
           <Button
             as={RouterLink}
-            to="/signup"
-            colorScheme="blue"
-            fontWeight={600}
+            to="/psychometrictest"
+            color="white"
+            bg="transparent"
+            _hover={{
+              bg: 'white',
+              color: 'black',
+              border: '1px solid',
+              borderColor: 'blue.500',
+            }}
           >
+            Psychometric Test
+          </Button>
+
+          <Button as={RouterLink} to="/signin" fontWeight={600}>
+            Sign In
+          </Button>
+          <Button as={RouterLink} to="/signup" colorScheme="blue" fontWeight={600}>
             Sign Up
           </Button>
         </HStack>
@@ -135,7 +173,7 @@ const Navbar = () => {
             <Link as={RouterLink} to="/about" onClick={onClose}>
               About Us
             </Link>
-            
+
             <Menu>
               <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
                 Services
@@ -163,21 +201,12 @@ const Navbar = () => {
             </Menu>
 
             <Link as={RouterLink} to="/psychometrictest" onClick={onClose}>
-              Psychometric test
-            </Link>
-            <Link as={RouterLink} to="/gallery1" onClick={onClose}>
-              Gallery1
+              Psychometric Test
             </Link>
             <Link as={RouterLink} to="/signin" onClick={onClose}>
               Sign In
             </Link>
-            <Button
-              as={RouterLink}
-              to="/signup"
-              colorScheme="blue"
-              w="full"
-              onClick={onClose}
-            >
+            <Button as={RouterLink} to="/signup" colorScheme="blue" w="full" onClick={onClose}>
               Sign Up
             </Button>
           </VStack>
