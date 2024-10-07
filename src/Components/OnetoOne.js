@@ -30,7 +30,7 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 
 const Card = ({ heading, description, number, color }) => {
   return (
-    <Box height={"250px"} width={"300px"} p={5}>
+    <Box height={"250px"} width={"300px"} p={4}>
       <Box
         maxW={{ base: "full", md: "375px" }}
         height={"100"}
@@ -55,7 +55,7 @@ const Card = ({ heading, description, number, color }) => {
               mt={3}
               fontSize={"lg"}
               textAlign={"center"}
-              fontWeight={600}
+              fontWeight={700}
               fontFamily={"Exo, sans-serif"}
             >
               {description}
@@ -187,7 +187,7 @@ export default function CallToActionWithVideo() {
 
 <SimpleGrid 
   columns={{ base: 1, md: 2, lg: 4 }} // 1 column on small screens, 2 on medium, and 4 on large
-  spacing={4} // Adjust spacing between cards
+  spacing={2} // Adjust spacing between cards
   mt={{ base: 5, md: 10 }} // Add margin-top for spacing
 >
   <Card description={"100% confidential & secure"} />

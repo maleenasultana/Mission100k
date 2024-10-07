@@ -60,7 +60,8 @@ const Navbar = () => {
     >
       <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
         {/* Logo */}
-        <Image src={'../../../logo.png'} alt={'Logo'} height={'50px'} width={'200px'} />
+        <Image src={'../../../logo.png'} w={{ base: '100px', md: '200px' }}
+              h={{ base: '25px', md: '50px' }}alt={'Logo'} />
 
         {/* Desktop Navigation */}
         <HStack as={'nav'} spacing={8} display={{ base: 'none', md: 'flex' }}>

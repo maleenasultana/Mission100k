@@ -119,10 +119,10 @@ export default function CallToActionWithVideo() {
       </Box>
       <Stack
         align={'center'}
-        spacing={{ base: 8, md: 6 }}
-        py={{ base: 10, md: 18 }}
+        spacing={{ base: 15, md: 6 }}
+        py={{ base: 20, md: 18 }}
         direction={{ base: 'column', md: 'row' }}>
-        <Stack flex={1} spacing={{ base: 5, md: 4 }}>
+        <Stack flex={1} spacing={{ base: 20, md: 4 }}>
           <Heading
             lineHeight={1.1}
             fontWeight={600}
@@ -273,9 +273,9 @@ export default function CallToActionWithVideo() {
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
-        py={{ base: 18, md: 25 }}
+        py={{ base: 20, md: 25 }}
         direction={{ base: 'column', md: 'row' }}>
-        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+        <Stack flex={1} spacing={{ base: 40, md: 10 }}>
           <Heading
             lineHeight={1.1}
             fontWeight={600}

@@ -134,11 +134,12 @@ export default function BasicStatistics() {
           boxShadow="2px 2px 2px 2px"
           textAlign={"center"}
           mt={"20px"}
-          height={{ base: "150px", md: "200px", lg: "250px" }}
-          width={{ base: "150px", md: "200px", lg: "350px" }}
+          p={8}
+          height={{ base: "250px", md: "200px", lg: "250px" }}
+          width={{ base: "250px", md: "200px", lg: "350px" }}
           pt={{ base: "40px", md: "60px", lg: "80px" }}
         >
-          <Text py={"5px"} fontSize={{ base: "12px", md: "16px", lg: "18px" }}>
+          <Text py={"5px"} fontSize={{ base: "18px", md: "16px", lg: "18px" }}>
             Over 30% of children in orphanages experience mental health issues
             (Children's Rights Alliance, 2021)
           </Text>
@@ -152,11 +153,12 @@ export default function BasicStatistics() {
           boxShadow="2px 2px 2px 2px"
           textAlign={"center"}
           mt={"20px"}
-          height={{ base: "150px", md: "200px", lg: "250px" }}
-          width={{ base: "150px", md: "200px", lg: "350px" }}
+          p={8}
+          height={{ base: "250px", md: "200px", lg: "250px" }}
+          width={{ base: "250px", md: "200px", lg: "350px" }}
           pt={{ base: "40px", md: "60px", lg: "80px" }}
         >
-          <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>
+          <Text fontSize={{ base: "18px", md: "16px", lg: "18px" }}>
             Students in low-income schools are 50% more likely to report
             emotional distress (National Center for Children in Poverty, 2020)
           </Text>
@@ -171,11 +173,12 @@ export default function BasicStatistics() {
           boxShadow="2px 2px 2px 2px"
           textAlign={"center"}
           mt={"20px"}
-          height={{ base: "150px", md: "200px", lg: "250px" }}
-          width={{ base: "150px", md: "200px", lg: "350px" }}
+          p={8}
+          height={{ base: "250px", md: "200px", lg: "250px" }}
+          width={{ base: "250px", md: "200px", lg: "350px" }}
           pt={{ base: "40px", md: "60px", lg: "80px" }}
         >
-          <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>
+          <Text fontSize={{ base: "18px", md: "16px", lg: "18px" }}>
             Children with access to mental health services show improved
             academic performance by 20% (The Child Mind Institute, 2019)
           </Text>
@@ -196,11 +199,12 @@ export default function BasicStatistics() {
           boxShadow="2px 2px 2px 2px"
           textAlign={"center"}
           mt={"20px"}
-          height={{ base: "150px", md: "200px", lg: "250px" }}
-          width={{ base: "150px", md: "200px", lg: "350px" }}
+          p={8}
+          height={{ base: "250px", md: "200px", lg: "250px" }}
+          width={{ base: "250px", md: "200px", lg: "350px" }}
           pt={{ base: "40px", md: "60px", lg: "80px" }}
         >
-          <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>
+          <Text fontSize={{ base: "18px", md: "16px", lg: "18px" }}>
             Approximately 1 in 5 students in low-income areas experience
             significant mental health challenges (SAMHSA, 2021)
           </Text>
@@ -215,11 +219,12 @@ export default function BasicStatistics() {
           boxShadow="2px 2px 2px 2px"
           textAlign={"center"}
           mt={"20px"}
-          height={{ base: "150px", md: "200px", lg: "250px" }}
-          width={{ base: "150px", md: "200px", lg: "350px" }}
+          p={8}
+          height={{ base: "250px", md: "200px", lg: "250px" }}
+          width={{ base: "250px", md: "200px", lg: "350px" }}
           pt={{ base: "40px", md: "60px", lg: "80px" }}
         >
-          <Text fontSize={{ base: "12px", md: "16px", lg: "18px" }}>
+          <Text fontSize={{ base: "18px", md: "16px", lg: "18px" }}>
             School-based mental health programs can reduce behavioural issues by
             up to 40% (National Institute of Mental Health, 2020)
           </Text>

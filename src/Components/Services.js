@@ -78,7 +78,7 @@ export default function BasicStatistics() {
       >
         <Text color={"blue.500"}>Our services</Text> </chakra.h1>
       <SimpleGrid columns={{ base: 1,  md: 3 }} // Adjusting columns for small screens
-        spacing={{ base: 4, sm: 5, md: 6 }} // Spacing for different breakpoints
+        spacing={{ base: 10, sm: 10, md: 6 }} // Spacing for different breakpoints
         py={"10px"}>
         <Link href="../schools">
           <StatsCard

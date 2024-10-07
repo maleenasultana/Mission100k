@@ -73,7 +73,7 @@ const OfferCard = ({ imageSrc, title }) => {
     <Box
       w={"full"}
       maxW={"300px"}
-      p={5}
+      p={8}
       py={5}
       // boxShadow={'md'}
       // borderRadius="md"

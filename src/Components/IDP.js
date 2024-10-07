@@ -112,17 +112,17 @@ export default function BasicStatistics() {
             bg="white"
             borderRadius="lg"
             boxShadow="md"
-            p={6}
+            p={2}
             maxWidth={{ base: "90%", sm: "80%", md: "600px" }}
             width="full"
           >
-            <Text fontSize="2xl" fontWeight="bold" mb={4} textAlign="center">
+            <Text fontSize="xl" fontWeight="bold" mb={4} textAlign="center">
               Key Areas of Focus
             </Text>
-            <UnorderedList spacing={3} pl={5} styleType="disc">
+            <UnorderedList p={5} spacing={4} pl={2} styleType="disc">
               <ListItem fontSize="lg" fontWeight="semibold">
                 Operations
-                <UnorderedList spacing={1} pl={5}>
+                <UnorderedList spacing={3} pl={5}>
                   <ListItem fontSize="lg">
                     Internal Quality audits – Monthly & Quarterly
                   </ListItem>
@@ -232,7 +232,7 @@ export default function BasicStatistics() {
   >
     Why choose us
   </chakra.h1>
-  <SimpleGrid columns={{ base: 1, md: 1 }} alignItems={'center'} spacing={{ base: 5, lg: 8 }}>
+  <SimpleGrid columns={{ base: 1, md: 1 }} alignItems={'center'} spacing={{ base: 10, lg: 8 }}>
     <StatsCard title={"15+ years of experience in the education industry"} />
     <StatsCard title={"Renowned educators and marketing professionals"} />
     <StatsCard title={"Result-Driven Approach"} />
