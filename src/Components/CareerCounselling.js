@@ -145,7 +145,7 @@ export default function BasicStatistics() {
           position={"relative"}
           w={"full"}
         >
-          <Text as={"span"} color={"blue.500"} textAlign={"center"}>
+          <Text as={"span"} color={"blue.500"} textAlign={"center"} pb={20}>
             Empowerment and Wellbeing Initiative
           </Text>
         </Flex>
@@ -158,13 +158,13 @@ export default function BasicStatistics() {
         w={"full"}
       >
         <Image
-          alt={"Hero Image"}
-          fit={"cover"}
-          align={"center"}
-          w={"550px"}
-          h={"300px"}
-          src={"../../../c-c.jpg"}
-          py={"10px"}
+          alt={'Hero Image'}
+          objectFit={'cover'}
+          align={'center'}
+          w={{ base: '100%', md: '550px' }}
+          h={{ base: '300px', md: '100%' }}
+          src={'../../../c-c.jpg'}
+          
         />
       </Flex>
 

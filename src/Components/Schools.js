@@ -80,6 +80,7 @@ const OfferCard = ({ imageSrc, title }) => {
          mr={6}
          height={"50px"}
          width={"50px"}
+         
        />
       
       <Box>
