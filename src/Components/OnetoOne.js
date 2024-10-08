@@ -27,6 +27,7 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
+import EnquiryForm from "./Enquiryform";
 
 const Card = ({ heading, description, number, color }) => {
   return (
@@ -186,16 +187,16 @@ export default function CallToActionWithVideo() {
 
 
 <SimpleGrid 
-  columns={{ base: 1, md: 2, lg: 4 }} // 1 column on small screens, 2 on medium, and 4 on large
+  columns={{ base: 1, md: 2, lg: 3 }} // 1 column on small screens, 2 on medium, and 4 on large
   spacing={2} // Adjust spacing between cards
   mt={{ base: 5, md: 10 }} // Add margin-top for spacing
 >
   <Card description={"100% confidential & secure"} />
-  <Card description={"99.9% uptime"} />
+ 
   <Card description={"Ease of access"} />
   <Card description={"Trust & Integrity"} />
   <Card description={"Built with empathy"} />
-  <Card description={"Inclusive"} />
+ 
   <Card description={"Unbiased"} />
   <Card description={"Practical Approach"} />
 </SimpleGrid>
@@ -489,24 +490,21 @@ export default function CallToActionWithVideo() {
         >
           <OfferCard
             imageSrc="../../../honor.svg"
-            title="Eating Disorder
-"
+            title="Eating Disorder"
           />
           <OfferCard
             imageSrc="../../../data.svg"
-            title="Relationship Counseling."
+            title="Relationship Counseling"
           />
           <OfferCard imageSrc="../../../3.svg" title="Stress Management" />
           <OfferCard
             imageSrc="../../../bookmark.svg"
-            title="Couples therapy
-."
+            title="Couples therapy"
           />
-          <OfferCard imageSrc="../../../5.svg" title="Schizophrenia." />
+          <OfferCard imageSrc="../../../5.svg" title="Schizophrenia" />
           <OfferCard
             imageSrc="../../../6.svg"
-            title="Mindfulness
-"
+            title="Mindfulnes"
           />
         </Flex>
       </Box>
@@ -526,7 +524,7 @@ export default function CallToActionWithVideo() {
         alignItems="center"
         mt={"20px"}
       >
-        <Stack
+        {/* <Stack
           spacing={6}
           direction={{ base: "column", sm: "row" }}
           alignItems="center"
@@ -544,8 +542,21 @@ export default function CallToActionWithVideo() {
               Book Your Session
             </Button>
           </Link>
-        </Stack>
+        </Stack> */}
       </Box>
+      <Heading
+        fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+        textAlign={"center"}
+        pb={"20px"}
+        pt={{ base: "90", lg: "50px" }}
+        margin={"30px"}
+        marginTop={"40px"}
+      >
+        <Text color={"blue.400"} as={"span"} textAlign={"center"} marginTop={'50px'} pt={'10px'}>
+        Request a call back
+        </Text>
+      </Heading>
+      <EnquiryForm/>
     </Container>
   );
 }

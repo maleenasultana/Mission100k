@@ -29,34 +29,37 @@ import {
 
 import { useState } from "react";
 
-const Card = ({ heading, description, icon, href,bgColor }) => {
+const Card = ({ heading, description, icon, href, bgColor }) => {
   return (
     <Box
-      maxW={{ base: 'full', md: '250px' }}
-      w={'full'}
+      maxW={{ base: "full", md: "250px" }}
+      w={"full"}
       borderWidth="1px"
       borderRadius="lg"
       bg={bgColor}
       overflow="hidden"
-      boxShadow={'revert'}
-      shadow={'revert-layer'}
+      boxShadow={"revert"}
+      shadow={"revert-layer"}
       _hover={{
-        transform: 'translateY(-5px)',
-        boxShadow: 'xl',
-        transition: 'all 0.3s ease-in-out',
+        transform: "translateY(-5px)",
+        boxShadow: "xl",
+        transition: "all 0.3s ease-in-out",
       }}
       transition="all 0.3s ease-in-out"
       textAlign="center"
       role="group"
-      position={'relative'}
-
-     
-      p={5}>
-      <Stack align={'start'} spacing={2}>
-       
+      position={"relative"}
+      p={5}
+    >
+      <Stack align={"start"} spacing={2}>
         <Box mt={2}>
           {/* <Heading size="md">{heading}</Heading> */}
-          <Text mt={1} fontSize={'sm'} fontFamily={'Exo, sans-serif'}fontWeight={600}>
+          <Text
+            mt={1}
+            fontSize={"sm"}
+            fontFamily={"Exo, sans-serif"}
+            fontWeight={600}
+          >
             {description}
           </Text>
         </Box>
@@ -65,8 +68,8 @@ const Card = ({ heading, description, icon, href,bgColor }) => {
         </Button> */}
       </Stack>
     </Box>
-  )
-}
+  );
+};
 
 const OfferCard = ({ imageSrc, title }) => {
   return (
@@ -146,7 +149,8 @@ export default function BasicStatistics() {
           w={"full"}
         >
           <Text as={"span"} color={"blue.500"} textAlign={"center"} pb={20}>
-            Empowerment and Wellbeing Initiative
+          career counseling and guidance 
+
           </Text>
         </Flex>
       </Heading>
@@ -158,13 +162,12 @@ export default function BasicStatistics() {
         w={"full"}
       >
         <Image
-          alt={'Hero Image'}
-          objectFit={'cover'}
-          align={'center'}
-          w={{ base: '100%', md: '550px' }}
-          h={{ base: '300px', md: '100%' }}
-          src={'../../../c-c.jpg'}
-          
+          alt={"Hero Image"}
+          objectFit={"cover"}
+          align={"center"}
+          w={{ base: "100%", md: "550px" }}
+          h={{ base: "300px", md: "100%" }}
+          src={"../../../c-c.jpg"}
         />
       </Flex>
 
@@ -195,59 +198,55 @@ export default function BasicStatistics() {
       >
         <OfferCard
           imageSrc="../../../honor.svg"
-          title="Help individuals identify strengths, interests, and suitable career paths.
+          title="Help individuals identify strengths, interests, and suitable career paths
 "
         />
         <OfferCard
           imageSrc="../../../data.svg"
-          title="Provide tailored guidance based on comprehensive psychometric assessments.
+          title="Provide tailored guidance based on comprehensive psychometric assessments
 "
         />
         <OfferCard
           imageSrc="../../../3.svg"
-          title="Assist students and professionals in making informed education and career decisions.
-"
+          title="Assist students and professionals in making informed education and career decisions"
         />
         <OfferCard
           imageSrc="../../../bookmark.svg"
-          title="Support professionals in navigating career transitions or breaks confidently.
-"
+          title="Support professionals in navigating career transitions or breaks confidently"
         />
         <OfferCard
           imageSrc="../../../5.svg"
-          title="Offer up-to-date insights into industry trends and emerging opportunities.
-."
+          title="Offer up-to-date insights into industry trends and emerging opportunities"
         />
         <OfferCard
           imageSrc="../../../6.svg"
-          title="Help individuals avoid common career mistakes by providing clarity on options
-"
+          title="Help individuals avoid common career mistakes by providing clarity on options"
         />
         <OfferCard
           imageSrc="../../../data.svg"
-          title="Guide professionals in enhancing their skills for better career prospects.
-"
+          title="Guide professionals in enhancing their skills for better career prospects"
         />
         <OfferCard
           imageSrc="../../../dial.svg"
-          title="Equip career changers with strategies to shift industries or roles smoothly.
-"
+          title="Equip career changers with strategies to shift industries or roles smooth"
         />
         <OfferCard
           imageSrc="../../../gift.svg"
-          title="Alleviate career-related stress by offering clear, actionable roadmaps.
-."
+          title="Alleviate career-related stress by offering clear, actionable roadmap"
         />
 
         <OfferCard
           imageSrc="../../../data.svg"
-          title="Ensure each individual finds a fulfilling career aligned with their personal goals
-"
+          title="Ensure each individual finds a fulfilling career aligned with their personal goals"
         />
       </Flex>
       <Box p={4} pt={10}>
-      <Stack spacing={4} as={Container} maxW={'3xl'} textAlign={'center'}>
-        <Heading fontSize={{ base: '2xl', sm: '4xl' }} color={'blue.500'}fontWeight={'bold'}>
+        <Stack spacing={4} as={Container} maxW={"3xl"} textAlign={"center"}>
+          <Heading
+            fontSize={{ base: "2xl", sm: "4xl" }}
+            color={"blue.500"}
+            fontWeight={"bold"}
+          >
             Why Career Counseling is Required?
           </Heading>
         </Stack>
@@ -266,44 +265,52 @@ export default function BasicStatistics() {
               description={
                 "Reduces uncertainty and indecision during critical career transitions."
               }
-               bgColor="pink.100"
+              bgColor="pink.100"
             />
             <Card
               heading={"Heading"}
               description={
                 "Provides working professionals with guidance to upskill or pivot into new roles."
               }
-               bgColor="orange.100"
+              bgColor="orange.100"
             />
             <Card
               heading={"Heading"}
               description={
                 "Offers a systematic approach to long-term career satisfaction and success"
               }
-               bgColor="red.100"
+              bgColor="red.100"
             />
           </Flex>
         </Container>
       </Box>
-      <Box py={10} display="flex" justifyContent="center" alignItems="center" mt={'20px'}>
-  <Stack spacing={6} direction={{ base: "column", sm: "row" }} alignItems="center">
-    <Link href="/psychometrictest">
-      <Button
-        rounded={"full"}
-        size={"lg"}
-        fontWeight={"normal"}
-        px={6}
-        colorScheme={"blue"}
-        bg={"blue.400"}
-        _hover={{ bg: "blue.600", transform: "scale(1.1)" }}
+      <Box
+        py={10}
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        mt={"20px"}
       >
-      Take the psychometric test today 
-
-
-      </Button>
-    </Link>
-    </Stack>
-    </Box>
+        <Stack
+          spacing={6}
+          direction={{ base: "column", sm: "row" }}
+          alignItems="center"
+        >
+          <Link href="/psychometrictest">
+            <Button
+              rounded={"full"}
+              size={"lg"}
+              fontWeight={"normal"}
+              px={6}
+              colorScheme={"blue"}
+              bg={"blue.400"}
+              _hover={{ bg: "blue.600", transform: "scale(1.1)" }}
+            >
+              Book your psychometric test 
+            </Button>
+          </Link>
+        </Stack>
+      </Box>
     </Box>
   );
 }

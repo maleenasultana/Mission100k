@@ -50,7 +50,7 @@ const Navbar = () => {
 
   return (
     <Box
-      bg={navbarBg} // Dynamic background
+      bg="purple.600"// Dynamic background
       transition="background-color 0.3s ease" // Smooth transition for background change
       px={4}
       boxShadow={boxShadow} // Dynamic shadow based on scroll

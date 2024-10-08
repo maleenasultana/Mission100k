@@ -20,10 +20,17 @@ const Home = () => {
         py={"20px"}
         fontWeight={"bold"}
       >
-        <Text color={"green.700"} font-family="Exo, sans-serif">
-          EMPOWERING MINDS, TRANSFORMING LIVES: YOUR JOURNEY TO LIFE SUCCESS
-          STARTS HERE
+        <Text
+          textAlign={"center"}
+          fontSize="25px"
+          fontWeight="500"
+          
+          fontFamily={"Exo, sans-serif"}
+          color={"green.500"}
+        >
+         EMPOWERING MINDS TRANSFORMING LIVES: YOUR JOURNEY TO LIFE SUCCESS STARTS HERE
         </Text>
+       
       </chakra.h1>
       {/* <Image fontSize={ '4xl'} src="../../../Add a heading.png" alt="... " height="200" width="full" /> */}
       <Services />

@@ -46,28 +46,56 @@ export default function LargeWithLogoCentered() {
       <Container as={Stack} maxW={'9xl'} py={10} >
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={6}>
           <Stack align={'flex-start'}>
-            <ListHeader>Product</ListHeader>
-            <Box as="a" href={'./about'}>
-              Overview
+            <ListHeader>Services</ListHeader>
+            <Box as="a" href={'./schools'}>
+              school / colleges
             </Box>
             <Stack direction={'row'} align={'center'} spacing={2}>
-              <Box as="a" href={'./services'}>
-                Features
+              <Box as="a" href={'./corporate'}>
+             corporates/  workplaces
               </Box>
-              <Tag
+             
+            </Stack>
+            <Stack direction={'row'} align={'center'} spacing={2}>
+              <Box as="a" href={'./careercounselling'}>
+               career counselling
+              </Box>
+              
+              {/* <Tag
                 size={'sm'}
                 bg={useColorModeValue('green.300', 'green.800')}
                 ml={2}
                 color={'white'}
               >
-                New
-              </Tag>
+             new
+              </Tag> */}
             </Stack>
+            <Stack direction={'row'} align={'center'} spacing={2}>
+               <Stack direction={'row'} align={'center'} spacing={2}>
+              <Box as="a" href={'./careercounselling'}>
+            
+              </Box>
+              
+              
+            </Stack>
+            <Stack direction={'row'} align={'center'} spacing={2}>
+              <Box as="a" href={'./onetoone'}>
+              one - to - one sessions
+              </Box>
+              
+            </Stack>
+           
+              
+            </Stack>
+            <Stack direction={'row'} align={'center'} spacing={2}>
+              <Box as="a" href={'./idp'}>
+               Institutional development programme
+              </Box>
+              
+            </Stack>
+
             <Box as="a" href={'#'}>
-              Tutorials
-            </Box>
-            <Box as="a" href={'#'}>
-              Pricing
+        
             </Box>
           </Stack>
           <Stack align={'flex-start'}>
@@ -79,11 +107,9 @@ export default function LargeWithLogoCentered() {
             <Box as="a" href={'./contactus'}>
               Contact Us
             </Box>
-            <Box as="a" href={'tel:+91'}>
-              <PhoneIcon /> Call Us
-            </Box>
-            <Box as="a" href={'mailto:'}>
-              <EmailIcon /> Email Us
+            
+            <Box as="a" href={'mailto:Director@mission100k.org'}>
+              <EmailIcon /> Email Us 
             </Box>
           </Stack>
           <Stack align={'flex-start'}>

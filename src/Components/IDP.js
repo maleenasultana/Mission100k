@@ -16,7 +16,10 @@ import {
   Button,
   Image,
   Link,
+  Container,
+  Heading,
 } from "@chakra-ui/react";
+import EnquiryForm from "./Enquiryform";
 
 function StatsCard({ title, stat }) {
   return (
@@ -46,58 +49,64 @@ function StatsCard({ title, stat }) {
 
 export default function BasicStatistics() {
   return (
-    <Box
-      maxW="9xl"
-      mx={"auto"}
-      px={{ base: 2, sm: 12, md: 17 }}
-      borderRadius={"40%"}
-    >
-      <chakra.h1
-        textAlign={"center"}
-        fontSize={{ base: "2xl", md: "4xl" }}
-        py={10}
-        fontWeight={"bold"}
-      >
-        IDP - Institution Development Programme
-      </chakra.h1>
-      <Box
-        display="flex"
-        flexDirection="column"
-        justifyContent="center"
-        marginTop={{ base: "3", sm: "0" }}
-      >
-        <Text
-          fontFamily={"sans-serif"}
-          fontWeight={600}
-          mx={"auto"}
-          fontSize={{ base: "lg", md: "x-large" }}
-        >
+<Container maxW={'7xl'}>
+     
+      <Stack
+        align={'center'}
+        spacing={{ base: 15, md: 6 }}
+        py={{ base: 20, md: 18 }}
+        direction={{ base: 'column', md: 'row' }}>
+        <Stack flex={1} py={20} spacing={{ base: 20, md: 4 }}>
+          <Heading
+            lineHeight={1.1}
+            fontWeight={600}
+            fontSize={{ base: '2xl', sm: '3xl', lg: '4xl' }}>
+            <Text as={'span'} color={'blue.500'}>
+            IDP - Institution Development Programme
+            </Text>
+          </Heading>
+          <Text color={'gray.500'}fontSize={{ base: "12", lg: "20" }} >
           Are you seeking advice from an expert on collaborating with your
           institution’s vision and mission?
-        </Text>
-      </Box>
-      <Box maxW="lg" mx="auto" mt={10} p={6} borderColor="gray.300">
-        <Image
-          alt={"Hero Image"}
-          fit={"cover"}
-          align={"center"}
-          w={"100%"}
-          h={"90%"}
-          src={"../../../idp.png"}
-        />
-        <Text fontSize={{ base: "md", lg: "lg" }} color={"gray.900"}>
+          </Text>
+          <Text fontSize={{ base: "14", lg: "20" }} color={"gray.700"}>
           Mission 100K is super excited to announce our collaboration with the
           top educators and marketing professionals to provide a sustainable
           revenue model for educational Institutions. While we strive towards
           impacting the lives of 100K people, our aim is also to empower the
           education institutions to be successful in their noble mission of
           providing the best quality education to the students.
-        </Text>
-      </Box>
+          </Text>
+        </Stack>
+        <Flex
+          flex={1}
+          justify={'center'}
+          align={'center'}
+          position={'relative'}
+          w={'full'}>
+          <Box
+            position={'absolute'}
+            height={'350px'}
+            rounded={'2xl'}
+            width={'200'}
+            overflow={'hidden'}>
+            <Image
+              alt={'Hero Image'}
+              objectFit={'cover'}
+              align={'center'}
+              w={{ base: '100%', md: 'auto' }}
+              h={{ base: 'auto', md: '100%' }}
+              src={'../../../idp.png'}
+            />
+          </Box>
+        </Flex>
+</Stack>
+   
+    
 
       <Box p={5} justifyContent={"center"}>
         <Text fontSize="2xl" fontWeight="bold" mb={4} textAlign="center">
-          Our IDS program involves
+          Our IDP Programme involves
         </Text>
 
         <Flex
@@ -203,7 +212,7 @@ export default function BasicStatistics() {
         </Flex>
       </Box>
 
-      <chakra.h1
+      {/* <chakra.h1
         textAlign={"center"}
         fontSize={{ base: "lg", md: "2xl" }}
         py={10}
@@ -221,7 +230,7 @@ export default function BasicStatistics() {
         fontWeight={"bold"}
       >
         Complete package of IDP – Rs.4.5 lakhs per year.
-      </chakra.h1>
+      </chakra.h1> */}
 
       <Box maxW="5xl" mx={"auto"} pt={5} px={{ base: 2, sm: 12, md: 17 }}>
   <chakra.h1
@@ -243,17 +252,19 @@ export default function BasicStatistics() {
 
       <Text
         textAlign={"center"}
-        fontSize={{ base: "lg", md: "xl" }}
+        fontSize={{ base: "3xl", md: "3xl" }}
         py={10}
         fontWeight={"bold"}
+        fontFamily={'Exo, sans-serif'}
       >
         Let us begin our collaboration toward a fulfilling Journey
       </Text>
       <Text
         textAlign={"center"}
-        fontSize={{ base: "lg", md: "xl" }}
+        fontSize={{ base: "3xl", md: "3xl" }}
         py={10}
         fontWeight={"bold"}
+        fontFamily={'Exo, sans-serif'}
       >
         Book your Free Consultation with our expert team
       </Text>
@@ -271,7 +282,7 @@ export default function BasicStatistics() {
           alignItems="center"
         >
           <Link href="/enquiryform">
-            <Button
+            {/* <Button
               rounded={"full"}
               size={"lg"}
               fontWeight={"normal"}
@@ -280,11 +291,26 @@ export default function BasicStatistics() {
               bg={"blue.400"}
               _hover={{ bg: "blue.600", transform: "scale(1.1)" }}
             >
-              Book Your Session
-            </Button>
+             Request a call back
+            </Button> */}
           </Link>
+          
+          
         </Stack>
       </Box>
-    </Box>
+      <Heading
+        fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+        textAlign={"center"}
+        pb={"20px"}
+        pt={{ base: "90", lg: "50px" }}
+        margin={"30px"}
+        marginTop={"40px"}
+      >
+        <Text color={"blue.400"} as={"span"} textAlign={"center"} marginTop={'50px'} pt={'10px'}>
+        Request a call back
+        </Text>
+      </Heading>
+   <EnquiryForm/>
+    </Container>
   );
 }

@@ -62,7 +62,7 @@ const Card = ({ heading, description, number, color }) => {
   return (
     <Box>
     <Box
-      maxW={{ base: "full", md: "275px" }}
+      maxW={{ base: "full", md: "250px" }}
       w={{ base: "100%", md: "auto" }} // Full width on small screens, auto on medium+
       h={{ base: "auto", md: "100%" }}
      
@@ -261,33 +261,18 @@ export default function BasicStatistics() {
       </Flex>
 
       <Box>
-        <Heading
-          fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
-          textAlign={"center"}
-          pt={"30px"}
-          marginTop={"40px"}
-          marginBottom={"2px"}
-        >
-          {/* <Text
-              as={'span'}
-              position={'relative'}
-              _after={{
-                content: "''",
-                width: 'full',
-                height: useBreakpointValue({ base: '20%', md: '30%' }),
-                position: 'absolute',
-                bottom: 1,
-                left: 0,
-                bg: 'blue.400',
-                zIndex: -1,
-              }}>
-             SEO - Website
-            </Text> */}
-          <br />{" "}
-          <Text color={"blue.400"} as={"span"} textAlign={"center"}>
-            EnquiryForm
-          </Text>{" "}
-        </Heading>
+      <Heading
+        fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+        textAlign={"center"}
+        pb={"20px"}
+        pt={{ base: "90", lg: "50px" }}
+        margin={"30px"}
+        marginTop={"40px"}
+      >
+        <Text color={"blue.400"} as={"span"} textAlign={"center"} marginTop={'50px'} pt={'10px'}>
+        Request a call back
+        </Text>
+      </Heading>
       </Box>
       <Box margin={"30px"}></Box>
       <Stack

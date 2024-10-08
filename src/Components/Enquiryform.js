@@ -1,6 +1,14 @@
 'use client';
 
-import { Box, Button, FormControl,Text, FormLabel, Input, Select, Textarea, VStack } from '@chakra-ui/react';
+import { Box, Button, FormControl,
+    Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  useDisclosure,
+  Text,FormLabel, Input, Select, Textarea, VStack } from '@chakra-ui/react';
 import { useState } from 'react';
 
 export default function EnquiryForm() {
@@ -11,7 +19,7 @@ export default function EnquiryForm() {
     service: '',
     additionalInfo: ''
   });
-
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -92,9 +100,32 @@ export default function EnquiryForm() {
             />
           </FormControl>
 
-          <Button type="submit" colorScheme="blue" width="full">
-            Submit
-          </Button>
+          <Button type="submit" colorScheme="blue" width="full" onClick={onOpen}>
+        Submit
+      </Button>
+
+      <Modal isOpen={isOpen} onClose={onClose} isCentered>
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Thank You!</ModalHeader>
+          <ModalBody>
+            <Text>
+              We appreciate your interest in our services.
+              <br />
+              Our team will review your request and get back
+              <br />
+              to you shortly. If you require immediate assistance,
+              <br />
+              please feel free to call us at 9019873893.
+            </Text>
+          </ModalBody>
+          <ModalFooter>
+            <Button colorScheme="blue" mr={3} onClick={onClose}>
+              Close
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
         </VStack>
         <Text color={'grey.100'}>
 <Text color={'blue.300'}>Thank You for Your Enquiry!</Text><br/>

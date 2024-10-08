@@ -57,7 +57,46 @@ const OfferCard = ({ imageSrc, title }) => {
     </Box>
   );
 };
-
+const Card = ({ heading, description, number, color }) => {
+  return (
+    <Box>
+    <Box
+      maxW={{ base: "full", md: "275px" }}
+      w={{ base: "100%", md: "auto" }} // Full width on small screens, auto on medium+
+      h={{ base: "auto", md: "100%" }}
+     
+      overflow="hidden"
+      p={5}
+      borderRadius="50%"
+      boxShadow="xl"
+      bg={useColorModeValue("white", "gray.800")}
+    >
+      <Stack align={"center"} spacing={2}>
+        <Box mt={2}>
+          <Heading
+            textAlign="center"
+            size="2xl"
+            color={color}
+            fontWeight="bold"
+          >
+            {number}
+          </Heading>
+          <Text mt={3} fontSize={"sm"} textAlign={"center"}>
+            {description}
+          </Text>
+        </Box>
+       
+      </Stack>
+      
+    </Box>
+    <Box>
+    <Text fontSize="sm" color="gray.500" textAlign="center">
+      *Source: {heading}
+    </Text>
+  </Box>
+  </Box>
+  );
+};
 export default function BasicStatistics() {
 
   const [formData, setFormData] = useState({
@@ -98,7 +137,7 @@ export default function BasicStatistics() {
         fontWeight={"bold"}
       >
         <Text color={"blue.500"} fontFamily="Poppins">
-          Employment and Well-being initiative
+        Student wellbeing initiative 
         </Text>
       </chakra.h1>
       <Box
@@ -119,116 +158,40 @@ export default function BasicStatistics() {
           everyone can thrive emotionally, mentally, and academically.
         </Text>
       </Box>
-      <Flex
+    
+      
+        <Flex
+        flexWrap="wrap"
+        gridGap={16}
         justify="center"
-        wrap="wrap" // Makes the circles wrap in smaller screens
-        gap={6} // Adds space between the circles
-        mt="20px"
-      >
-        <Box
-          borderRadius={"50%"}
-          bg={"blue.100"}
-          borderBottom="5px solid"
-          borderRight="5px solid"
-          borderColor="grey.100"
-          boxShadow="2px 2px 2px 2px"
-          textAlign={"center"}
-          mt={"20px"}
-          p={8}
-          height={{ base: "250px", md: "250px", lg: "250px" }}
-          width={{ base: "250px", md: "250px", lg: "350px" }}
-          pt={{ base: "40px", md: "60px", lg: "80px" }}
-        >
-          <Text py={"5px"} fontSize={{ base: "14px", md: "16px", lg: "18px" }}>
-            Over 30% of children in orphanages experience mental health issues
-            (Children's Rights Alliance, 2021)
-          </Text>
-        </Box>
-        <Box
-          borderRadius={"50%"}
-          bg={"blue.100"}
-          borderBottom="5px solid"
-          borderRight="5px solid"
-          borderColor="grey.100"
-          boxShadow="2px 2px 2px 2px"
-          textAlign={"center"}
-          mt={"20px"}
-          p={8}
-          height={{ base: "250px", md: "250px", lg: "250px" }}
-          width={{ base: "250px", md: "250px", lg: "350px" }}
-          pt={{ base: "40px", md: "60px", lg: "80px" }}
-        >
-          <Text fontSize={{ base: "14px", md: "16px", lg: "18px" }}>
-            Students in low-income schools are 50% more likely to report
-            emotional distress (National Center for Children in Poverty, 2020)
-          </Text>
-        </Box>
-
-        <Box
-          borderRadius={"50%"}
-          bg={"blue.100"}
-          borderBottom="5px solid"
-          borderRight="5px solid"
-          borderColor="grey.100"
-          boxShadow="2px 2px 2px 2px"
-          textAlign={"center"}
-          mt={"20px"}
-          p={8}
-          height={{ base: "250px", md: "250px", lg: "250px" }}
-          width={{ base: "250px", md: "250px", lg: "350px" }}
-          pt={{ base: "40px", md: "60px", lg: "80px" }}
-        >
-          <Text fontSize={{ base: "14px", md: "16px", lg: "18px" }}>
-            Children with access to mental health services show improved
-            academic performance by 20% (The Child Mind Institute, 2019)
-          </Text>
-        </Box>
-      </Flex>
-      <Flex
-        justify="center"
-        wrap="wrap" // Makes the circles wrap in smaller screens
-        gap={6} // Adds space between the circles
-        mt="20px"
-      >
-        <Box
-          borderRadius={"50%"}
-          bg={"blue.100"}
-          borderBottom="5px solid"
-          borderRight="5px solid"
-          borderColor="grey.100"
-          boxShadow="2px 2px 2px 2px"
-          textAlign={"center"}
-          mt={"20px"}
-          p={8}
-          height={{ base: "250px", md: "250px", lg: "250px" }}
-          width={{ base: "250px", md: "250px", lg: "350px" }}
-          pt={{ base: "40px", md: "60px", lg: "80px" }}
-        >
-          <Text fontSize={{ base: "14px", md: "16px", lg: "18px" }}>
-            Approximately 1 in 5 students in low-income areas experience
-            significant mental health challenges (SAMHSA, 2021)
-          </Text>
-        </Box>
-
-        <Box
-          borderRadius={"50%"}
-          bg={"blue.100"}
-          borderBottom="5px solid"
-          borderRight="5px solid"
-          borderColor="grey.100"
-          boxShadow="2px 2px 2px 2px"
-          textAlign={"center"}
-          mt={"20px"}
-          p={8}
-          height={{ base: "250px", md: "250px", lg: "250px" }}
-          width={{ base: "250px", md: "250px", lg: "350px" }}
-          pt={{ base: "40px", md: "60px", lg: "80px" }}
-        >
-          <Text fontSize={{ base: "14px", md: "16px", lg: "18px" }}>
-            School-based mental health programs can reduce behavioural issues by
-            up to 40% (National Institute of Mental Health, 2020)
-          </Text>
-        </Box>
+        pt={30}
+        width="100%"
+        height={'auto'}
+        px={{ base: 4, md: 0 }}>
+        <Card
+          number={"60%"}
+          heading={"(UNICEF, 2020)."}
+          description={"of orphans face mental issues "}
+          color={"red.500"}
+        />
+        <Card
+          number={"2x"}
+          heading={"(NIMHANS, 2019)"}
+          description={"anxiety in government school kids "}
+          color={"red.500"}
+        />
+        <Card
+          number={"1 in 3"}
+          heading={"(Plan India, 2021)"}
+          description={"rural students face high stress "}
+          color={"red.500"}
+        />
+        <Card
+          number={"25%"}
+          heading={"(National Research Council, 2019)"}
+          description={"Mental services boost academics "}
+          color={"red.500"}
+        />
       </Flex>
 
       <Heading
@@ -246,38 +209,50 @@ export default function BasicStatistics() {
       <Flex flexWrap="wrap" gridGap={16} py={20} justify="center" spacing={{ base: 6, lg: 8 }}>
         <OfferCard
           imageSrc="../../../honor.svg"
-          title="Group workshops on stress management and emotional skills.."
+          title="Group workshops on stress management and emotional skills"
         />
         <OfferCard
           imageSrc="../../../data.svg"
-          title=" Roleplays for practical problem-solving."
+          title=" Roleplays for practical problem-solving"
         />
         
         <OfferCard
           imageSrc="../../../bookmark.svg"
-          title=" Assessments to evaluate emotional well-being and progress."
+          title=" Assessments to evaluate emotional well-being and progress"
         />
         <OfferCard
           imageSrc="../../../5.svg"
-          title="Worksheets to help students set goals and track their growth."
+          title="Worksheets to help students set goals and track their growth"
         />
         <OfferCard
           imageSrc="../../../6.svg"
-          title="Reference materials for continuous learning."
+          title="Reference materials for continuous learning"
         />
         <OfferCard
           imageSrc="../../../data.svg"
-          title="Self-help tools to promote independent development."
+          title="Self-help tools to promote independent development"
         />
         <OfferCard
           imageSrc="../../../dial.svg"
-          title="Career counseling for future guidance."
+          title="Career counseling for future guidance"
         />
         
       </Flex>
 
     
     </Box>
+    <Heading
+        fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+        textAlign={"center"}
+        pb={"20px"}
+        pt={{ base: "90", lg: "50px" }}
+        margin={"30px"}
+        marginTop={"40px"}
+      >
+        <Text color={"blue.400"} as={"span"} textAlign={"center"} marginTop={'50px'} pt={'10px'}>
+        Request a call back
+        </Text>
+      </Heading>
     <Enquiryform/>
     </Container>
   );

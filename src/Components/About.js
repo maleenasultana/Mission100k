@@ -8,6 +8,9 @@ import {
   chakra,
   Container,
   Flex,
+  Button,
+  Link,
+  Stack,
 } from "@chakra-ui/react";
 
 const ArticleList = () => {
@@ -103,6 +106,10 @@ const ArticleList = () => {
           RESILIENT AND SUCCESSFUL INDIA.
         </Text>
       </VStack>
+      <Box py={10} display="flex" justifyContent="center" alignItems="center" mt={'20px'}>
+     
+    
+    </Box>
     </Container>
   );
 };

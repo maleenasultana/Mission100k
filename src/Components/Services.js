@@ -109,6 +109,7 @@ export default function BasicStatistics() {
             text="Providing essential mental well-being support and career counselling to underserved communities"
           />
         </Link>
+        
       </SimpleGrid>
       <SimpleGrid columns={{ base: 1, md: 3, sm:"2" }} spacing={{ base: 8, lg: 5 }} py={"25px"}>
         <Link href="../careercounselling">
