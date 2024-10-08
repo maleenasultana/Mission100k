@@ -177,14 +177,14 @@ export default function BasicStatistics() {
             heading={"(UNICEF, 2020)"}
             description={"of orphans face mental issues"}
             color={"red.500"}
-            // Responsive card width
+            width={{ base: "100%", sm: "48%", md: "30%", lg: "22%" }} // Responsive card width
           />
           <Card
             number={"2x"}
             heading={"(NIMHANS, 2019)"}
             description={"anxiety in government school kids"}
             color={"red.500"}
-         
+            width={{ base: "100%", sm: "48%", md: "30%", lg: "22%" }}
           />
 
           <Card
@@ -192,6 +192,7 @@ export default function BasicStatistics() {
           heading={"(N.R.Council,2019)"}
           description={"Mental services boost academics"}
           color={'red.500'}
+          width={{ base: "100%", sm: "48%", md: "30%", lg: "22%" }}
           />
         
           <Card
@@ -199,6 +200,7 @@ export default function BasicStatistics() {
             heading={"(Plan India, 2021)"}
             description={"rural students face high stress"}
             color={"red.500"}
+            width={{ base: "100%", sm: "48%", md: "30%", lg: "22%" }}
           />
         </Flex>
 
