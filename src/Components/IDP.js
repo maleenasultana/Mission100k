@@ -24,85 +24,99 @@ import EnquiryForm from "./Enquiryform";
 function StatsCard({ title, stat }) {
   return (
     <Stat
-    px={{ base: 4, md: 8 }}
-    py={"5"}
-    shadow={"xl"}
-    backgroundColor={'blue.100'}
-    border={"1px solid"}
-    borderColor={useColorModeValue("gray.800", "gray.500")}
-    rounded={"lg"}
-    transition="all 0.3s ease"  // Smooth transition for hover effects
-    _hover={{
-      boxShadow: "lg",          // Add a larger shadow on hover
-      transform: "translateY(-5px)", // Move the card slightly upward on hover
-    }}
-  >
-    <StatLabel fontWeight={900} fontSize={"xl"} isTruncated>
-      {title}
-    </StatLabel>
-    <StatNumber fontSize={"2xl"} fontWeight={"medium"}>
-      {stat}
-    </StatNumber>
-  </Stat>
+      px={{ base: 4, md: 8 }}
+      py={"5"}
+      shadow={"xl"}
+      backgroundColor={"blue.100"}
+      border={"1px solid"}
+      borderColor={useColorModeValue("gray.800", "gray.500")}
+      rounded={"lg"}
+      transition="all 0.3s ease" // Smooth transition for hover effects
+      _hover={{
+        boxShadow: "lg", // Add a larger shadow on hover
+        transform: "translateY(-5px)", // Move the card slightly upward on hover
+      }}
+    >
+      <StatLabel fontWeight={900} fontSize={"xl"} isTruncated>
+        {title}
+      </StatLabel>
+      <StatNumber fontSize={"2xl"} fontWeight={"medium"}>
+        {stat}
+      </StatNumber>
+    </Stat>
   );
 }
 
 export default function BasicStatistics() {
   return (
-<Container maxW={'7xl'}>
-     
+    <Container maxW={"7xl"}>
       <Stack
-        align={'center'}
-        spacing={{ base: 15, md: 6 }}
-        py={{ base: 20, md: 18 }}
-        direction={{ base: 'column', md: 'row' }}>
-        <Stack flex={1} py={20} spacing={{ base: 20, md: 4 }}>
-          <Heading
-            lineHeight={1.1}
-            fontWeight={600}
-            fontSize={{ base: '2xl', sm: '3xl', lg: '4xl' }}>
-            <Text as={'span'} color={'blue.500'}>
-            IDP - Institution Development Programme
-            </Text>
-          </Heading>
-          <Text color={'gray.500'}fontSize={{ base: "12", lg: "20" }} >
-          Are you seeking advice from an expert on collaborating with your
-          institution’s vision and mission?
-          </Text>
-          <Text fontSize={{ base: "14", lg: "20" }} color={"gray.700"}>
-          Mission 100K is super excited to announce our collaboration with the
-          top educators and marketing professionals to provide a sustainable
-          revenue model for educational Institutions. While we strive towards
-          impacting the lives of 100K people, our aim is also to empower the
-          education institutions to be successful in their noble mission of
-          providing the best quality education to the students.
-          </Text>
-        </Stack>
-        <Flex
-          flex={1}
-          justify={'center'}
-          align={'center'}
-          position={'relative'}
-          w={'full'}>
-          <Box
-            position={'absolute'}
-            height={'350px'}
-            rounded={'2xl'}
-            width={'200'}
-            overflow={'hidden'}>
-            <Image
-              alt={'Hero Image'}
-              objectFit={'cover'}
-              align={'center'}
-              w={{ base: '100%', md: 'auto' }}
-              h={{ base: 'auto', md: '100%' }}
-              src={'../../../idp.png'}
-            />
-          </Box>
-        </Flex>
+  align={"center"}
+  spacing={{ base: 8, md: 10 }}
+  py={{ base: 20, md: 25 }}
+  direction={{ base: "column", md: "row" }}
+>
+  <Stack flex={1} spacing={{ base: 6, md: 10 }}>
+    <Heading
+      lineHeight={1.1}
+      fontWeight={600}
+      fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
+      textAlign={{ base: "center", md: "left" }} // For center alignment on mobile
+    >
+      <Text as={"span"} color={"blue.500"}>
+        IDP - Institution Development Programme
+      </Text>
+    </Heading>
+    <Text
+      fontSize={{ base: "lg", lg: "2xl" }} // Adjust font size for better readability
+      color={"green.500"}
+      fontWeight={"bold"}
+      textAlign={{ base: "center", md: "left" }} // Responsive text alignment
+    >
+      Are you seeking advice from an expert on collaborating with your
+      institution’s vision and mission?
+    </Text>
+    <Text
+      fontSize={{ base: "sm", lg: "lg" }} // Slightly smaller on mobile
+      color={"gray.700"}
+      textAlign={{ base: "center", md: "left" }} // Responsive text alignment
+    >
+      Mission 100K is super excited to announce our collaboration with the
+      top educators and marketing professionals to provide a sustainable
+      revenue model for educational institutions. While we strive towards
+      impacting the lives of 100K people, our aim is also to empower the
+      education institutions to be successful in their noble mission of
+      providing the best quality education to the students.
+    </Text>
+  </Stack>
+
+  <Flex
+    flex={1}
+    justify={"center"}
+    align={"center"}
+    position={"relative"}
+    w={"full"}
+  >
+    <Box
+      position={"relative"}
+      height={{ base: "250px", md: "350px" }} // Adjust height for different screen sizes
+      rounded={"2xl"}
+      width={{ base: "90%", md: "300px", lg: "400px" }} // Adjust width for responsiveness
+      overflow={"hidden"}
+      boxShadow={"lg"} // Add shadow for a nicer effect
+    >
+      <Image
+        alt={"Hero Image"}
+        objectFit={"cover"}
+        align={"center"}
+        w={"100%"} // Ensures the image fills the container
+        h={"100%"} // Ensures the image maintains the height
+        src={"../../../idp.png"}
+      />
+    </Box>
+  </Flex>
 </Stack>
-   
-    
+
 
       <Box p={5} justifyContent={"center"}>
         <Text fontSize="2xl" fontWeight="bold" mb={4} textAlign="center">
@@ -233,29 +247,45 @@ export default function BasicStatistics() {
       </chakra.h1> */}
 
       <Box maxW="5xl" mx={"auto"} pt={5} px={{ base: 2, sm: 12, md: 17 }}>
-  <chakra.h1
-    textAlign={"center"}
-    fontSize={{ base: "lg", md: "2xl" }}
-    py={10}
-    fontWeight={"bold"}
-  >
-    Why choose us
-  </chakra.h1>
-  <SimpleGrid columns={{ base: 1, md: 1 }} alignItems={'center'} spacing={{ base: 10, lg: 8 }}>
-    <StatsCard title={"15+ years of experience in the education industry"} />
-    <StatsCard title={"Renowned educators and marketing professionals"} />
-    <StatsCard title={"Result-Driven Approach"} />
-    <StatsCard title={"Always in Sync with Institution Vision"} />
-    <StatsCard title={"Affordable price"} />
-  </SimpleGrid>
-</Box>
+        <Heading
+          fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+          textAlign={"center"}
+          pb={"20px"}
+          pt={{ base: "90", lg: "50px" }}
+          margin={"30px"}
+          marginTop={"40px"}
+        >
+          <Text
+            color={"blue.400"}
+            as={"span"}
+            textAlign={"center"}
+            marginTop={"50px"}
+            pt={"10px"}
+          >
+            Why Choose Us
+          </Text>
+        </Heading>
+        <SimpleGrid
+          columns={{ base: 1, md: 1 }}
+          alignItems={"center"}
+          spacing={{ base: 10, lg: 8 }}
+        >
+          <StatsCard
+            title={"15+ years of experience in the education industry"}
+          />
+          <StatsCard title={"Renowned educators and marketing professionals"} />
+          <StatsCard title={"Result-Driven Approach"} />
+          <StatsCard title={"Always in Sync with Institution Vision"} />
+          <StatsCard title={"Affordable price"} />
+        </SimpleGrid>
+      </Box>
 
       <Text
         textAlign={"center"}
         fontSize={{ base: "3xl", md: "3xl" }}
         py={10}
         fontWeight={"bold"}
-        fontFamily={'Exo, sans-serif'}
+        fontFamily={"Exo, sans-serif"}
       >
         Let us begin our collaboration toward a fulfilling Journey
       </Text>
@@ -264,7 +294,7 @@ export default function BasicStatistics() {
         fontSize={{ base: "3xl", md: "3xl" }}
         py={10}
         fontWeight={"bold"}
-        fontFamily={'Exo, sans-serif'}
+        fontFamily={"Exo, sans-serif"}
       >
         Book your Free Consultation with our expert team
       </Text>
@@ -294,8 +324,6 @@ export default function BasicStatistics() {
              Request a call back
             </Button> */}
           </Link>
-          
-          
         </Stack>
       </Box>
       <Heading
@@ -306,11 +334,17 @@ export default function BasicStatistics() {
         margin={"30px"}
         marginTop={"40px"}
       >
-        <Text color={"blue.400"} as={"span"} textAlign={"center"} marginTop={'50px'} pt={'10px'}>
-        Request a call back
+        <Text
+          color={"blue.400"}
+          as={"span"}
+          textAlign={"center"}
+          marginTop={"50px"}
+          pt={"10px"}
+        >
+          Request a call back
         </Text>
       </Heading>
-   <EnquiryForm/>
+      <EnquiryForm />
     </Container>
   );
 }

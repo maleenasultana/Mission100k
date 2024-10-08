@@ -24,6 +24,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { useState } from "react";
+import Enquiryform from "./Enquiryform";
 
 const OfferCard = ({ imageSrc, title }) => {
   return (
@@ -260,7 +261,6 @@ export default function BasicStatistics() {
         />
       </Flex>
 
-      <Box>
       <Heading
         fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
         textAlign={"center"}
@@ -273,126 +273,10 @@ export default function BasicStatistics() {
         Request a call back
         </Text>
       </Heading>
-      </Box>
-      <Box margin={"30px"}></Box>
-      <Stack
-        spacing={{ base: 4, sm: 6 }}
-        direction={{ base: "column", sm: "row" }}
-        py={"20pxs"}
-      >
-        {/* <Button
-          rounded={'full'}
-          size={'lg'}
-          fontWeight={'normal'}
-          px={9}
-          colorScheme={'blue'}
-          bg={'blue.400'}
-          _hover={{ bg: 'blue.600', transform: 'scale(1.1)' }}
-          py={'20px'}>
-          <Link to="/">Book Your Session Now</Link>
-        </Button> */}
+   
 
-        <Box
-          maxW="md"
-          mx="auto"
-          mt={10}
-          p={6}
-          border="1px"
-          borderColor="gray.300"
-          borderRadius="md"
-          boxShadow="lg"
-        >
-          <form onSubmit={handleSubmit} mt="30px">
-            <VStack spacing={4} align="start">
-              <FormControl id="name" isRequired>
-                <FormLabel>Name:</FormLabel>
-                <Input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Please enter your name"
-                />
-              </FormControl>
-
-              <FormControl id="contactNumber" isRequired>
-                <FormLabel>Contact Number:</FormLabel>
-                <Input
-                  type="tel"
-                  name="contactNumber"
-                  value={formData.contactNumber}
-                  onChange={handleChange}
-                  placeholder="Please enter your contact number"
-                />
-              </FormControl>
-
-              <FormControl id="email" isRequired>
-                <FormLabel>Email ID:</FormLabel>
-                <Input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="Please enter your email address"
-                />
-              </FormControl>
-
-              <FormControl id="service" isRequired>
-                <FormLabel>What Service Are You Interested In?</FormLabel>
-                <Select
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  placeholder="Choose the service you require"
-                >
-                  <option value="1 to 1 Counseling Service">
-                    1 to 1 Counseling Service
-                  </option>
-                  <option value="Workplace - Corporate Program">
-                    Workplace - Corporate Program
-                  </option>
-                  <option value="School-College-University Program">
-                    School-College-University Program
-                  </option>
-                  <option value="Institutional Development Program">
-                    Institutional Development Program
-                  </option>
-                  <option value="Career Counseling and Psychometric Test">
-                    Career Counseling and Psychometric Test
-                  </option>
-                  <option value="Government School/Orphanages">
-                    Government School/Orphanages
-                  </option>
-                  <option value="Preschool program">Preschool program</option>
-                  <option value="Other">Other (Please specify)</option>
-                </Select>
-              </FormControl>
-
-              <FormControl id="additionalInfo">
-                <FormLabel>Additional Information:</FormLabel>
-                <Textarea
-                  name="additionalInfo"
-                  value={formData.additionalInfo}
-                  onChange={handleChange}
-                  placeholder="Please provide any additional details or specific requirements"
-                />
-              </FormControl>
-
-              <Button type="submit" colorScheme="blue" width="full">
-                Submit
-              </Button>
-            </VStack>
-            <Text color={"grey.100"}>
-              <Text color={"blue.300"}>Thank You for Your Enquiry!</Text>
-              <br />
-              {/* <Text color={'red.200'}>We appreciate your interest in our services.<br/>
-Our team will review your request and get back <br/>
-to you shortly. If you require immediate assistance,<br/></Text>
-<Text color={'blue.400'}>please feel free to call us at xxxxxxxxxxx</Text> */}
-            </Text>
-          </form>
-        </Box>
-      </Stack>
+    <Enquiryform/>
+    
     </Box> 
     </Box>
   );

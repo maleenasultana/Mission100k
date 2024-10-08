@@ -45,59 +45,30 @@ export default function LargeWithLogoCentered() {
     >
       <Container as={Stack} maxW={'9xl'} py={10} >
         <SimpleGrid columns={{ base: 1, sm: 2, md: 4 }} spacing={6}>
-          <Stack align={'flex-start'}>
-            <ListHeader>Services</ListHeader>
-            <Box as="a" href={'./schools'}>
-              school / colleges
-            </Box>
-            <Stack direction={'row'} align={'center'} spacing={2}>
-              <Box as="a" href={'./corporate'}>
-             corporates/  workplaces
-              </Box>
-             
-            </Stack>
-            <Stack direction={'row'} align={'center'} spacing={2}>
-              <Box as="a" href={'./careercounselling'}>
-               career counselling
-              </Box>
-              
-              {/* <Tag
-                size={'sm'}
-                bg={useColorModeValue('green.300', 'green.800')}
-                ml={2}
-                color={'white'}
-              >
-             new
-              </Tag> */}
-            </Stack>
-            <Stack direction={'row'} align={'center'} spacing={2}>
-               <Stack direction={'row'} align={'center'} spacing={2}>
-              <Box as="a" href={'./careercounselling'}>
-            
-              </Box>
-              
-              
-            </Stack>
-            <Stack direction={'row'} align={'center'} spacing={2}>
-              <Box as="a" href={'./onetoone'}>
-              one - to - one sessions
-              </Box>
-              
-            </Stack>
-           
-              
-            </Stack>
-            <Stack direction={'row'} align={'center'} spacing={2}>
-              <Box as="a" href={'./idp'}>
-               Institutional development programme
-              </Box>
-              
-            </Stack>
+        <Stack align={'flex-start'} spacing={4}>  {/* Added spacing to keep items consistently spaced */}
+  <ListHeader>Services</ListHeader>
+  
+  <Box as="a" href={'./schools'}>
+    Schools / Colleges
+  </Box>
 
-            <Box as="a" href={'#'}>
-        
-            </Box>
-          </Stack>
+  <Box as="a" href={'./corporates'}>
+    Corporates / Workplaces
+  </Box>
+
+  <Box as="a" href={'./careercounselling'}>
+    Career Counselling
+  </Box>
+
+  <Box as="a" href={'./onetoone'}>
+    One-to-One Sessions
+  </Box>
+
+  <Box as="a" href={'./idp'}>
+    Institutional Development Programme
+  </Box>
+</Stack>
+
           <Stack align={'flex-start'}>
             <ListHeader>Company</ListHeader>
 

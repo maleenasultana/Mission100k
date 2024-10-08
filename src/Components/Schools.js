@@ -336,8 +336,8 @@ export default function CallToActionWithVideo() {
               alt={"Hero Image"}
               objectFit={"cover"}
               align={"center"}
-              w={{ base: "100%", md: "auto" }}
-              h={{ base: "auto", md: "100%" }}
+              w={{ base: "90%", md: "auto" }}
+              h={{ base: "auto", md: "90%" }}
               src={"../../../2.jpg"}
             />
           </Box>
