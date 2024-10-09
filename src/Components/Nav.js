@@ -168,7 +168,8 @@ const Navbar = () => {
     icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
     aria-label={'Toggle Navigation'}
     position="absolute" // Use absolute positioning
-    top={13} // Adjust this value for vertical positioning
+    top={13}
+    mx={20} // Adjust this value for vertical positioning
     left={40} // Adjust this value for horizontal positioning
     onClick={isOpen ? onClose : onOpen}
     display={{ base: 'flex', md: 'none' }} // Show only on small screens
@@ -178,8 +179,8 @@ const Navbar = () => {
 
   {/* Mobile Navigation */}
   <Collapse in={isOpen} animateOpacity>
-    <Box pb={4} display={{ md: 'none' }} bgColor={'purple.600'}>
-      <VStack as={'nav'} spacing={4} alignItems="center">
+    <Box pb={4} p={'15px'}display={{ md: 'none' }} bgColor={'purple.600'}>
+      <VStack as={'nav'} spacing={4} alignItems="flex-left">
         <Link as={RouterLink} to="/" onClick={onClose}>
           Home
         </Link>
