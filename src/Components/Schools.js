@@ -27,6 +27,7 @@ const Card = ({ heading, description, number, color }) => {
         w={"full"}
         overflow="hidden"
         p={4}
+        py={10}
         borderRadius="50%"
         boxShadow="lg"
         bg={useColorModeValue("white", "gray.800")}
@@ -176,11 +177,13 @@ export default function CallToActionWithVideo() {
               w={{ base: "100%", md: "auto" }}
               h={{ base: "auto", md: "100%" }}
               src={"../../../school-img.png"}
+              py="8"
+            
             />
           </Box>
         </Flex>
       </Stack>
-
+<Box py={10}>
       <Flex
         flexWrap="wrap"
         gridGap={16}
@@ -226,7 +229,7 @@ export default function CallToActionWithVideo() {
           color={"green.500"}
         />
       </Flex>
-
+</Box>
       <Heading
         fontSize={{ base: "3xl", md: "4xl", lg: "5xl" }}
         textAlign={"center"}

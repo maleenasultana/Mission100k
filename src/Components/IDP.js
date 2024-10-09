@@ -53,7 +53,7 @@ export default function BasicStatistics() {
       <Stack
   align={"center"}
   spacing={{ base: 8, md: 10 }}
-  py={{ base: 20, md: 25 }}
+  py={{ base: 20, md: 40 }}
   direction={{ base: "column", md: "row" }}
 >
   <Stack flex={1} spacing={{ base: 6, md: 10 }}>
