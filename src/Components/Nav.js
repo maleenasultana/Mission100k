@@ -57,7 +57,7 @@ const Navbar = () => {
   boxShadow={boxShadow} // Dynamic shadow based on scroll
   position="fixed" // Fixed navbar on top
   width="100%" // Full width for navbar
-  maxWidth={{ base: "100%", md: "1200px", lg: "1500px" }} // Responsive max width
+ // Responsive max width
   mx="auto" // Center the navbar horizontally
   zIndex={10} // Ensure navbar stays on top of other elements
   h={{ base: '50px', md: '65px' }} 
@@ -76,8 +76,10 @@ const Navbar = () => {
     <Image 
         src={'../../../logo.png'} 
         w={{ base: '100px', md: '200px' }} // Responsive logo width
-        h={{ base: '25px', md: '50px' }} // Responsive logo height
+     
+        h={{ base: '40px', md: '50px' }} // Responsive logo height
         alt={'Logo'} 
+        py={1}
     />
 </Box>
 

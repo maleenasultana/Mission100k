@@ -12,7 +12,7 @@ import "./../App.css";
 const Home = () => {
   return (
     <Container maxW={"100vw"}>
-      <Carousal display={"auto"} />
+      <Carousal display={"cover"} />
       <chakra.h1
         textAlign={"center"}
         fontSize={{ base: "lg", md: "2xl" }}

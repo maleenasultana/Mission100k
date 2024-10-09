@@ -36,7 +36,7 @@ const Card = ({ heading, description, number, color }) => {
         maxW={{ base: "full", md: "375px" }}
         height={"100"}
         overflow="hidden"
-      
+      p={2}
         borderRadius="10%"
         boxShadow="xl"
         backgroundColor={"blue.100"}
