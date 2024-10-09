@@ -51,6 +51,7 @@ const Navbar = () => {
   return (
     <Box
   bg="purple.600"
+  // opacity={'10%'}
   transition="background-color 0.3s ease" // Smooth transition for background change
   px={{ base: 2, md: 4, lg: 8 }} // Responsive padding
   boxShadow={boxShadow} // Dynamic shadow based on scroll
@@ -59,17 +60,27 @@ const Navbar = () => {
   maxWidth={{ base: "100%", md: "1200px", lg: "1500px" }} // Responsive max width
   mx="auto" // Center the navbar horizontally
   zIndex={10} // Ensure navbar stays on top of other elements
-  h={{ base: '50px', md: '65px' }} // Responsive height for the navbar
+  h={{ base: '50px', md: '65px' }} 
+  alignItems={'center'}// Responsive height for the navbar
 >
 
 
   <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
     {/* Logo */}
-    <Image src={'../../../logo.png'} 
-      w={{ base: '100px', md: '200px' }} // Responsive logo width
-      h={{ base: '25px', md: '50px' }} // Responsive logo height
-      alt={'Logo'} 
+    <Box 
+    display={{ base: 'flex', md: 'block' }} // Use flex on small screens, block on medium and up
+    justifyContent="center" // Centers horizontally on small screens
+    alignItems="center" // Centers vertically on small screens
+    h={{ base: '60px', md: 'auto' }} // Adjust height for the container on small screens
+>
+    <Image 
+        src={'../../../logo.png'} 
+        w={{ base: '100px', md: '200px' }} // Responsive logo width
+        h={{ base: '25px', md: '50px' }} // Responsive logo height
+        alt={'Logo'} 
     />
+</Box>
+
 
     {/* Desktop Navigation */}
     <HStack as={'nav'} spacing={8} display={{ base: 'none', md: 'flex' }}>
@@ -153,19 +164,22 @@ const Navbar = () => {
     {/* Mobile Hamburger Menu */}
     <IconButton
     mr={45}
-      size={'md'}
-      icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-      aria-label={'Toggle Navigation'}
-      display={{ base: 'flex', md: 'none' }} // Show only on small screens
-      onClick={isOpen ? onClose : onOpen}
-      ml="auto" // Push burger icon to the right
-    />
+    size={'md'}
+    icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+    aria-label={'Toggle Navigation'}
+    position="absolute" // Use absolute positioning
+    top={13} // Adjust this value for vertical positioning
+    left={40} // Adjust this value for horizontal positioning
+    onClick={isOpen ? onClose : onOpen}
+    display={{ base: 'flex', md: 'none' }} // Show only on small screens
+/>
+
   </Flex>
 
   {/* Mobile Navigation */}
   <Collapse in={isOpen} animateOpacity>
-    <Box pb={4} display={{ md: 'none' }}>
-      <VStack as={'nav'} spacing={4} alignItems="flex-start">
+    <Box pb={4} display={{ md: 'none' }} bgColor={'purple.600'}>
+      <VStack as={'nav'} spacing={4} alignItems="center">
         <Link as={RouterLink} to="/" onClick={onClose}>
           Home
         </Link>
