@@ -168,7 +168,7 @@ const Navbar = () => {
     icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
     aria-label={'Toggle Navigation'}
     position="absolute" // Use absolute positioning
-    top={13}
+    top={1}
     mx={20} // Adjust this value for vertical positioning
     left={40} // Adjust this value for horizontal positioning
     onClick={isOpen ? onClose : onOpen}
