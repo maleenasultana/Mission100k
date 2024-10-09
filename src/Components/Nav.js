@@ -181,7 +181,7 @@ const Navbar = () => {
 
   {/* Mobile Navigation */}
   <Collapse in={isOpen} animateOpacity>
-    <Box pb={4} p={'15px'}display={{ md: 'none' }} bgColor={'purple.600'}>
+    <Box pb={4} p={'15px'}display={{ md: 'none' }} bgColor={'purple.500'}>
       <VStack as={'nav'} spacing={4} alignItems="flex-left">
         <Link as={RouterLink} to="/" onClick={onClose}>
           Home
@@ -191,7 +191,7 @@ const Navbar = () => {
         </Link>
 
         <Menu>
-          <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+          <MenuButton as={RouterLink} rightIcon={<ChevronDownIcon />} >
             Services
           </MenuButton>
           <MenuList>

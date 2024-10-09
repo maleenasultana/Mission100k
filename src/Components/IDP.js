@@ -37,8 +37,12 @@ function StatsCard({ title, stat }) {
         transform: "translateY(-5px)", // Move the card slightly upward on hover
       }}
     >
-      <StatLabel fontWeight={900} fontSize={"xl"} isTruncated>
-        {title}
+      
+      <StatLabel  isTruncated
+      fontSize={{ base: "sm", sm: "md", lg: "lg" }}  // Responsive font sizes
+      fontWeight="bold"
+      wordBreak="break-word"  // Ensure long words break properly>
+       > {title}
       </StatLabel>
       <StatNumber fontSize={"2xl"} fontWeight={"medium"}>
         {stat}
@@ -266,18 +270,17 @@ export default function BasicStatistics() {
           </Text>
         </Heading>
         <SimpleGrid
-          columns={{ base: 1, md: 1 }}
-          alignItems={"center"}
-          spacing={{ base: 10, lg: 8 }}
-        >
-          <StatsCard
-            title={"15+ years of experience in the education industry"}
-          />
-          <StatsCard title={"Renowned educators and marketing professionals"} />
-          <StatsCard title={"Result-Driven Approach"} />
-          <StatsCard title={"Always in Sync with Institution Vision"} />
-          <StatsCard title={"Affordable price"} />
-        </SimpleGrid>
+  columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
+  spacing={{ base: 5, sm: 8, lg: 10 }}
+  alignItems="center"
+>
+  <StatsCard title={"15+ years of experience in the education industry"} />
+  <StatsCard title={"Renowned educators and marketing professionals"} />
+  <StatsCard title={"Result-Driven Approach"} />
+  <StatsCard title={"Always in Sync with Institution Vision"} />
+  <StatsCard title={"Affordable price"} />
+</SimpleGrid>
+
       </Box>
 
       <Text

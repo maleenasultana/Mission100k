@@ -11,7 +11,7 @@ import "./../App.css";
 
 const Home = () => {
   return (
-    <Container maxW={"100vw"}>
+    <Container maxW={"100%"}>
       <Carousal display={"cover"} />
       <chakra.h1
         textAlign={"center"}

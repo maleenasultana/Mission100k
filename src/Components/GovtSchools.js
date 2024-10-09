@@ -59,7 +59,7 @@ const Card = ({ heading, description, number, color }) => {
   return (
     <Box>
       <Box
-        width={{ base: "150px", sm: "180px", md: "200px", lg: "220px" }} // Equal width for circle
+        width={{ base: "250px", sm: "180px", md: "200px", lg: "220px" }} // Equal width for circle
         height={{ base: "150px", sm: "180px", md: "200px", lg: "220px" }} // Equal height for circle
         bg={"white"} // Ensure contrasting background
         borderRadius="50%" // Make it circular
@@ -85,7 +85,7 @@ const Card = ({ heading, description, number, color }) => {
             >
               {number}
             </Heading>
-            <Text mt={3} fontSize={"md"} textAlign={"center"}>
+            <Text mt={3} fontSize={"md"} p={1} textAlign={"center"}>
               {description}
             </Text>
           </Box>

@@ -66,7 +66,7 @@ const Card = ({ heading, description, number, color }) => {
       maxW={{ base: "full", md: "250px" }}
       w={{ base: "100%", md: "auto" }} // Full width on small screens, auto on medium+
       h={{ base: "auto", md: "100%" }}
-     
+     textAlign={'center'}
       overflow="hidden"
       p={5}
       borderRadius="50%"
@@ -83,7 +83,7 @@ const Card = ({ heading, description, number, color }) => {
           >
             {number}
           </Heading>
-          <Text mt={3} fontSize={"md"} textAlign={"center"}>
+          <Text mt={3} fontSize={"sm"} p={10} textAlign={"center"}>
             {description}
           </Text>
         </Box>
