@@ -75,16 +75,16 @@ const Card = ({ heading, description, number, color }) => {
 const OfferCard = ({ imageSrc, title }) => {
   return (
     <Box
-      w={"full"}
-      maxW={"300px"}
-      py={5}
-      // boxShadow={'md'}
-      // borderRadius="md"
-      display="flex"
-      alignItems="center"
-      bg={useColorModeValue("white", "gray.800")}
-      height={"80px"} // Ensuring uniform height
-    >
+    w={"full"}
+    maxW={"300px"}
+    p={5}
+    py={5}
+    display="flex"
+    alignItems="center"
+    bg={useColorModeValue("white", "gray.800")}
+    height={"100px"}
+  >
+
       {/* Image on the left side */}
       <Image
         src={imageSrc}
@@ -219,10 +219,11 @@ export default function CallToActionWithVideo() {
           We provide holistic mental health through a variety of interventions.
         </Text>
       </Heading>
+      
       <Box alignContent={'center'}>
         <Box
           maxW={{ base: "full", md: "100%" }} // Set a maximum width for larger screens
-          width={{base: "full", md:"500px"}}
+          width={{base: "full", md:"700px"}}
           borderWidth="1px"
           borderRadius="lg"
           overflow="hidden"
@@ -254,9 +255,9 @@ export default function CallToActionWithVideo() {
       </Box>
 
       <Box py={{ base: 3, md: 5 }}>
-        <Box
+      <Box
           maxW={{ base: "full", md: "100%" }} // Set a maximum width for larger screens
-          width={{base:"250px", md:"500px"}}
+          width={{base: "full", md:"700px"}}
           borderWidth="1px"
           borderRadius="lg"
           overflow="hidden"
@@ -266,7 +267,7 @@ export default function CallToActionWithVideo() {
           flexDirection="column"
           justifyContent="center"
           alignItems="center" // Center-align content
-          textAlign="center" // Center text
+          textAlign="center" // Center tex
         >
           Anxiety - 3.5% of India's population has an anxiety-related disorder
         </Box>
@@ -289,9 +290,9 @@ export default function CallToActionWithVideo() {
       </Box>
 
       <Box py={{ base: 3, md: 5 }}>
-        <Box
+      <Box
           maxW={{ base: "full", md: "100%" }} // Set a maximum width for larger screens
-          width={{base:"250px", md:"500px"}}
+          width={{base: "full", md:"700px"}}
           borderWidth="1px"
           borderRadius="lg"
           overflow="hidden"
@@ -301,7 +302,7 @@ export default function CallToActionWithVideo() {
           flexDirection="column"
           justifyContent="center"
           alignItems="center" // Center-align content
-          textAlign="center" // Center text
+          textAlign="center" // Center tex
         >
           OCD - 1 in 40 people, will develop OCD, and 1.2% of people have OCD in
           any 12 months
@@ -309,9 +310,9 @@ export default function CallToActionWithVideo() {
       </Box>
 
       <Box py={{ base: 3, md: 5 }}>
-        <Box
+      <Box
           maxW={{ base: "full", md: "100%" }} // Set a maximum width for larger screens
-          width={{base:"250px", md:"500px"}}
+          width={{base: "full", md:"700px"}}
           borderWidth="1px"
           borderRadius="lg"
           overflow="hidden"
@@ -321,7 +322,7 @@ export default function CallToActionWithVideo() {
           flexDirection="column"
           justifyContent="center"
           alignItems="center" // Center-align content
-          textAlign="center" // Center text
+          textAlign="center" // Center tex
         >
           Obsessions- Obsessions are unwanted, repetitive, and intrusive
           thoughts, which tend to cause a lot of anxiety and distress.
@@ -329,9 +330,9 @@ export default function CallToActionWithVideo() {
       </Box>
 
       <Box py={{ base: 3, md: 5 }}>
-        <Box
+      <Box
           maxW={{ base: "full", md: "100%" }} // Set a maximum width for larger screens
-          width={{base:"250px", md:"500px"}}
+          width={{base: "full", md:"700px"}}
           borderWidth="1px"
           borderRadius="lg"
           overflow="hidden"
@@ -341,7 +342,7 @@ export default function CallToActionWithVideo() {
           flexDirection="column"
           justifyContent="center"
           alignItems="center" // Center-align content
-          textAlign="center" // Center text
+          textAlign="center" // Center tex
         >
           Compulsions- Compulsions are behaviours you feel you must repeatedly
           engage in to alleviate your distress.
@@ -349,9 +350,9 @@ export default function CallToActionWithVideo() {
       </Box>
 
       <Box py={{ base: 3, md: 5 }}>
-        <Box
-          maxW={{ base: "full", md:"100%" }} // Set a maximum width for larger screens
-          width={{base:"250px", md:"500px"}}
+      <Box
+          maxW={{ base: "full", md: "100%" }} // Set a maximum width for larger screens
+          width={{base: "full", md:"700px"}}
           borderWidth="1px"
           borderRadius="lg"
           overflow="hidden"
@@ -361,7 +362,7 @@ export default function CallToActionWithVideo() {
           flexDirection="column"
           justifyContent="center"
           alignItems="center" // Center-align content
-          textAlign="center" // Center text
+          textAlign="center" // Center tex
         >
           Bipolar Disorder - 1 in 150 persons or 0.3%of Indians live with
           bipolar disorder with 70 per cent of the remaining untreated
@@ -393,9 +394,9 @@ export default function CallToActionWithVideo() {
       </Box>
 
       <Box py={{ base: 3, md: 5 }}>
-        <Box
+      <Box
           maxW={{ base: "full", md: "100%" }} // Set a maximum width for larger screens
-          width={{base:"250px", md:"500px"}}
+          width={{base: "full", md:"700px"}}
           borderWidth="1px"
           borderRadius="lg"
           overflow="hidden"
@@ -405,7 +406,7 @@ export default function CallToActionWithVideo() {
           flexDirection="column"
           justifyContent="center"
           alignItems="center" // Center-align content
-          textAlign="center" // Center text
+          textAlign="center" // Center tex
         >
           ADHD - 10 million Indian children are diagnosed with ADHD annually
         </Box>
@@ -429,9 +430,9 @@ export default function CallToActionWithVideo() {
         </Menu>
       </Box>
       <Box py={{ base: 3, md: 5 }}>
-        <Box
-          maxW={{ base: "full", md: "100%"}} // Set a maximum width for larger screens
-          width={{base:"250px", md:"500px"}}
+      <Box
+          maxW={{ base: "full", md: "100%" }} // Set a maximum width for larger screens
+          width={{base: "full", md:"700px"}}
           borderWidth="1px"
           borderRadius="lg"
           overflow="hidden"
@@ -441,7 +442,7 @@ export default function CallToActionWithVideo() {
           flexDirection="column"
           justifyContent="center"
           alignItems="center" // Center-align content
-          textAlign="center" // Center text
+          textAlign="center" // Center tex
         >
           Social Anxiety - One in seven Indians suffer from a social anxiety
           disorder
