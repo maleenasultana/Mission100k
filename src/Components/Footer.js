@@ -117,7 +117,7 @@ export default function LargeWithLogoCentered() {
             <Box as="a" href={'https://www.instagram.com/mission100ks/'}>
               Instagram
             </Box>
-            <Box as="a" href={'https://linkedin.com'}>
+            <Box as="a" href={'https://www.linkedin.com/in/missionwellbeing'}>
               LinkedIn
             </Box>
           </Stack>
