@@ -270,17 +270,18 @@ export default function BasicStatistics() {
           </Text>
         </Heading>
         <SimpleGrid
-  columns={{ base: 1, sm: 2, md: 3, lg: 4 }}
-  spacing={{ base: 5, sm: 8, lg: 10 }}
-  alignItems="center"
->
-  <StatsCard title={"15+ years of experience in the education industry"} />
-  <StatsCard title={"Renowned educators and marketing professionals"} />
-  <StatsCard title={"Result-Driven Approach"} />
-  <StatsCard title={"Always in Sync with Institution Vision"} />
-  <StatsCard title={"Affordable price"} />
-</SimpleGrid>
-
+          columns={{ base: 1, md: 1 }}
+          alignItems={"center"}
+          spacing={{ base: 10, lg: 8 }}
+        >
+          <StatsCard
+            title={"15+ years of experience in the education industry"}
+          />
+          <StatsCard title={"Renowned educators and marketing professionals"} />
+          <StatsCard title={"Result-Driven Approach"} />
+          <StatsCard title={"Always in Sync with Institution Vision"} />
+          <StatsCard title={"Affordable price"} />
+        </SimpleGrid>
       </Box>
 
       <Text

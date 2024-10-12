@@ -103,29 +103,41 @@ export default function EnquiryForm() {
           <Button type="submit" colorScheme="blue" width="full" onClick={onOpen}>
         Submit
       </Button>
+      <Modal isOpen={isOpen} onClose={onClose} scrollBehavior="inside">
+  <ModalOverlay />
+  <ModalContent
+    position="fixed"
+    bottom={0}
+    mb={4}  // Optional: adds margin from the bottom of the screen
+    maxW={["90%", "80%", "60%", "40%"]}
+    maxH="90vh"  // Ensures the modal doesn't overflow beyond viewport height
+    p={[4, 6, 8]}
+    overflowY="auto"
+  >
+    <ModalHeader fontSize={["lg", "xl"]} textAlign="center">
+      Thank You!
+    </ModalHeader>
+    <ModalBody>
+      <Text fontSize={["sm", "md"]} textAlign="center">
+        We appreciate your interest in our services.
+        <br />
+        Our team will review your request and get back
+        <br />
+        to you shortly. If you require immediate assistance,
+        <br />
+        please feel free to call us at 9019873893.
+      </Text>
+    </ModalBody>
+    <ModalFooter>
+      <Button colorScheme="blue" mr={3} onClick={onClose}>
+        Close
+      </Button>
+    </ModalFooter>
+  </ModalContent>
+</Modal>
 
-      <Modal isOpen={isOpen} onClose={onClose} isCentered>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>Thank You!</ModalHeader>
-          <ModalBody>
-            <Text>
-              We appreciate your interest in our services.
-              <br />
-              Our team will review your request and get back
-              <br />
-              to you shortly. If you require immediate assistance,
-              <br />
-              please feel free to call us at 9019873893.
-            </Text>
-          </ModalBody>
-          <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
+
+
         </VStack>
         <Text color={'grey.100'}>
 <Text color={'blue.300'}>Thank You for Your Enquiry!</Text><br/>

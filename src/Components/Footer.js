@@ -105,16 +105,16 @@ export default function LargeWithLogoCentered() {
             <Box
               as="a"
               href={
-                'https://www.bing.com/ck/a?!&&p=583db211f445a4c6JmltdHM9MTcwODczMjgwMCZpZ3VpZD0xZWZiNTM3Zi02OWFhLTY4ZTEtM2YzMC00MDEwNjhmNzY5ZjUmaW5zaWQ9NTIyNQ&ptn=3&ver=2&hsh=3&fclid=1efb537f-69aa-68e1-3f30-401068f769f5&psq=facebook&u=a1aHR0cHM6Ly93d3cuZmFjZWJvb2suY29tLw&ntb=1'
+                'https://www.facebook.com/profile.php?id=61567043039711&mibextid=ZbWKwL'
               }
             >
               Facebook
             </Box>
-            <Box as="a" href={'https://twitter.com/home'}>
+            <Box as="a" href={'https://t.co/redirect?url=https%3A%2F%2Fx.com%2FMission100ks&t=1&cn=bG9naW5fbm90aWZpY2F0aW9uX2VtYWls&sig=0d1d2e71b7260c4e65c1ead18a985536c2b135a6&iid=3922c09f048d417082ccd58816e6fccb&uid=1831603482379304960&nid=296+1'}>
               Twitter
             </Box>
 
-            <Box as="a" href={'https://instagram.com/'}>
+            <Box as="a" href={'https://www.instagram.com/mission100ks/'}>
               Instagram
             </Box>
             <Box as="a" href={'https://linkedin.com'}>
