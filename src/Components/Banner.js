@@ -29,6 +29,9 @@ export default function CallToActionWithVideo() {
             fontWeight={600}
             fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
             <Text
+            bgGradient="linear(to-r, teal.400, blue.500, purple.600)"
+             bgClip="text"
+              textTransform="capitalize"
               as={'span'}
               position={'relative'}
               _after={{
@@ -45,7 +48,7 @@ export default function CallToActionWithVideo() {
             </Text>
             <br />
             <Text as={'span'} 
-            // color={'blue.400'}
+             color={'blue.400'}
             >
               use everywhere!
             </Text>
@@ -115,7 +118,7 @@ export default function CallToActionWithVideo() {
               w={'100%'}
               h={'100%'}
               src={
-                "../../../children.jpg"
+                "../../../corp.jpg"
               }
             />
           </Box>

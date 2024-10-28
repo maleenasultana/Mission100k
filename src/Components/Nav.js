@@ -50,7 +50,7 @@ const Navbar = () => {
 
   return (
     <Box
-  bg="purple.600"
+  bg="gray.400"
   // opacity={'10%'}
   transition="background-color 0.3s ease" // Smooth transition for background change
   px={{ base: 2, md: 4, lg: 8 }} // Responsive padding
@@ -73,14 +73,14 @@ const Navbar = () => {
     alignItems="center" // Centers vertically on small screens
     h={{ base: '60px', md: 'auto' }} // Adjust height for the container on small screens
 >
-    <Image 
+    {/* <Image 
         src={'../../../logo.png'} 
         w={{ base: '100px', md: '200px' }} // Responsive logo width
      
         h={{ base: '40px', md: '50px' }} // Responsive logo height
         alt={'Logo'} 
-        py={1}
-    />
+        // py={1}
+    /> */}
 </Box>
 
 
